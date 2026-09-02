@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +16,8 @@ const DISMISS_KEY = "kascing:sticky-cta-dismissed";
  * via props, so it can be dropped onto the homepage on its own.
  */
 export function StickyCtaBar() {
+  const t = useTranslations("home.stickyCta");
+  const tCommon = useTranslations("common");
   const [pastHero, setPastHero] = useState(false);
   const [nearFooterCta, setNearFooterCta] = useState(false);
   // pastHero is false at mount either way, so `visible` starts false regardless
@@ -72,19 +75,19 @@ export function StickyCtaBar() {
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0",
       )}
     >
-      <p className="flex-1 text-sm font-medium text-stone-700">Siap cari produsen kascing terdekat?</p>
+      <p className="flex-1 text-sm font-medium text-stone-700">{t("message")}</p>
       <Link
         href="/direktori"
         tabIndex={visible ? 0 : -1}
         className="shrink-0 rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
       >
-        Cari Produsen
+        {tCommon("cariProdusenCta")}
       </Link>
       <button
         type="button"
         onClick={handleDismiss}
         tabIndex={visible ? 0 : -1}
-        aria-label="Tutup"
+        aria-label={tCommon("tutup")}
         className="shrink-0 rounded-full p-1 text-stone-400 hover:bg-stone-100 hover:text-stone-600"
       >
         ✕

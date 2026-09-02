@@ -1,40 +1,43 @@
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
-const FEATURES = [
-  {
-    title: "Belajar Kascing",
-    description: "Panduan edukasi dari dasar budidaya hingga strategi untuk perkebunan skala besar.",
-    href: "/belajar-kascing",
-  },
-  {
-    title: "Direktori Produsen",
-    description: "Temukan dan bandingkan produsen kascing terdekat sesuai kebutuhan Anda.",
-    href: "/direktori",
-  },
-  {
-    title: "Berita & Artikel",
-    description: "Kabar terbaru seputar industri kascing, update riset, dan press release.",
-    href: "/berita",
-  },
-  {
-    title: "Riset & Publikasi",
-    description: "Jurnal, laporan, dan white paper berbasis data untuk pengambilan keputusan.",
-    href: "/riset",
-  },
-  {
-    title: "Studi Kasus",
-    description: "Cerita nyata penggunaan kascing dari hobiis, perkebunan besar, hingga eksportir.",
-    href: "/studi-kasus",
-  },
-  {
-    title: "Sumber Daya",
-    description: "Kalkulator kebutuhan kascing, unduhan panduan, dan jawaban pertanyaan umum.",
-    href: "/sumber-daya",
-  },
-];
-
 /** Feature/category grid — join.com-style cards with a title and 1-2 line description, not just an icon + link. */
-export function FeatureGrid() {
+export async function FeatureGrid() {
+  const t = await getTranslations("home.features");
+
+  const FEATURES = [
+    {
+      title: t("belajarKascing.title"),
+      description: t("belajarKascing.description"),
+      href: "/belajar-kascing",
+    },
+    {
+      title: t("direktoriProdusen.title"),
+      description: t("direktoriProdusen.description"),
+      href: "/direktori",
+    },
+    {
+      title: t("berita.title"),
+      description: t("berita.description"),
+      href: "/berita",
+    },
+    {
+      title: t("riset.title"),
+      description: t("riset.description"),
+      href: "/riset",
+    },
+    {
+      title: t("studiKasus.title"),
+      description: t("studiKasus.description"),
+      href: "/studi-kasus",
+    },
+    {
+      title: t("sumberDaya.title"),
+      description: t("sumberDaya.description"),
+      href: "/sumber-daya",
+    },
+  ];
+
   return (
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {FEATURES.map((f) => (
@@ -45,7 +48,7 @@ export function FeatureGrid() {
         >
           <h3 className="font-bold text-stone-900 group-hover:text-emerald-700">{f.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-stone-500">{f.description}</p>
-          <span className="mt-4 text-sm font-medium text-emerald-700">Jelajahi →</span>
+          <span className="mt-4 text-sm font-medium text-emerald-700">{t("cardCta")}</span>
         </Link>
       ))}
     </div>

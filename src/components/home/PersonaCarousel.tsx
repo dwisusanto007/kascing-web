@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useTranslations } from "next-intl";
 
 interface PersonaCarouselProps {
   ariaLabel: string;
@@ -15,6 +16,7 @@ interface PersonaCarouselProps {
  * move focus card-to-card while the track has focus.
  */
 export function PersonaCarousel({ ariaLabel, children }: PersonaCarouselProps) {
+  const t = useTranslations("common.carousel");
   const trackRef = useRef<HTMLDivElement>(null);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -71,7 +73,7 @@ export function PersonaCarousel({ ariaLabel, children }: PersonaCarouselProps) {
             type="button"
             onClick={() => scrollByCard(-1)}
             disabled={!canScrollPrev}
-            aria-label="Sebelumnya"
+            aria-label={t("previous")}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-300 text-stone-600 transition hover:border-emerald-300 hover:text-emerald-700 disabled:cursor-not-allowed disabled:opacity-40"
           >
             ←
@@ -80,7 +82,7 @@ export function PersonaCarousel({ ariaLabel, children }: PersonaCarouselProps) {
             type="button"
             onClick={() => scrollByCard(1)}
             disabled={!canScrollNext}
-            aria-label="Berikutnya"
+            aria-label={t("next")}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-300 text-stone-600 transition hover:border-emerald-300 hover:text-emerald-700 disabled:cursor-not-allowed disabled:opacity-40"
           >
             →

@@ -5,7 +5,9 @@
       "description": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, large plantations, and exporters alike."
     },
     "cariProdusenCta": "Find Producers",
-    "lihatSemua": "See all"
+    "lihatSemua": "See all",
+    "tutup": "Close",
+    "carousel": { "previous": "Previous", "next": "Next" }
   },
   "home": {
     "hero": {
@@ -33,6 +35,26 @@
       "directory": { "title": "Find already-verified producers", "description": "Our directory filters producers by location, production capacity, and certification — not just a contact list." },
       "data": { "title": "Learn from case studies & real data", "description": "See real results from hobbyists, large plantations, and exporters, backed by figures and supporting research." },
       "news": { "title": "Follow the latest vermicompost industry news", "description": "New research updates, press releases, and educational articles publish regularly, so your decisions are always based on current information." }
-    }
+    },
+    "features": {
+      "belajarKascing": { "title": "Learn Vermicomposting", "description": "Educational guides from the basics to strategies for large-scale plantations." },
+      "direktoriProdusen": { "title": "Producer Directory", "description": "Find and compare nearby vermicompost producers that fit your needs." },
+      "berita": { "title": "News & Articles", "description": "The latest on the vermicompost industry, research updates, and press releases." },
+      "riset": { "title": "Research & Publications", "description": "Journals, reports, and data-driven white papers for decision-making." },
+      "studiKasus": { "title": "Case Studies", "description": "Real stories of vermicompost use from hobbyists, large plantations, and exporters." },
+      "sumberDaya": { "title": "Resources", "description": "A vermicompost needs calculator, guide downloads, and answers to common questions." },
+      "cardCta": "Explore →"
+    },
+    "stats": {
+      "produsen": "Registered Producers",
+      "artikel": "Educational Articles",
+      "riset": "Research & Publications",
+      "studiKasus": "Case Studies"
+    },
+    "ctaBanner": {
+      "title": "Ready to get started with vermicompost?",
+      "description": "Find a trusted producer near you, or list your vermicompost business in our directory."
+    },
+    "stickyCta": { "message": "Ready to find a nearby vermicompost producer?" }
   }
 }

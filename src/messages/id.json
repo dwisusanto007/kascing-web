@@ -5,7 +5,9 @@
       "description": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir."
     },
     "cariProdusenCta": "Cari Produsen",
-    "lihatSemua": "Lihat semua"
+    "lihatSemua": "Lihat semua",
+    "tutup": "Tutup",
+    "carousel": { "previous": "Sebelumnya", "next": "Berikutnya" }
   },
   "home": {
     "hero": {
@@ -33,6 +35,26 @@
       "directory": { "title": "Cari produsen yang sudah terverifikasi", "description": "Direktori kami menyaring produsen berdasarkan lokasi, kapasitas produksi, dan sertifikasi — bukan sekadar daftar kontak." },
       "data": { "title": "Belajar dari studi kasus & data nyata", "description": "Lihat hasil nyata dari hobiis, perkebunan besar, hingga eksportir, lengkap dengan angka dan riset pendukung." },
       "news": { "title": "Ikuti kabar terbaru industri kascing", "description": "Update riset, press release, dan artikel edukasi baru tayang rutin, supaya keputusanmu selalu berbasis info terkini." }
-    }
+    },
+    "features": {
+      "belajarKascing": { "title": "Belajar Kascing", "description": "Panduan edukasi dari dasar budidaya hingga strategi untuk perkebunan skala besar." },
+      "direktoriProdusen": { "title": "Direktori Produsen", "description": "Temukan dan bandingkan produsen kascing terdekat sesuai kebutuhan Anda." },
+      "berita": { "title": "Berita & Artikel", "description": "Kabar terbaru seputar industri kascing, update riset, dan press release." },
+      "riset": { "title": "Riset & Publikasi", "description": "Jurnal, laporan, dan white paper berbasis data untuk pengambilan keputusan." },
+      "studiKasus": { "title": "Studi Kasus", "description": "Cerita nyata penggunaan kascing dari hobiis, perkebunan besar, hingga eksportir." },
+      "sumberDaya": { "title": "Sumber Daya", "description": "Kalkulator kebutuhan kascing, unduhan panduan, dan jawaban pertanyaan umum." },
+      "cardCta": "Jelajahi →"
+    },
+    "stats": {
+      "produsen": "Produsen Terdaftar",
+      "artikel": "Artikel Edukasi",
+      "riset": "Riset & Publikasi",
+      "studiKasus": "Studi Kasus"
+    },
+    "ctaBanner": {
+      "title": "Siap mulai dengan kascing?",
+      "description": "Temukan produsen terpercaya di sekitar Anda, atau daftarkan bisnis kascing Anda ke direktori kami."
+    },
+    "stickyCta": { "message": "Siap cari produsen kascing terdekat?" }
   }
 }

@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { articles, caseStudies, producers, researchPapers } from "@/lib/mock-data";
 
 /**
@@ -7,12 +8,14 @@ import { articles, caseStudies, producers, researchPapers } from "@/lib/mock-dat
  * alternative to logos. The whole strip hides itself if there's nothing to
  * show, per the card's empty-state test scenario.
  */
-export function StatsStrip() {
+export async function StatsStrip() {
+  const t = await getTranslations("home.stats");
+
   const stats = [
-    { label: "Produsen Terdaftar", value: producers.length },
-    { label: "Artikel Edukasi", value: articles.length },
-    { label: "Riset & Publikasi", value: researchPapers.length },
-    { label: "Studi Kasus", value: caseStudies.length },
+    { label: t("produsen"), value: producers.length },
+    { label: t("artikel"), value: articles.length },
+    { label: t("riset"), value: researchPapers.length },
+    { label: t("studiKasus"), value: caseStudies.length },
   ].filter((s) => s.value > 0);
 
   if (stats.length === 0) return null;
