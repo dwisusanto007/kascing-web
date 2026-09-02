@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Modal } from "@/components/ui/Modal";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function DownloadPaperButton({ title, fileAvailable }: { title: string; fileAvailable: boolean }) {
+  const t = useTranslations("riset.download");
+  const tCommon = useTranslations("common");
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -14,7 +17,7 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email.trim() || !EMAIL_RE.test(email)) {
-      setError("Masukkan alamat email yang valid untuk menerima tautan unduhan.");
+      setError(t("invalidEmail"));
       return;
     }
     setError("");
@@ -31,7 +34,7 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
   if (!fileAvailable) {
     return (
       <div className="rounded-lg bg-stone-100 px-4 py-2.5 text-sm text-stone-500">
-        Dokumen tidak tersedia untuk diunduh saat ini.
+        {t("unavailable")}
       </div>
     );
   }
@@ -43,36 +46,34 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
         onClick={() => setOpen(true)}
         className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
       >
-        Unduh White Paper
+        {t("buttonLabel")}
       </button>
-      <Modal open={open} onClose={handleClose} title="Unduh Dokumen">
+      <Modal open={open} onClose={handleClose} title={t("modalTitle")}>
         {sent ? (
           <div>
             <p className="text-sm text-emerald-700">
-              Tautan unduhan untuk <strong>{title}</strong> telah dikirim ke <strong>{email}</strong>.
+              {t("sentPrefix")} <strong>{title}</strong> {t("sentMiddle")} <strong>{email}</strong>.
             </p>
             <button
               type="button"
               onClick={handleClose}
               className="mt-4 rounded-full bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800"
             >
-              Tutup
+              {tCommon("tutup")}
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} noValidate>
-            <p className="mb-3 text-sm text-stone-500">
-              Masukkan email untuk menerima tautan unduhan &ldquo;{title}&rdquo;.
-            </p>
+            <p className="mb-3 text-sm text-stone-500">{t("prompt", { title })}</p>
             <label htmlFor="paper-email" className="sr-only">
-              Email
+              {t("emailLabel")}
             </label>
             <input
               id="paper-email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="nama@email.com"
+              placeholder={t("emailPlaceholder")}
               className="w-full rounded-lg border border-stone-300 px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
             />
             {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
@@ -80,7 +81,7 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
               type="submit"
               className="mt-4 w-full rounded-full bg-emerald-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
             >
-              Kirim Tautan Unduhan
+              {t("submit")}
             </button>
           </form>
         )}

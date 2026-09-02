@@ -155,7 +155,46 @@
       "noData": { "title": "No research & publications yet", "description": "Research documents will be available here soon." },
       "noResults": { "title": "No matching documents", "description": "Try changing the commodity, document type, or year filter combination." }
     },
-    "card": { "cta": "Read details" }
+    "card": { "cta": "Read details" },
+    "detail": {
+      "notFoundTitle": "Document not found",
+      "abstractTitle": "Abstract",
+      "simplifiedVersionCta": "Read the Simplified Version →"
+    },
+    "download": {
+      "invalidEmail": "Enter a valid email address to receive the download link.",
+      "unavailable": "This document isn't available for download right now.",
+      "buttonLabel": "Download White Paper",
+      "modalTitle": "Download Document",
+      "sentPrefix": "The download link for",
+      "sentMiddle": "has been sent to",
+      "prompt": "Enter your email to receive the download link for “{title}”.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "name@email.com",
+      "submit": "Send Download Link"
+    },
+    "propose": {
+      "invalidFileType": "Unsupported document format. Use PDF or DOC/DOCX.",
+      "errors": {
+        "titleRequired": "Publication title is required.",
+        "authorRequired": "Researcher name is required.",
+        "emailInvalid": "Invalid email format.",
+        "abstractRequired": "Abstract/summary is required."
+      },
+      "success": {
+        "title": "Thank you, we've received your publication proposal.",
+        "message": "Our editorial team will review it and contact you at {email}."
+      },
+      "fields": {
+        "title": "Publication Title",
+        "author": "Researcher Name",
+        "email": "Email",
+        "abstract": "Abstract/Summary",
+        "upload": "Upload Document (PDF/DOC, optional)",
+        "fileSelected": "Selected: {filename}"
+      },
+      "submit": "Propose Publication"
+    }
   },
   "studiKasus": {
     "card": { "cta": "Read case study" }

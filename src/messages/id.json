@@ -155,7 +155,46 @@
       "noData": { "title": "Belum ada riset & publikasi", "description": "Dokumen riset akan segera hadir di sini." },
       "noResults": { "title": "Tidak ada dokumen yang cocok", "description": "Coba ubah kombinasi filter komoditas, jenis dokumen, atau tahun." }
     },
-    "card": { "cta": "Baca detail" }
+    "card": { "cta": "Baca detail" },
+    "detail": {
+      "notFoundTitle": "Dokumen tidak ditemukan",
+      "abstractTitle": "Abstrak",
+      "simplifiedVersionCta": "Baca Versi Sederhana →"
+    },
+    "download": {
+      "invalidEmail": "Masukkan alamat email yang valid untuk menerima tautan unduhan.",
+      "unavailable": "Dokumen tidak tersedia untuk diunduh saat ini.",
+      "buttonLabel": "Unduh White Paper",
+      "modalTitle": "Unduh Dokumen",
+      "sentPrefix": "Tautan unduhan untuk",
+      "sentMiddle": "telah dikirim ke",
+      "prompt": "Masukkan email untuk menerima tautan unduhan “{title}”.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "nama@email.com",
+      "submit": "Kirim Tautan Unduhan"
+    },
+    "propose": {
+      "invalidFileType": "Format dokumen tidak didukung. Gunakan PDF atau DOC/DOCX.",
+      "errors": {
+        "titleRequired": "Judul publikasi wajib diisi.",
+        "authorRequired": "Nama peneliti wajib diisi.",
+        "emailInvalid": "Format email tidak valid.",
+        "abstractRequired": "Abstrak/ringkasan wajib diisi."
+      },
+      "success": {
+        "title": "Terima kasih, pengajuan publikasi Anda telah kami terima.",
+        "message": "Tim editorial akan meninjau dan menghubungi Anda melalui {email}."
+      },
+      "fields": {
+        "title": "Judul Publikasi",
+        "author": "Nama Peneliti",
+        "email": "Email",
+        "abstract": "Abstrak/Ringkasan",
+        "upload": "Unggah Dokumen (PDF/DOC, opsional)",
+        "fileSelected": "Terpilih: {filename}"
+      },
+      "submit": "Ajukan Publikasi"
+    }
   },
   "studiKasus": {
     "card": { "cta": "Baca studi kasus" }

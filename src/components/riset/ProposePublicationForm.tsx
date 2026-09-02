@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ACCEPTED_TYPES = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
@@ -13,6 +14,7 @@ interface FormState {
 }
 
 export function ProposePublicationForm() {
+  const t = useTranslations("riset.propose");
   const [form, setForm] = useState<FormState>({ title: "", author: "", email: "", abstract: "" });
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [fileName, setFileName] = useState("");
@@ -28,7 +30,7 @@ export function ProposePublicationForm() {
     const file = e.target.files?.[0];
     if (!file) return;
     if (!ACCEPTED_TYPES.includes(file.type)) {
-      setFileError("Format dokumen tidak didukung. Gunakan PDF atau DOC/DOCX.");
+      setFileError(t("invalidFileType"));
       setFileName("");
       return;
     }
@@ -39,10 +41,10 @@ export function ProposePublicationForm() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const next: Partial<FormState> = {};
-    if (!form.title.trim()) next.title = "Judul publikasi wajib diisi.";
-    if (!form.author.trim()) next.author = "Nama peneliti wajib diisi.";
-    if (!form.email.trim() || !EMAIL_RE.test(form.email.trim())) next.email = "Format email tidak valid.";
-    if (!form.abstract.trim()) next.abstract = "Abstrak/ringkasan wajib diisi.";
+    if (!form.title.trim()) next.title = t("errors.titleRequired");
+    if (!form.author.trim()) next.author = t("errors.authorRequired");
+    if (!form.email.trim() || !EMAIL_RE.test(form.email.trim())) next.email = t("errors.emailInvalid");
+    if (!form.abstract.trim()) next.abstract = t("errors.abstractRequired");
     setErrors(next);
     if (Object.keys(next).length > 0) return;
     setSubmitted(true);
@@ -51,8 +53,8 @@ export function ProposePublicationForm() {
   if (submitted) {
     return (
       <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-        <p className="font-medium text-emerald-900">Terima kasih, pengajuan publikasi Anda telah kami terima.</p>
-        <p className="mt-1 text-sm text-emerald-800">Tim editorial akan meninjau dan menghubungi Anda melalui {form.email}.</p>
+        <p className="font-medium text-emerald-900">{t("success.title")}</p>
+        <p className="mt-1 text-sm text-emerald-800">{t("success.message", { email: form.email })}</p>
       </div>
     );
   }
@@ -60,7 +62,7 @@ export function ProposePublicationForm() {
   return (
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
       <div>
-        <label className="mb-1 block text-sm font-medium text-stone-700">Judul Publikasi</label>
+        <label className="mb-1 block text-sm font-medium text-stone-700">{t("fields.title")}</label>
         <input
           value={form.title}
           onChange={(e) => update("title", e.target.value)}
@@ -70,7 +72,7 @@ export function ProposePublicationForm() {
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1 block text-sm font-medium text-stone-700">Nama Peneliti</label>
+          <label className="mb-1 block text-sm font-medium text-stone-700">{t("fields.author")}</label>
           <input
             value={form.author}
             onChange={(e) => update("author", e.target.value)}
@@ -79,7 +81,7 @@ export function ProposePublicationForm() {
           {errors.author && <p className="mt-1 text-xs text-red-600">{errors.author}</p>}
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-stone-700">Email</label>
+          <label className="mb-1 block text-sm font-medium text-stone-700">{t("fields.email")}</label>
           <input
             type="email"
             value={form.email}
@@ -90,7 +92,7 @@ export function ProposePublicationForm() {
         </div>
       </div>
       <div>
-        <label className="mb-1 block text-sm font-medium text-stone-700">Abstrak/Ringkasan</label>
+        <label className="mb-1 block text-sm font-medium text-stone-700">{t("fields.abstract")}</label>
         <textarea
           rows={4}
           value={form.abstract}
@@ -100,16 +102,16 @@ export function ProposePublicationForm() {
         {errors.abstract && <p className="mt-1 text-xs text-red-600">{errors.abstract}</p>}
       </div>
       <div>
-        <label className="mb-1 block text-sm font-medium text-stone-700">Unggah Dokumen (PDF/DOC, opsional)</label>
+        <label className="mb-1 block text-sm font-medium text-stone-700">{t("fields.upload")}</label>
         <input type="file" accept=".pdf,.doc,.docx" onChange={handleFile} className="text-sm" />
-        {fileName && <p className="mt-1 text-xs text-emerald-700">Terpilih: {fileName}</p>}
+        {fileName && <p className="mt-1 text-xs text-emerald-700">{t("fields.fileSelected", { filename: fileName })}</p>}
         {fileError && <p className="mt-1 text-xs text-red-600">{fileError}</p>}
       </div>
       <button
         type="submit"
         className="w-fit rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
       >
-        Ajukan Publikasi
+        {t("submit")}
       </button>
     </form>
   );
