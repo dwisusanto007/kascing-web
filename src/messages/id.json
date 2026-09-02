@@ -20,7 +20,8 @@
     "resetFilter": "Reset filter",
     "resetSemuaFilter": "Reset semua filter",
     "kembali": "← Kembali",
-    "resetKategori": "Reset kategori"
+    "resetKategori": "Reset kategori",
+    "unduh": "Unduh"
   },
   "forms": {
     "newsletter": {
@@ -317,6 +318,46 @@
       },
       "next": "Lanjut →",
       "submit": "Kirim Pendaftaran"
+    }
+  },
+  "sumberDaya": {
+    "title": "Sumber Daya",
+    "subtitle": "Kalkulator kebutuhan kascing, unduhan panduan, dan pertanyaan yang sering diajukan.",
+    "kalkulator": {
+      "description": "Estimasi kebutuhan kascing berdasarkan luas lahan dan jenis komoditas.",
+      "errorLabel": "kalkulator"
+    },
+    "unduhan": {
+      "description": "Panduan PDF dan poster edukasi seputar kascing.",
+      "errorLabel": "daftar unduhan"
+    },
+    "faqTitle": "Pertanyaan yang Sering Diajukan",
+    "calculator": {
+      "fields": {
+        "area": "Luas Lahan (m²)",
+        "areaPlaceholder": "mis. 100",
+        "commodity": "Jenis Komoditas",
+        "commodityOther": "Lainnya"
+      },
+      "submit": "Hitung Kebutuhan",
+      "errors": {
+        "areaRequired": "Luas lahan wajib diisi.",
+        "areaInvalid": "Masukkan angka yang valid untuk luas lahan.",
+        "areaPositive": "Luas lahan harus lebih besar dari 0."
+      },
+      "noData": "Data perhitungan belum tersedia untuk komoditas “{commodity}”.",
+      "result": "Estimasi kebutuhan kascing untuk {area} m² lahan {commodity}:",
+      "resultKg": "{kg} kg"
+    },
+    "downloads": {
+      "unavailable": "File tidak tersedia saat ini. Coba lagi nanti.",
+      "downloading": "Mengunduh “{title}”…"
+    }
+  },
+  "tentang": {
+    "comingSoon": {
+      "title": "Segera Hadir",
+      "description": "Halaman “Tentang Vermicompost.id” sedang kami siapkan. Sementara itu, jelajahi konten edukasi dan direktori produsen kami."
     }
   },
   "errors": {

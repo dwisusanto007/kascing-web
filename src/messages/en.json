@@ -20,7 +20,8 @@
     "resetFilter": "Reset filter",
     "resetSemuaFilter": "Reset all filters",
     "kembali": "← Back",
-    "resetKategori": "Reset category"
+    "resetKategori": "Reset category",
+    "unduh": "Download"
   },
   "forms": {
     "newsletter": {
@@ -317,6 +318,46 @@
       },
       "next": "Next →",
       "submit": "Submit Registration"
+    }
+  },
+  "sumberDaya": {
+    "title": "Resources",
+    "subtitle": "Vermicompost needs calculator, guide downloads, and frequently asked questions.",
+    "kalkulator": {
+      "description": "Estimate vermicompost needs based on land area and commodity type.",
+      "errorLabel": "calculator"
+    },
+    "unduhan": {
+      "description": "PDF guides and educational posters about vermicompost.",
+      "errorLabel": "download list"
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "calculator": {
+      "fields": {
+        "area": "Land Area (m²)",
+        "areaPlaceholder": "e.g. 100",
+        "commodity": "Commodity Type",
+        "commodityOther": "Other"
+      },
+      "submit": "Calculate Needs",
+      "errors": {
+        "areaRequired": "Land area is required.",
+        "areaInvalid": "Enter a valid number for the land area.",
+        "areaPositive": "Land area must be greater than 0."
+      },
+      "noData": "Calculation data isn't available yet for the “{commodity}” commodity.",
+      "result": "Estimated vermicompost needed for {area} m² of {commodity} land:",
+      "resultKg": "{kg} kg"
+    },
+    "downloads": {
+      "unavailable": "File isn't available right now. Try again later.",
+      "downloading": "Downloading “{title}”…"
+    }
+  },
+  "tentang": {
+    "comingSoon": {
+      "title": "Coming Soon",
+      "description": "The “About Vermicompost.id” page is being prepared. In the meantime, explore our educational content and producer directory."
     }
   },
   "errors": {
