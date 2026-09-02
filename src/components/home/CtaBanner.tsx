@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 export async function CtaBanner() {
   const t = await getTranslations("home.ctaBanner");
   const tCommon = await getTranslations("common");
+  const tNav = await getTranslations("nav");
 
   return (
     <section id="cta-banner" className="bg-emerald-700">
@@ -24,7 +25,7 @@ export async function CtaBanner() {
             href="/direktori/daftar"
             className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
           >
-            Daftarkan Bisnis Anda
+            {tNav("direktori.children.daftar.label")}
           </Link>
         </div>
       </div>

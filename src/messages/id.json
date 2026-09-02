@@ -150,5 +150,17 @@
     "mobileMenuButton": { "ariaLabel": "Buka menu navigasi" },
     "mobileNav": { "ariaLabel": "Navigasi mobile" },
     "mobileSubmenu": { "ariaLabel": "Buka submenu {label}" }
+  },
+  "footer": {
+    "tagline": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir.",
+    "newsletterLabel": "Berlangganan newsletter",
+    "columns": { "produk": "Produk & Section", "perusahaan": "Perusahaan", "legal": "Legal" },
+    "links": {
+      "tentangKami": "Tentang Kami",
+      "kalkulator": "Kalkulator Kascing",
+      "kebijakanPrivasi": "Kebijakan Privasi",
+      "syaratKetentuan": "Syarat & Ketentuan"
+    },
+    "copyright": "© {year} Vermicompost.id. Seluruh hak cipta dilindungi."
   }
 }

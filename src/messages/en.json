@@ -150,5 +150,17 @@
     "mobileMenuButton": { "ariaLabel": "Open navigation menu" },
     "mobileNav": { "ariaLabel": "Mobile navigation" },
     "mobileSubmenu": { "ariaLabel": "Open {label} submenu" }
+  },
+  "footer": {
+    "tagline": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, large plantations, and exporters alike.",
+    "newsletterLabel": "Subscribe to our newsletter",
+    "columns": { "produk": "Product & Sections", "perusahaan": "Company", "legal": "Legal" },
+    "links": {
+      "tentangKami": "About Us",
+      "kalkulator": "Vermicompost Calculator",
+      "kebijakanPrivasi": "Privacy Policy",
+      "syaratKetentuan": "Terms & Conditions"
+    },
+    "copyright": "© {year} Vermicompost.id. All rights reserved."
   }
 }
