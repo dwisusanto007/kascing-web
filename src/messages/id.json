@@ -18,7 +18,8 @@
     "kembaliKeBeranda": "Kembali ke Beranda",
     "sending": "Mengirim…",
     "resetFilter": "Reset filter",
-    "resetSemuaFilter": "Reset semua filter"
+    "resetSemuaFilter": "Reset semua filter",
+    "kembali": "← Kembali"
   },
   "forms": {
     "newsletter": {
@@ -129,7 +130,87 @@
       "noData": { "title": "Belum ada produsen terdaftar", "description": "Produsen kascing akan segera tampil di sini." },
       "noResults": { "title": "Tidak ada produsen yang cocok", "description": "Coba ubah kata kunci pencarian atau kombinasi filter yang digunakan." }
     },
-    "map": { "disclaimer": "Tampilan peta skematik (ilustrasi lokasi produsen)" }
+    "map": { "disclaimer": "Tampilan peta skematik (ilustrasi lokasi produsen)" },
+    "detail": {
+      "notFoundTitle": "Produsen tidak ditemukan",
+      "capacityPrefix": "Kapasitas: {label}",
+      "aboutTitle": "Tentang Produsen",
+      "productsTitle": "Jenis Produk",
+      "commoditiesTitle": "Komoditas Dilayani",
+      "galleryTitle": "Galeri",
+      "noGalleryPhoto": "Belum ada foto galeri",
+      "relatedArticlePrompt": "Belum yakin mau pakai kascing? Baca panduan dulu.",
+      "contactTitle": "Hubungi Produsen",
+      "contactWhatsapp": "Chat via WhatsApp",
+      "contactPhone": "Telepon {phone}",
+      "contactEmail": "Email {email}",
+      "noContact": "Kontak produsen belum tersedia.",
+      "relatedProducersTitle": "Produsen Lain di {province}"
+    },
+    "daftar": {
+      "metaTitle": "Daftarkan Bisnis Anda",
+      "breadcrumbLabel": "Daftarkan Bisnis",
+      "title": "Daftarkan Bisnis Kascing Anda",
+      "subtitle": "Lengkapi formulir berikut untuk mendaftarkan produsen kascing Anda ke direktori Vermicompost.id. Tim kami akan meninjau pendaftaran sebelum tampil secara publik.",
+      "errorLabel": "formulir pendaftaran"
+    },
+    "form": {
+      "steps": {
+        "data": "Data Bisnis",
+        "kontak": "Kontak",
+        "produk": "Produk & Kapasitas",
+        "foto": "Foto & Review"
+      },
+      "errors": {
+        "businessNameRequired": "Nama bisnis wajib diisi.",
+        "provinceRequired": "Pilih provinsi.",
+        "cityRequired": "Kota wajib diisi.",
+        "addressRequired": "Alamat wajib diisi.",
+        "contactRequired": "Isi minimal salah satu: WhatsApp atau telepon.",
+        "invalidPhone": "Format nomor telepon tidak valid.",
+        "invalidWhatsapp": "Format nomor WhatsApp tidak valid.",
+        "emailRequired": "Email wajib diisi.",
+        "invalidEmail": "Format email tidak valid.",
+        "productsRequired": "Pilih minimal satu jenis produk.",
+        "capacityRequired": "Pilih kapasitas produksi.",
+        "invalidFileType": "Format file tidak didukung. Unggah file gambar (JPG/PNG).",
+        "fileTooLarge": "Ukuran file maksimal {max}MB.",
+        "submitConnectionLost": "Koneksi terputus saat mengirim formulir.",
+        "submitGeneric": "Terjadi kesalahan saat mengirim formulir.",
+        "submitErrorSuffix": "{error} Data formulir Anda tidak hilang, silakan coba kirim ulang."
+      },
+      "success": {
+        "title": "Pendaftaran Berhasil Dikirim",
+        "message": "Terima kasih, {name}. Pendaftaran Anda berstatus <strong>menunggu review admin</strong>. Kami akan menghubungi Anda melalui email {email} setelah proses review selesai.",
+        "cta": "Kembali ke Direktori"
+      },
+      "fields": {
+        "businessName": "Nama Bisnis",
+        "province": "Provinsi",
+        "provincePlaceholder": "Pilih provinsi",
+        "city": "Kota/Kabupaten",
+        "address": "Alamat Lengkap",
+        "whatsapp": "Nomor WhatsApp",
+        "phone": "Nomor Telepon (opsional)",
+        "email": "Email",
+        "capacityPlaceholder": "Pilih kapasitas",
+        "commoditiesOptional": "Komoditas Dilayani (opsional)",
+        "certificationsOptional": "Sertifikasi (opsional)",
+        "photoUpload": "Unggah Foto Produk/Fasilitas (opsional)",
+        "fileSelected": "Terpilih: {filename}"
+      },
+      "summary": {
+        "title": "Ringkasan Pendaftaran",
+        "businessName": "Nama Bisnis",
+        "location": "Lokasi",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "products": "Produk",
+        "capacity": "Kapasitas"
+      },
+      "next": "Lanjut →",
+      "submit": "Kirim Pendaftaran"
+    }
   },
   "errors": {
     "pageFallback": {

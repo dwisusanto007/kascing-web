@@ -18,7 +18,8 @@
     "kembaliKeBeranda": "Back to Home",
     "sending": "Sending…",
     "resetFilter": "Reset filter",
-    "resetSemuaFilter": "Reset all filters"
+    "resetSemuaFilter": "Reset all filters",
+    "kembali": "← Back"
   },
   "forms": {
     "newsletter": {
@@ -129,7 +130,87 @@
       "noData": { "title": "No registered producers yet", "description": "Vermicompost producers will appear here soon." },
       "noResults": { "title": "No matching producers", "description": "Try changing your search keyword or filter combination." }
     },
-    "map": { "disclaimer": "Schematic map view (illustrative producer locations)" }
+    "map": { "disclaimer": "Schematic map view (illustrative producer locations)" },
+    "detail": {
+      "notFoundTitle": "Producer not found",
+      "capacityPrefix": "Capacity: {label}",
+      "aboutTitle": "About the Producer",
+      "productsTitle": "Product Types",
+      "commoditiesTitle": "Commodities Served",
+      "galleryTitle": "Gallery",
+      "noGalleryPhoto": "No gallery photos yet",
+      "relatedArticlePrompt": "Not sure about using vermicompost yet? Read the guide first.",
+      "contactTitle": "Contact the Producer",
+      "contactWhatsapp": "Chat via WhatsApp",
+      "contactPhone": "Call {phone}",
+      "contactEmail": "Email {email}",
+      "noContact": "Producer contact info isn't available yet.",
+      "relatedProducersTitle": "Other Producers in {province}"
+    },
+    "daftar": {
+      "metaTitle": "List Your Business",
+      "breadcrumbLabel": "List Your Business",
+      "title": "List Your Vermicompost Business",
+      "subtitle": "Complete the form below to list your vermicompost business in the Vermicompost.id directory. Our team will review your submission before it goes public.",
+      "errorLabel": "registration form"
+    },
+    "form": {
+      "steps": {
+        "data": "Business Info",
+        "kontak": "Contact",
+        "produk": "Product & Capacity",
+        "foto": "Photo & Review"
+      },
+      "errors": {
+        "businessNameRequired": "Business name is required.",
+        "provinceRequired": "Select a province.",
+        "cityRequired": "City is required.",
+        "addressRequired": "Address is required.",
+        "contactRequired": "Fill in at least one: WhatsApp or phone.",
+        "invalidPhone": "Invalid phone number format.",
+        "invalidWhatsapp": "Invalid WhatsApp number format.",
+        "emailRequired": "Email is required.",
+        "invalidEmail": "Invalid email format.",
+        "productsRequired": "Select at least one product type.",
+        "capacityRequired": "Select a production capacity.",
+        "invalidFileType": "Unsupported file format. Upload an image file (JPG/PNG).",
+        "fileTooLarge": "Maximum file size is {max}MB.",
+        "submitConnectionLost": "Connection lost while submitting the form.",
+        "submitGeneric": "Something went wrong while submitting the form.",
+        "submitErrorSuffix": "{error} Your form data wasn't lost — please try submitting again."
+      },
+      "success": {
+        "title": "Registration Submitted",
+        "message": "Thank you, {name}. Your registration is <strong>pending admin review</strong>. We'll contact you at {email} once the review is complete.",
+        "cta": "Back to Directory"
+      },
+      "fields": {
+        "businessName": "Business Name",
+        "province": "Province",
+        "provincePlaceholder": "Select a province",
+        "city": "City/Regency",
+        "address": "Full Address",
+        "whatsapp": "WhatsApp Number",
+        "phone": "Phone Number (optional)",
+        "email": "Email",
+        "capacityPlaceholder": "Select capacity",
+        "commoditiesOptional": "Commodities Served (optional)",
+        "certificationsOptional": "Certifications (optional)",
+        "photoUpload": "Upload Product/Facility Photo (optional)",
+        "fileSelected": "Selected: {filename}"
+      },
+      "summary": {
+        "title": "Registration Summary",
+        "businessName": "Business Name",
+        "location": "Location",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "products": "Products",
+        "capacity": "Capacity"
+      },
+      "next": "Next →",
+      "submit": "Submit Registration"
+    }
   },
   "errors": {
     "pageFallback": {
