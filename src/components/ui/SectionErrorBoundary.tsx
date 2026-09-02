@@ -1,7 +1,7 @@
 "use client";
 
 import { Component, Fragment, type ErrorInfo, type ReactNode } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const MAX_ATTEMPTS = 3;
 

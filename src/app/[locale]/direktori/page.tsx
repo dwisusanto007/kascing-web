@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { DirectoryExplorer } from "@/components/direktori/DirectoryExplorer";
 import { SectionErrorBoundary } from "@/components/ui/SectionErrorBoundary";
 import { SkeletonCardGrid } from "@/components/ui/Skeleton";

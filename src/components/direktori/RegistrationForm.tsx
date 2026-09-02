@@ -2,7 +2,7 @@
 
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { CERTIFICATIONS_LIST, COMMODITIES_LIST, PRODUCTS_LIST, PROVINCES } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 

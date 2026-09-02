@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { NAV_ITEMS } from "@/lib/nav";
 import { NewsletterForm } from "@/components/NewsletterForm";
 

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 /** Full-width solid-green CTA banner, join.com-style, closing out the homepage. */
 export function CtaBanner() {

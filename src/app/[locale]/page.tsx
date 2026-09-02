@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SectionErrorBoundary } from "@/components/ui/SectionErrorBoundary";
 import { SectionHeading } from "@/components/ui/SectionHeading";
