@@ -3,6 +3,36 @@
     "meta": {
       "title": "Vermicompost.id — Education & Producer Directory",
       "description": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, large plantations, and exporters alike."
+    },
+    "cariProdusenCta": "Find Producers",
+    "lihatSemua": "See all"
+  },
+  "home": {
+    "hero": {
+      "title": "Organic Vermicompost for Richer Farming",
+      "subtitle": "Vermicompost.id helps hobbyists, large plantations, and exporters understand the benefits of vermicompost and find trusted producers across Indonesia.",
+      "ctaPrimary": "Start Learning",
+      "ctaSecondary": "Find a Nearby Producer",
+      "imageLabel": "Vermicompost Hero"
+    },
+    "sections": {
+      "personas": { "title": "Get Started Based on Your Needs", "ariaLabel": "Get started based on your needs" },
+      "story": { "title": "Why Start with Vermicompost.id", "errorLabel": "Vermicompost.id value proposition" },
+      "features": { "title": "Explore Vermicompost.id", "subtitle": "Everything you need about vermicompost, in one place." },
+      "highlights": { "title": "Education & Latest News", "errorLabel": "latest articles & news" },
+      "caseStudies": { "errorLabel": "case study preview" },
+      "directory": { "title": "Producer Directory", "errorLabel": "producer directory preview" }
+    },
+    "personas": {
+      "hobiis": { "description": "Just starting out or into ornamental plants? Learn vermicompost basics for your home garden." },
+      "perkebunanBesar": { "description": "Boost large-scale land productivity with a data-driven vermicompost strategy." },
+      "eksportir": { "description": "Meet organic quality standards for export markets with certified vermicompost." },
+      "ctaLabel": "Learn more →"
+    },
+    "story": {
+      "directory": { "title": "Find already-verified producers", "description": "Our directory filters producers by location, production capacity, and certification — not just a contact list." },
+      "data": { "title": "Learn from case studies & real data", "description": "See real results from hobbyists, large plantations, and exporters, backed by figures and supporting research." },
+      "news": { "title": "Follow the latest vermicompost industry news", "description": "New research updates, press releases, and educational articles publish regularly, so your decisions are always based on current information." }
     }
   }
 }

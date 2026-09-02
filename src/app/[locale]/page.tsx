@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SectionErrorBoundary } from "@/components/ui/SectionErrorBoundary";
@@ -15,49 +16,49 @@ import { ScrollStorySection } from "@/components/home/ScrollStorySection";
 import { StickyCtaBar } from "@/components/home/StickyCtaBar";
 import { PERSONA_LABELS } from "@/lib/types";
 
-const STORY_POINTS = [
-  {
-    title: "Cari produsen yang sudah terverifikasi",
-    description:
-      "Direktori kami menyaring produsen berdasarkan lokasi, kapasitas produksi, dan sertifikasi — bukan sekadar daftar kontak.",
-    imageSrc: "/images/story-directory.jpg",
-  },
-  {
-    title: "Belajar dari studi kasus & data nyata",
-    description:
-      "Lihat hasil nyata dari hobiis, perkebunan besar, hingga eksportir, lengkap dengan angka dan riset pendukung.",
-    imageSrc: "/images/story-data-check.jpg",
-  },
-  {
-    title: "Ikuti kabar terbaru industri kascing",
-    description:
-      "Update riset, press release, dan artikel edukasi baru tayang rutin, supaya keputusanmu selalu berbasis info terkini.",
-    imageSrc: "/images/news-stack.jpg",
-  },
-];
+export default async function HomePage() {
+  const t = await getTranslations("home");
+  const tCommon = await getTranslations("common");
 
-const PERSONAS = [
-  {
-    persona: "hobiis" as const,
-    title: "Hobiis",
-    description: "Baru mulai atau hobi tanaman hias? Pelajari dasar-dasar kascing untuk halaman rumahmu.",
-    href: "/belajar-kascing?kategori=Pemula",
-  },
-  {
-    persona: "perkebunan-besar" as const,
-    title: "Perkebunan Besar",
-    description: "Tingkatkan produktivitas lahan luas dengan strategi kascing berbasis data.",
-    href: "/belajar-kascing?kategori=Perkebunan+Besar",
-  },
-  {
-    persona: "eksportir" as const,
-    title: "Eksportir",
-    description: "Penuhi standar mutu organik untuk pasar ekspor dengan kascing bersertifikat.",
-    href: "/belajar-kascing?kategori=Eksportir",
-  },
-];
+  const STORY_POINTS = [
+    {
+      title: t("story.directory.title"),
+      description: t("story.directory.description"),
+      imageSrc: "/images/story-directory.jpg",
+    },
+    {
+      title: t("story.data.title"),
+      description: t("story.data.description"),
+      imageSrc: "/images/story-data-check.jpg",
+    },
+    {
+      title: t("story.news.title"),
+      description: t("story.news.description"),
+      imageSrc: "/images/news-stack.jpg",
+    },
+  ];
 
-export default function HomePage() {
+  const PERSONAS = [
+    {
+      persona: "hobiis" as const,
+      title: "Hobiis",
+      description: t("personas.hobiis.description"),
+      href: "/belajar-kascing?kategori=Pemula",
+    },
+    {
+      persona: "perkebunan-besar" as const,
+      title: "Perkebunan Besar",
+      description: t("personas.perkebunanBesar.description"),
+      href: "/belajar-kascing?kategori=Perkebunan+Besar",
+    },
+    {
+      persona: "eksportir" as const,
+      title: "Eksportir",
+      description: t("personas.eksportir.description"),
+      href: "/belajar-kascing?kategori=Eksportir",
+    },
+  ];
+
   return (
     <div>
       <StickyCtaBar />
@@ -67,29 +68,26 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl">
-              Pupuk Organik Kascing untuk Pertanian yang Lebih Subur
+              {t("hero.title")}
             </h1>
-            <p className="mt-4 max-w-xl text-base text-stone-600">
-              Vermicompost.id membantu hobiis, perkebunan besar, hingga eksportir memahami manfaat kascing dan
-              menemukan produsen terpercaya di seluruh Indonesia.
-            </p>
+            <p className="mt-4 max-w-xl text-base text-stone-600">{t("hero.subtitle")}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/belajar-kascing"
                 className="rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800"
               >
-                Mulai Belajar
+                {t("hero.ctaPrimary")}
               </Link>
               <Link
                 href="/direktori"
                 className="rounded-full border border-emerald-700 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
               >
-                Cari Produsen Terdekat
+                {t("hero.ctaSecondary")}
               </Link>
             </div>
           </div>
           <PlaceholderImage
-            label="Hero Kascing"
+            label={t("hero.imageLabel")}
             imageSrc="/images/hero-kascing.jpg"
             className="h-64 w-full rounded-2xl object-cover sm:h-80 lg:h-96"
           />
@@ -100,8 +98,8 @@ export default function HomePage() {
 
       {/* 01 — Persona entry points */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="01" title="Mulai Sesuai Kebutuhanmu" />
-        <PersonaCarousel ariaLabel="Mulai sesuai kebutuhanmu">
+        <SectionHeading number="01" title={t("sections.personas.title")} />
+        <PersonaCarousel ariaLabel={t("sections.personas.ariaLabel")}>
           {PERSONAS.map((p) => (
             <Link
               key={p.persona}
@@ -113,7 +111,7 @@ export default function HomePage() {
               </span>
               <h3 className="mt-3 font-bold text-stone-900 group-hover:text-emerald-700">{p.title}</h3>
               <p className="mt-1 text-sm text-stone-500">{p.description}</p>
-              <span className="mt-auto pt-4 text-sm font-medium text-emerald-700">Pelajari lebih lanjut →</span>
+              <span className="mt-auto pt-4 text-sm font-medium text-emerald-700">{t("personas.ctaLabel")}</span>
             </Link>
           ))}
         </PersonaCarousel>
@@ -121,22 +119,26 @@ export default function HomePage() {
 
       {/* 02 — Scroll-driven value proposition story */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="02" title="Kenapa Mulai dari Vermicompost.id" />
-        <SectionErrorBoundary label="value proposition Vermicompost.id">
+        <SectionHeading number="02" title={t("sections.story.title")} />
+        <SectionErrorBoundary label={t("sections.story.errorLabel")}>
           <ScrollStorySection points={STORY_POINTS} />
         </SectionErrorBoundary>
       </section>
 
       {/* 03 — Feature/category grid */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="03" title="Jelajahi Vermicompost.id" subtitle="Semua yang kamu butuhkan seputar kascing, dalam satu tempat." />
+        <SectionHeading
+          number="03"
+          title={t("sections.features.title")}
+          subtitle={t("sections.features.subtitle")}
+        />
         <FeatureGrid />
       </section>
 
       {/* 04 — Highlight artikel & berita */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="04" title="Edukasi & Kabar Terbaru" />
-        <SectionErrorBoundary label="artikel & berita terbaru">
+        <SectionHeading number="04" title={t("sections.highlights.title")} />
+        <SectionErrorBoundary label={t("sections.highlights.errorLabel")}>
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <HighlightSection />
           </Suspense>
@@ -145,8 +147,8 @@ export default function HomePage() {
 
       {/* 05 — Studi kasus preview */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="05" title="Studi Kasus" action={{ label: "Lihat semua", href: "/studi-kasus" }} />
-        <SectionErrorBoundary label="preview studi kasus">
+        <SectionHeading number="05" title="Studi Kasus" action={{ label: tCommon("lihatSemua"), href: "/studi-kasus" }} />
+        <SectionErrorBoundary label={t("sections.caseStudies.errorLabel")}>
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <CaseStudyPreview />
           </Suspense>
@@ -155,8 +157,12 @@ export default function HomePage() {
 
       {/* 06 — Direktori preview */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="06" title="Direktori Produsen" action={{ label: "Lihat semua", href: "/direktori" }} />
-        <SectionErrorBoundary label="preview direktori produsen">
+        <SectionHeading
+          number="06"
+          title={t("sections.directory.title")}
+          action={{ label: tCommon("lihatSemua"), href: "/direktori" }}
+        />
+        <SectionErrorBoundary label={t("sections.directory.errorLabel")}>
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <DirectoryPreview />
           </Suspense>

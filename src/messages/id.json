@@ -3,6 +3,36 @@
     "meta": {
       "title": "Vermicompost.id — Edukasi & Direktori Produsen Kascing",
       "description": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir."
+    },
+    "cariProdusenCta": "Cari Produsen",
+    "lihatSemua": "Lihat semua"
+  },
+  "home": {
+    "hero": {
+      "title": "Pupuk Organik Kascing untuk Pertanian yang Lebih Subur",
+      "subtitle": "Vermicompost.id membantu hobiis, perkebunan besar, hingga eksportir memahami manfaat kascing dan menemukan produsen terpercaya di seluruh Indonesia.",
+      "ctaPrimary": "Mulai Belajar",
+      "ctaSecondary": "Cari Produsen Terdekat",
+      "imageLabel": "Hero Kascing"
+    },
+    "sections": {
+      "personas": { "title": "Mulai Sesuai Kebutuhanmu", "ariaLabel": "Mulai sesuai kebutuhanmu" },
+      "story": { "title": "Kenapa Mulai dari Vermicompost.id", "errorLabel": "value proposition Vermicompost.id" },
+      "features": { "title": "Jelajahi Vermicompost.id", "subtitle": "Semua yang kamu butuhkan seputar kascing, dalam satu tempat." },
+      "highlights": { "title": "Edukasi & Kabar Terbaru", "errorLabel": "artikel & berita terbaru" },
+      "caseStudies": { "errorLabel": "preview studi kasus" },
+      "directory": { "title": "Direktori Produsen", "errorLabel": "preview direktori produsen" }
+    },
+    "personas": {
+      "hobiis": { "description": "Baru mulai atau hobi tanaman hias? Pelajari dasar-dasar kascing untuk halaman rumahmu." },
+      "perkebunanBesar": { "description": "Tingkatkan produktivitas lahan luas dengan strategi kascing berbasis data." },
+      "eksportir": { "description": "Penuhi standar mutu organik untuk pasar ekspor dengan kascing bersertifikat." },
+      "ctaLabel": "Pelajari lebih lanjut →"
+    },
+    "story": {
+      "directory": { "title": "Cari produsen yang sudah terverifikasi", "description": "Direktori kami menyaring produsen berdasarkan lokasi, kapasitas produksi, dan sertifikasi — bukan sekadar daftar kontak." },
+      "data": { "title": "Belajar dari studi kasus & data nyata", "description": "Lihat hasil nyata dari hobiis, perkebunan besar, hingga eksportir, lengkap dengan angka dan riset pendukung." },
+      "news": { "title": "Ikuti kabar terbaru industri kascing", "description": "Update riset, press release, dan artikel edukasi baru tayang rutin, supaya keputusanmu selalu berbasis info terkini." }
     }
   }
 }
