@@ -197,7 +197,20 @@
     }
   },
   "studiKasus": {
-    "card": { "cta": "Read case study" }
+    "card": { "cta": "Read case study" },
+    "title": "Case Studies",
+    "subtitle": "Real vermicompost usage stories from hobbyists, large plantations, and exporters.",
+    "errorLabel": "case studies",
+    "errorMessage": "Failed to load case studies.",
+    "tabs": { "ariaLabel": "Persona segmentation" },
+    "empty": {
+      "noData": { "title": "No case studies for {persona} yet", "description": "Case studies for this segment will be available soon." }
+    },
+    "detail": {
+      "notFoundTitle": "Case study not found",
+      "relatedProducerCta": "View Related Producer →",
+      "relatedResearchCta": "Read Supporting Research →"
+    }
   },
   "direktori": {
     "card": { "cta": "View profile" },

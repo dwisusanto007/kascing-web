@@ -15,7 +15,10 @@ import { cn } from "@/lib/utils";
 const PERSONAS: Persona[] = ["hobiis", "perkebunan-besar", "eksportir"];
 
 export function CaseStudyExplorer() {
+  const t = useTranslations("studiKasus");
+  const tCard = useTranslations("studiKasus.card");
   const tPersona = useTranslations("taxonomy.persona");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
   const initialPersona = searchParams.get("persona") as Persona | null;
@@ -41,12 +44,12 @@ export function CaseStudyExplorer() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat studi kasus.");
+    throw new Error(t("errorMessage"));
   }
 
   return (
     <div>
-      <div role="tablist" aria-label="Segmentasi persona" className="flex flex-wrap gap-2">
+      <div role="tablist" aria-label={t("tabs.ariaLabel")} className="flex flex-wrap gap-2">
         {PERSONAS.map((p) => (
           <button
             key={p}
@@ -68,9 +71,9 @@ export function CaseStudyExplorer() {
         {filtered.length === 0 ? (
           <EmptyState
             variant="no-data"
-            title={`Belum ada studi kasus untuk ${tPersona(PERSONA_LABEL_KEYS[activePersona])}`}
-            description="Studi kasus untuk segmen ini akan segera hadir."
-            actionLabel="Muat ulang"
+            title={t("empty.noData.title", { persona: tPersona(PERSONA_LABEL_KEYS[activePersona]) })}
+            description={t("empty.noData.description")}
+            actionLabel={tCommon("muatUlang")}
             onAction={retry}
           />
         ) : (
@@ -84,7 +87,7 @@ export function CaseStudyExplorer() {
                 tag={tPersona(PERSONA_LABEL_KEYS[c.persona])}
                 hasImage={c.hasImage}
                 imageSrc={c.imageUrl}
-                cta="Baca studi kasus"
+                cta={tCard("cta")}
               />
             ))}
           </div>

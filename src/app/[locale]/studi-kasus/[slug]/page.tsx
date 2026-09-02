@@ -8,7 +8,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -16,9 +16,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const caseStudy = findCaseStudyBySlug(slug);
-  return { title: caseStudy ? caseStudy.title : "Studi kasus tidak ditemukan" };
+  if (caseStudy) return { title: caseStudy.title };
+  const t = await getTranslations({ locale, namespace: "studiKasus.detail" });
+  return { title: t("notFoundTitle") };
 }
 
 export default async function CaseStudyDetailPage({ params }: PageProps) {
@@ -29,10 +31,12 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
   const relatedProducer = caseStudy.relatedProducerSlug ? findProducerBySlug(caseStudy.relatedProducerSlug) : undefined;
   const relatedResearch = caseStudy.relatedResearchSlug ? findResearchBySlug(caseStudy.relatedResearchSlug) : undefined;
   const tPersona = await getTranslations("taxonomy.persona");
+  const t = await getTranslations("studiKasus.detail");
+  const tNav = await getTranslations("nav");
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumb items={[{ label: "Studi Kasus", href: "/studi-kasus" }, { label: caseStudy.title }]} />
+      <Breadcrumb items={[{ label: tNav("studiKasus.label"), href: "/studi-kasus" }, { label: caseStudy.title }]} />
 
       <PlaceholderImage label={caseStudy.title} hasImage={caseStudy.hasImage} imageSrc={caseStudy.imageUrl} className="h-56 w-full rounded-xl sm:h-72" />
 
@@ -84,7 +88,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               href={`/direktori/${relatedProducer.slug}`}
               className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
             >
-              Lihat Produsen Terkait →
+              {t("relatedProducerCta")}
             </Link>
           )}
           {relatedResearch && (
@@ -92,7 +96,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               href={`/riset/${relatedResearch.slug}`}
               className="rounded-full border border-emerald-700 px-5 py-2.5 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
             >
-              Baca Riset Pendukung →
+              {t("relatedResearchCta")}
             </Link>
           )}
         </div>

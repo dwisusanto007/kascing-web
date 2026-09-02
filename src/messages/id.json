@@ -197,7 +197,20 @@
     }
   },
   "studiKasus": {
-    "card": { "cta": "Baca studi kasus" }
+    "card": { "cta": "Baca studi kasus" },
+    "title": "Studi Kasus",
+    "subtitle": "Cerita nyata penggunaan kascing dari hobiis, perkebunan besar, hingga eksportir.",
+    "errorLabel": "studi kasus",
+    "errorMessage": "Gagal memuat studi kasus.",
+    "tabs": { "ariaLabel": "Segmentasi persona" },
+    "empty": {
+      "noData": { "title": "Belum ada studi kasus untuk {persona}", "description": "Studi kasus untuk segmen ini akan segera hadir." }
+    },
+    "detail": {
+      "notFoundTitle": "Studi kasus tidak ditemukan",
+      "relatedProducerCta": "Lihat Produsen Terkait →",
+      "relatedResearchCta": "Baca Riset Pendukung →"
+    }
   },
   "direktori": {
     "card": { "cta": "Lihat profil" },
