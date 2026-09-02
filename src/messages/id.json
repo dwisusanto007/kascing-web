@@ -19,7 +19,8 @@
     "sending": "Mengirim…",
     "resetFilter": "Reset filter",
     "resetSemuaFilter": "Reset semua filter",
-    "kembali": "← Kembali"
+    "kembali": "← Kembali",
+    "resetKategori": "Reset kategori"
   },
   "forms": {
     "newsletter": {
@@ -100,6 +101,27 @@
       "hobiis": "Hobiis",
       "perkebunanBesar": "Perkebunan Besar",
       "eksportir": "Eksportir"
+    }
+  },
+  "belajarKascing": {
+    "title": "Belajar Kascing",
+    "subtitle": "Panduan dan artikel edukasi seputar budidaya dan pemanfaatan kascing, dari pemula hingga kebutuhan ekspor.",
+    "errorLabel": "daftar artikel",
+    "errorMessage": "Gagal memuat daftar artikel.",
+    "filter": { "kategori": "Kategori" },
+    "empty": {
+      "noData": { "title": "Belum ada artikel", "description": "Konten edukasi Belajar Kascing akan segera hadir." },
+      "noResults": { "title": "Belum ada artikel di kategori ini", "description": "Coba pilih kategori lain." }
+    },
+    "card": { "meta": "{date} · {minutes} menit baca" },
+    "detail": {
+      "notFoundTitle": "Artikel tidak ditemukan",
+      "readingTime": "{minutes} menit baca",
+      "tocAriaLabel": "Daftar isi",
+      "tocTitle": "Daftar Isi",
+      "section": "Bagian {n}",
+      "readMoreCta": "Baca Lanjut →",
+      "relatedTitle": "Artikel Terkait"
     }
   },
   "studiKasus": {

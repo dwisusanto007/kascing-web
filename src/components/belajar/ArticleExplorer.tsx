@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { articles } from "@/lib/mock-data";
 import type { Article } from "@/lib/types";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
@@ -14,6 +15,8 @@ import { formatDate } from "@/lib/utils";
 const CATEGORIES = ["Pemula", "Perkebunan Besar", "Eksportir"];
 
 export function ArticleExplorer() {
+  const t = useTranslations("belajarKascing");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
   const initialCategory = searchParams.get("kategori");
@@ -38,16 +41,16 @@ export function ArticleExplorer() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat daftar artikel.");
+    throw new Error(t("errorMessage"));
   }
 
   if (!data || data.length === 0) {
     return (
       <EmptyState
         variant="no-data"
-        title="Belum ada artikel"
-        description="Konten edukasi Belajar Kascing akan segera hadir."
-        actionLabel="Muat ulang"
+        title={t("empty.noData.title")}
+        description={t("empty.noData.description")}
+        actionLabel={tCommon("muatUlang")}
         onAction={retry}
       />
     );
@@ -57,7 +60,7 @@ export function ArticleExplorer() {
     <div>
       <div className="flex flex-wrap items-center gap-2">
         <FilterDropdown
-          label="Kategori"
+          label={t("filter.kategori")}
           options={CATEGORIES.map((c) => ({ value: c, label: c }))}
           selected={categories}
           onChange={setCategories}
@@ -68,7 +71,7 @@ export function ArticleExplorer() {
             onClick={() => setCategories([])}
             className="rounded-lg px-3 py-2 text-sm font-medium text-stone-500 hover:bg-stone-100"
           >
-            Reset kategori
+            {tCommon("resetKategori")}
           </button>
         )}
       </div>
@@ -77,9 +80,9 @@ export function ArticleExplorer() {
         {filtered.length === 0 ? (
           <EmptyState
             variant="no-results"
-            title="Belum ada artikel di kategori ini"
-            description="Coba pilih kategori lain."
-            actionLabel="Reset kategori"
+            title={t("empty.noResults.title")}
+            description={t("empty.noResults.description")}
+            actionLabel={tCommon("resetKategori")}
             onAction={() => setCategories([])}
           />
         ) : (
@@ -90,10 +93,11 @@ export function ArticleExplorer() {
                 href={`/belajar-kascing/${a.slug}`}
                 title={a.title}
                 excerpt={a.excerpt}
-                meta={`${formatDate(a.publishedAt)} · ${a.readingTimeMin} menit baca`}
+                meta={t("card.meta", { date: formatDate(a.publishedAt), minutes: a.readingTimeMin })}
                 tag={a.category}
                 hasImage={a.hasImage}
                 imageSrc={a.imageUrl}
+                cta={tCommon("lihatDetail")}
               />
             ))}
           </div>

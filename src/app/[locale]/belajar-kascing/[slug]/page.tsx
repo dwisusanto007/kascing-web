@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { articles, findArticleBySlug } from "@/lib/mock-data";
@@ -8,7 +9,7 @@ import { Card } from "@/components/ui/Card";
 import { formatDate } from "@/lib/utils";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 const TOC_THRESHOLD = 3;
@@ -18,15 +19,21 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const article = findArticleBySlug(slug);
-  return { title: article ? article.title : "Artikel tidak ditemukan" };
+  if (article) return { title: article.title };
+  const t = await getTranslations({ locale, namespace: "belajarKascing.detail" });
+  return { title: t("notFoundTitle") };
 }
 
 export default async function ArticleDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const article = findArticleBySlug(slug);
   if (!article) notFound();
+
+  const t = await getTranslations("belajarKascing.detail");
+  const tNav = await getTranslations("nav");
+  const tCommon = await getTranslations("common");
 
   const related = article.relatedSlugs
     .map((s) => findArticleBySlug(s))
@@ -37,7 +44,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <Breadcrumb
         items={[
-          { label: "Belajar Kascing", href: "/belajar-kascing" },
+          { label: tNav("belajarKascing.label"), href: "/belajar-kascing" },
           { label: article.title },
         ]}
       />
@@ -49,17 +56,17 @@ export default async function ArticleDetailPage({ params }: PageProps) {
       </span>
       <h1 className="mt-3 text-2xl font-bold text-stone-900 sm:text-3xl">{article.title}</h1>
       <p className="mt-2 text-sm text-stone-500">
-        {formatDate(article.publishedAt)} · {article.readingTimeMin} menit baca
+        {formatDate(article.publishedAt)} · {t("readingTime", { minutes: article.readingTimeMin })}
       </p>
 
       {showToc && (
-        <nav aria-label="Daftar isi" className="mt-6 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">
-          <p className="mb-2 font-semibold text-stone-800">Daftar Isi</p>
+        <nav aria-label={t("tocAriaLabel")} className="mt-6 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">
+          <p className="mb-2 font-semibold text-stone-800">{t("tocTitle")}</p>
           <ol className="flex flex-col gap-1">
             {article.content.map((_, i) => (
               <li key={i}>
                 <a href={`#bagian-${i + 1}`} className="text-emerald-700 hover:underline">
-                  Bagian {i + 1}
+                  {t("section", { n: i + 1 })}
                 </a>
               </li>
             ))}
@@ -81,20 +88,20 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             href={`/belajar-kascing/${related[0].slug}`}
             className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
           >
-            Baca Lanjut →
+            {t("readMoreCta")}
           </Link>
         ) : null}
         <Link
           href="/direktori"
           className="rounded-full border border-emerald-700 px-5 py-2.5 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
         >
-          Cari Produsen
+          {tCommon("cariProdusenCta")}
         </Link>
       </div>
 
       {related.length > 0 && (
         <div className="mt-12">
-          <h2 className="mb-4 text-lg font-semibold text-stone-900">Artikel Terkait</h2>
+          <h2 className="mb-4 text-lg font-semibold text-stone-900">{t("relatedTitle")}</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {related.map((a) => (
               <Card
@@ -106,6 +113,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
                 tag={a.category}
                 hasImage={a.hasImage}
                 imageSrc={a.imageUrl}
+                cta={tCommon("lihatDetail")}
               />
             ))}
           </div>

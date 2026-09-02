@@ -19,7 +19,8 @@
     "sending": "Sending…",
     "resetFilter": "Reset filter",
     "resetSemuaFilter": "Reset all filters",
-    "kembali": "← Back"
+    "kembali": "← Back",
+    "resetKategori": "Reset category"
   },
   "forms": {
     "newsletter": {
@@ -100,6 +101,27 @@
       "hobiis": "Hobbyists",
       "perkebunanBesar": "Large Plantations",
       "eksportir": "Exporters"
+    }
+  },
+  "belajarKascing": {
+    "title": "Learn Vermicomposting",
+    "subtitle": "Educational guides and articles on vermicompost cultivation and use, from beginner to export needs.",
+    "errorLabel": "article list",
+    "errorMessage": "Failed to load the article list.",
+    "filter": { "kategori": "Category" },
+    "empty": {
+      "noData": { "title": "No articles yet", "description": "Belajar Kascing educational content is coming soon." },
+      "noResults": { "title": "No articles in this category yet", "description": "Try selecting a different category." }
+    },
+    "card": { "meta": "{date} · {minutes} min read" },
+    "detail": {
+      "notFoundTitle": "Article not found",
+      "readingTime": "{minutes} min read",
+      "tocAriaLabel": "Table of contents",
+      "tocTitle": "Table of Contents",
+      "section": "Section {n}",
+      "readMoreCta": "Read More →",
+      "relatedTitle": "Related Articles"
     }
   },
   "studiKasus": {
