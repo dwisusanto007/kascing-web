@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { researchPapers } from "@/lib/mock-data";
 import type { ResearchPaper } from "@/lib/types";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
@@ -13,6 +14,9 @@ import { EmptyState } from "@/components/ui/EmptyState";
 const DOC_TYPES = ["Jurnal", "White Paper", "Laporan"];
 
 export function ResearchExplorer() {
+  const t = useTranslations("riset");
+  const tDirektori = useTranslations("direktori");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
   const initialDocType = searchParams.get("jenis");
@@ -61,16 +65,16 @@ export function ResearchExplorer() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat daftar riset & publikasi.");
+    throw new Error(t("errorMessage"));
   }
 
   if (!data || data.length === 0) {
     return (
       <EmptyState
         variant="no-data"
-        title="Belum ada riset & publikasi"
-        description="Dokumen riset akan segera hadir di sini."
-        actionLabel="Muat ulang"
+        title={t("empty.noData.title")}
+        description={t("empty.noData.description")}
+        actionLabel={tCommon("muatUlang")}
         onAction={retry}
       />
     );
@@ -82,26 +86,26 @@ export function ResearchExplorer() {
     <div>
       <div className="flex flex-wrap items-center gap-2">
         <FilterDropdown
-          label="Komoditas"
+          label={tDirektori("filter.komoditas")}
           options={commodities.map((c) => ({ value: c, label: c }))}
           selected={selectedCommodities}
           onChange={setSelectedCommodities}
         />
         <FilterDropdown
-          label="Jenis Dokumen"
+          label={t("filter.jenisDokumen")}
           options={DOC_TYPES.map((d) => ({ value: d, label: d }))}
           selected={selectedDocTypes}
           onChange={setSelectedDocTypes}
         />
         <FilterDropdown
-          label="Tahun"
+          label={t("filter.tahun")}
           options={years.map((y) => ({ value: y, label: y }))}
           selected={selectedYears}
           onChange={setSelectedYears}
         />
         {hasActiveFilters && (
           <button type="button" onClick={resetAll} className="rounded-lg px-3 py-2 text-sm font-medium text-stone-500 hover:bg-stone-100">
-            Reset semua filter
+            {tCommon("resetSemuaFilter")}
           </button>
         )}
       </div>
@@ -110,9 +114,9 @@ export function ResearchExplorer() {
         {filtered.length === 0 ? (
           <EmptyState
             variant="no-results"
-            title="Tidak ada dokumen yang cocok"
-            description="Coba ubah kombinasi filter komoditas, jenis dokumen, atau tahun."
-            actionLabel="Reset filter"
+            title={t("empty.noResults.title")}
+            description={t("empty.noResults.description")}
+            actionLabel={tCommon("resetFilter")}
             onAction={resetAll}
           />
         ) : (
@@ -126,7 +130,7 @@ export function ResearchExplorer() {
                 meta={`${r.docType} · ${r.year}`}
                 tag={r.commodity}
                 hasImage={false}
-                cta="Baca detail"
+                cta={t("card.cta")}
               />
             ))}
           </div>

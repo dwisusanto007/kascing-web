@@ -141,6 +141,22 @@
       "newsletterPrompt": "Jangan lewatkan berita terbaru lainnya"
     }
   },
+  "riset": {
+    "title": "Riset & Publikasi",
+    "subtitle": "Jurnal, laporan, dan white paper seputar kascing dari berbagai komoditas.",
+    "errorLabel": "daftar riset & publikasi",
+    "errorMessage": "Gagal memuat daftar riset & publikasi.",
+    "proposeSection": {
+      "title": "Ajukan Publikasi",
+      "description": "Peneliti dapat mengajukan jurnal atau laporan untuk dipublikasikan melalui Vermicompost.id."
+    },
+    "filter": { "jenisDokumen": "Jenis Dokumen", "tahun": "Tahun" },
+    "empty": {
+      "noData": { "title": "Belum ada riset & publikasi", "description": "Dokumen riset akan segera hadir di sini." },
+      "noResults": { "title": "Tidak ada dokumen yang cocok", "description": "Coba ubah kombinasi filter komoditas, jenis dokumen, atau tahun." }
+    },
+    "card": { "cta": "Baca detail" }
+  },
   "studiKasus": {
     "card": { "cta": "Baca studi kasus" }
   },

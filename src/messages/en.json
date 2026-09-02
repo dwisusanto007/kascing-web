@@ -141,6 +141,22 @@
       "newsletterPrompt": "Don't miss other recent news"
     }
   },
+  "riset": {
+    "title": "Research & Publications",
+    "subtitle": "Journals, reports, and white papers on vermicompost across various commodities.",
+    "errorLabel": "research & publications list",
+    "errorMessage": "Failed to load the research & publications list.",
+    "proposeSection": {
+      "title": "Propose a Publication",
+      "description": "Researchers can propose a journal or report to be published via Vermicompost.id."
+    },
+    "filter": { "jenisDokumen": "Document Type", "tahun": "Year" },
+    "empty": {
+      "noData": { "title": "No research & publications yet", "description": "Research documents will be available here soon." },
+      "noResults": { "title": "No matching documents", "description": "Try changing the commodity, document type, or year filter combination." }
+    },
+    "card": { "cta": "Read details" }
+  },
   "studiKasus": {
     "card": { "cta": "Read case study" }
   },
