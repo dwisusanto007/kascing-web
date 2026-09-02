@@ -13,7 +13,9 @@
     "slowLoading": "Still loading, please wait…",
     "pagination": { "ariaLabel": "Page navigation", "previous": "← Previous", "next": "Next →" },
     "readMore": { "less": "Show less", "more": "Read more" },
-    "filter": { "noOptions": "No options", "resetLabel": "Reset {label}" }
+    "filter": { "noOptions": "No options", "resetLabel": "Reset {label}" },
+    "cobaLagi": "Try again",
+    "kembaliKeBeranda": "Back to Home"
   },
   "home": {
     "hero": {
@@ -91,6 +93,18 @@
   },
   "direktori": {
     "card": { "cta": "View profile" }
+  },
+  "errors": {
+    "pageFallback": {
+      "titleWithLabel": "Failed to load {label}",
+      "titleGeneric": "Something went wrong",
+      "description": "This page ran into a problem while loading. Please try again or go back to the homepage."
+    },
+    "sectionFallback": {
+      "titleWithLabel": "Failed to load {label}.",
+      "titleGeneric": "Something went wrong while loading this section.",
+      "exhausted": "Already retried several times and still failing. Please reload the page later."
+    }
   },
   "nav": {
     "belajarKascing": {

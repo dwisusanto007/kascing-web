@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 interface PageErrorFallbackProps {
@@ -17,6 +18,8 @@ const MAX_ATTEMPTS = 3;
  * forever; the counter resets whenever a new error instance is thrown.
  */
 export function PageErrorFallback({ error, reset, label }: PageErrorFallbackProps) {
+  const t = useTranslations("errors.pageFallback");
+  const tCommon = useTranslations("common");
   const [attempts, setAttempts] = useState(0);
 
   useEffect(() => {
@@ -31,11 +34,9 @@ export function PageErrorFallback({ error, reset, label }: PageErrorFallbackProp
         ⚠️
       </span>
       <h1 className="mt-4 text-xl font-semibold text-stone-900">
-        {label ? `Gagal memuat ${label}` : "Terjadi kesalahan"}
+        {label ? t("titleWithLabel", { label }) : t("titleGeneric")}
       </h1>
-      <p className="mt-2 text-sm text-stone-500">
-        Halaman ini mengalami masalah saat memuat. Silakan coba lagi atau kembali ke beranda.
-      </p>
+      <p className="mt-2 text-sm text-stone-500">{t("description")}</p>
       {process.env.NODE_ENV === "development" && (
         <p className="mt-2 max-w-full overflow-x-auto rounded bg-stone-100 p-2 text-left text-xs text-stone-500">
           {error.message}
@@ -51,13 +52,13 @@ export function PageErrorFallback({ error, reset, label }: PageErrorFallbackProp
           disabled={exhausted}
           className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-emerald-800 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          Coba lagi
+          {tCommon("cobaLagi")}
         </button>
         <Link
           href="/"
           className="rounded-full border border-stone-300 px-5 py-2.5 text-sm font-medium text-stone-700 transition hover:bg-stone-50"
         >
-          Kembali ke Beranda
+          {tCommon("kembaliKeBeranda")}
         </Link>
       </div>
     </div>

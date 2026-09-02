@@ -13,7 +13,9 @@
     "slowLoading": "Masih memuat, mohon tunggu sebentar…",
     "pagination": { "ariaLabel": "Navigasi halaman", "previous": "← Sebelumnya", "next": "Berikutnya →" },
     "readMore": { "less": "Tampilkan lebih sedikit", "more": "Baca selengkapnya" },
-    "filter": { "noOptions": "Tidak ada opsi", "resetLabel": "Reset {label}" }
+    "filter": { "noOptions": "Tidak ada opsi", "resetLabel": "Reset {label}" },
+    "cobaLagi": "Coba lagi",
+    "kembaliKeBeranda": "Kembali ke Beranda"
   },
   "home": {
     "hero": {
@@ -91,6 +93,18 @@
   },
   "direktori": {
     "card": { "cta": "Lihat profil" }
+  },
+  "errors": {
+    "pageFallback": {
+      "titleWithLabel": "Gagal memuat {label}",
+      "titleGeneric": "Terjadi kesalahan",
+      "description": "Halaman ini mengalami masalah saat memuat. Silakan coba lagi atau kembali ke beranda."
+    },
+    "sectionFallback": {
+      "titleWithLabel": "Gagal memuat {label}.",
+      "titleGeneric": "Terjadi kesalahan saat memuat bagian ini.",
+      "exhausted": "Sudah dicoba beberapa kali dan masih gagal. Silakan muat ulang halaman nanti."
+    }
   },
   "nav": {
     "belajarKascing": {
