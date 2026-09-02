@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/nav";
 import { cn } from "@/lib/utils";
+import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -87,7 +88,8 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden shrink-0 lg:block">
+        <div className="hidden shrink-0 items-center gap-3 lg:flex">
+          <LocaleSwitcher />
           <Link
             href="/direktori"
             className="rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
@@ -156,6 +158,9 @@ export function Header() {
               );
             })}
           </ul>
+          <div className="mt-3 flex justify-center">
+            <LocaleSwitcher />
+          </div>
           <Link
             href="/direktori"
             className="mt-3 block rounded-full bg-emerald-700 px-4 py-2 text-center text-sm font-semibold text-white"
