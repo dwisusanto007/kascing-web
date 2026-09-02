@@ -87,5 +87,68 @@
   },
   "direktori": {
     "card": { "cta": "View profile" }
+  },
+  "nav": {
+    "belajarKascing": {
+      "label": "Learn Vermicomposting",
+      "description": "Educational guides on growing & using vermicompost",
+      "children": {
+        "all": { "label": "All Articles", "description": "Basic to advanced guides" },
+        "beginner": { "label": "For Beginners", "description": "Start with vermicomposting basics" },
+        "largePlantation": { "label": "For Large Plantations", "description": "Vermicompost strategy for large land areas" },
+        "exporter": { "label": "For Exporters", "description": "Quality standards for export markets" }
+      }
+    },
+    "berita": {
+      "label": "News & Articles",
+      "description": "The latest on the vermicompost industry and research",
+      "children": {
+        "all": { "label": "All News", "description": "Latest news, most recent first" },
+        "industri": { "label": "Industry", "description": "Vermicompost industry developments" },
+        "risetUpdate": { "label": "Research Update", "description": "The latest research findings" },
+        "pressRelease": { "label": "Press Release", "description": "Official Vermicompost.id releases" }
+      }
+    },
+    "riset": {
+      "label": "Research & Publications",
+      "description": "Journals, reports, and white papers on vermicompost",
+      "children": {
+        "all": { "label": "All Research & Publications", "description": "Journals, reports, and white papers" },
+        "whitePaper": { "label": "Download White Paper", "description": "Concise documents ready to download" }
+      }
+    },
+    "direktori": {
+      "label": "Directory",
+      "description": "Find and list vermicompost producers",
+      "children": {
+        "cari": { "label": "Find Producers", "description": "Browse nearby vermicompost producers" },
+        "daftar": { "label": "List Your Business", "description": "Add your business to the directory" }
+      }
+    },
+    "studiKasus": {
+      "label": "Case Studies",
+      "description": "Real vermicompost stories by persona",
+      "children": {
+        "hobiis": { "label": "Hobbyists", "description": "Stories from ornamental plant lovers" },
+        "perkebunanBesar": { "label": "Large Plantations", "description": "Vermicompost's impact on large-land productivity" },
+        "eksportir": { "label": "Exporters", "description": "Meeting organic standards for export" }
+      }
+    },
+    "sumberDaya": {
+      "label": "Resources",
+      "description": "Calculator, downloads, and FAQ about vermicompost",
+      "children": {
+        "kalkulator": { "label": "Vermicompost Needs Calculator", "description": "Estimate your needs per land area" },
+        "unduhan": { "label": "Downloads", "description": "PDF guides & educational posters" },
+        "faq": { "label": "FAQ", "description": "Frequently asked questions" }
+      }
+    },
+    "tentang": { "label": "About", "description": "About Vermicompost.id" }
+  },
+  "header": {
+    "nav": { "ariaLabel": "Main navigation" },
+    "mobileMenuButton": { "ariaLabel": "Open navigation menu" },
+    "mobileNav": { "ariaLabel": "Mobile navigation" },
+    "mobileSubmenu": { "ariaLabel": "Open {label} submenu" }
   }
 }

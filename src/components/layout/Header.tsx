@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/nav";
@@ -13,11 +14,25 @@ function isActive(pathname: string, href: string) {
 }
 
 export function Header() {
+  const t = useTranslations("nav");
+  const tHeader = useTranslations("header");
+  const tCommon = useTranslations("common");
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [lastPathname, setLastPathname] = useState(pathname);
+
+  const navItems = NAV_ITEMS.map((item) => ({
+    ...item,
+    label: t(item.labelKey),
+    description: item.descriptionKey ? t(item.descriptionKey) : undefined,
+    children: item.children?.map((child) => ({
+      ...child,
+      label: t(child.labelKey),
+      description: child.descriptionKey ? t(child.descriptionKey) : undefined,
+    })),
+  }));
 
   // Close menus on route change — adjusted synchronously during render
   // (React's recommended pattern for resetting state when an input changes)
@@ -36,8 +51,8 @@ export function Header() {
           <span className="text-lg">Vermicompost.id</span>
         </Link>
 
-        <nav aria-label="Navigasi utama" className="hidden flex-1 items-center justify-center gap-1 lg:flex">
-          {NAV_ITEMS.map((item) => {
+        <nav aria-label={tHeader("nav.ariaLabel")} className="hidden flex-1 items-center justify-center gap-1 lg:flex">
+          {navItems.map((item) => {
             const active = isActive(pathname, item.href);
             const hasChildren = !!item.children?.length;
             return (
@@ -94,7 +109,7 @@ export function Header() {
             href="/direktori"
             className="rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
           >
-            Cari Produsen
+            {tCommon("cariProdusenCta")}
           </Link>
         </div>
 
@@ -102,7 +117,7 @@ export function Header() {
           type="button"
           onClick={() => setMobileOpen((o) => !o)}
           aria-expanded={mobileOpen}
-          aria-label="Buka menu navigasi"
+          aria-label={tHeader("mobileMenuButton.ariaLabel")}
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-stone-300 text-stone-600 lg:hidden"
         >
           <span aria-hidden>{mobileOpen ? "✕" : "☰"}</span>
@@ -110,9 +125,9 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <nav aria-label="Navigasi mobile" className="border-t border-stone-200 bg-white px-4 py-3 lg:hidden">
+        <nav aria-label={tHeader("mobileNav.ariaLabel")} className="border-t border-stone-200 bg-white px-4 py-3 lg:hidden">
           <ul className="flex flex-col gap-1">
-            {NAV_ITEMS.map((item) => {
+            {navItems.map((item) => {
               const active = isActive(pathname, item.href);
               const hasChildren = !!item.children?.length;
               const expanded = mobileExpanded === item.label;
@@ -132,7 +147,7 @@ export function Header() {
                     {hasChildren && (
                       <button
                         type="button"
-                        aria-label={`Buka submenu ${item.label}`}
+                        aria-label={tHeader("mobileSubmenu.ariaLabel", { label: item.label })}
                         aria-expanded={expanded}
                         onClick={() => setMobileExpanded(expanded ? null : item.label)}
                         className="px-2 py-2 text-stone-400"
@@ -165,7 +180,7 @@ export function Header() {
             href="/direktori"
             className="mt-3 block rounded-full bg-emerald-700 px-4 py-2 text-center text-sm font-semibold text-white"
           >
-            Cari Produsen
+            {tCommon("cariProdusenCta")}
           </Link>
         </nav>
       )}

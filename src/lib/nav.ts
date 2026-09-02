@@ -1,88 +1,80 @@
 export interface NavChild {
-  label: string;
+  labelKey: string;
   href: string;
-  description?: string;
+  descriptionKey?: string;
 }
 
 export interface NavItem {
-  label: string;
+  labelKey: string;
   href: string;
-  description?: string;
+  descriptionKey?: string;
   children?: NavChild[];
 }
 
 export const NAV_ITEMS: NavItem[] = [
   {
-    label: "Belajar Kascing",
+    labelKey: "belajarKascing.label",
     href: "/belajar-kascing",
-    description: "Panduan edukasi seputar budidaya & pemanfaatan kascing",
+    descriptionKey: "belajarKascing.description",
     children: [
-      { label: "Semua Artikel", href: "/belajar-kascing", description: "Panduan dasar hingga lanjutan" },
-      { label: "Untuk Pemula", href: "/belajar-kascing?kategori=Pemula", description: "Mulai dari dasar budidaya kascing" },
-      {
-        label: "Untuk Perkebunan Besar",
-        href: "/belajar-kascing?kategori=Perkebunan+Besar",
-        description: "Strategi kascing untuk lahan luas",
-      },
-      { label: "Untuk Eksportir", href: "/belajar-kascing?kategori=Eksportir", description: "Standar mutu untuk pasar ekspor" },
+      { labelKey: "belajarKascing.children.all.label", href: "/belajar-kascing", descriptionKey: "belajarKascing.children.all.description" },
+      { labelKey: "belajarKascing.children.beginner.label", href: "/belajar-kascing?kategori=Pemula", descriptionKey: "belajarKascing.children.beginner.description" },
+      { labelKey: "belajarKascing.children.largePlantation.label", href: "/belajar-kascing?kategori=Perkebunan+Besar", descriptionKey: "belajarKascing.children.largePlantation.description" },
+      { labelKey: "belajarKascing.children.exporter.label", href: "/belajar-kascing?kategori=Eksportir", descriptionKey: "belajarKascing.children.exporter.description" },
     ],
   },
   {
-    label: "Berita & Artikel",
+    labelKey: "berita.label",
     href: "/berita",
-    description: "Kabar terbaru seputar industri dan riset kascing",
+    descriptionKey: "berita.description",
     children: [
-      { label: "Semua Berita", href: "/berita", description: "Kabar terbaru, terurut dari yang terkini" },
-      { label: "Industri", href: "/berita?kategori=Industri", description: "Perkembangan industri kascing" },
-      { label: "Riset Update", href: "/berita?kategori=Riset+Update", description: "Temuan riset terbaru" },
-      { label: "Press Release", href: "/berita?kategori=Press+Release", description: "Rilis resmi Vermicompost.id" },
+      { labelKey: "berita.children.all.label", href: "/berita", descriptionKey: "berita.children.all.description" },
+      { labelKey: "berita.children.industri.label", href: "/berita?kategori=Industri", descriptionKey: "berita.children.industri.description" },
+      { labelKey: "berita.children.risetUpdate.label", href: "/berita?kategori=Riset+Update", descriptionKey: "berita.children.risetUpdate.description" },
+      { labelKey: "berita.children.pressRelease.label", href: "/berita?kategori=Press+Release", descriptionKey: "berita.children.pressRelease.description" },
     ],
   },
   {
-    label: "Riset & Publikasi",
+    labelKey: "riset.label",
     href: "/riset",
-    description: "Jurnal, laporan, dan white paper seputar kascing",
+    descriptionKey: "riset.description",
     children: [
-      { label: "Semua Riset & Publikasi", href: "/riset", description: "Jurnal, laporan, dan white paper" },
-      { label: "Unduh White Paper", href: "/riset?jenis=White+Paper", description: "Dokumen ringkas siap unduh" },
+      { labelKey: "riset.children.all.label", href: "/riset", descriptionKey: "riset.children.all.description" },
+      { labelKey: "riset.children.whitePaper.label", href: "/riset?jenis=White+Paper", descriptionKey: "riset.children.whitePaper.description" },
     ],
   },
   {
-    label: "Direktori",
+    labelKey: "direktori.label",
     href: "/direktori",
-    description: "Temukan dan daftarkan produsen kascing",
+    descriptionKey: "direktori.description",
     children: [
-      { label: "Cari Produsen", href: "/direktori", description: "Jelajahi produsen kascing terdekat" },
-      { label: "Daftarkan Bisnis Anda", href: "/direktori/daftar", description: "Masukkan bisnis Anda ke direktori" },
+      { labelKey: "direktori.children.cari.label", href: "/direktori", descriptionKey: "direktori.children.cari.description" },
+      { labelKey: "direktori.children.daftar.label", href: "/direktori/daftar", descriptionKey: "direktori.children.daftar.description" },
     ],
   },
   {
-    label: "Studi Kasus",
+    labelKey: "studiKasus.label",
     href: "/studi-kasus",
-    description: "Cerita nyata penggunaan kascing per persona",
+    descriptionKey: "studiKasus.description",
     children: [
-      { label: "Hobiis", href: "/studi-kasus?persona=hobiis", description: "Cerita dari pecinta tanaman hias" },
-      {
-        label: "Perkebunan Besar",
-        href: "/studi-kasus?persona=perkebunan-besar",
-        description: "Dampak kascing pada produktivitas lahan luas",
-      },
-      { label: "Eksportir", href: "/studi-kasus?persona=eksportir", description: "Memenuhi standar organik untuk ekspor" },
+      { labelKey: "studiKasus.children.hobiis.label", href: "/studi-kasus?persona=hobiis", descriptionKey: "studiKasus.children.hobiis.description" },
+      { labelKey: "studiKasus.children.perkebunanBesar.label", href: "/studi-kasus?persona=perkebunan-besar", descriptionKey: "studiKasus.children.perkebunanBesar.description" },
+      { labelKey: "studiKasus.children.eksportir.label", href: "/studi-kasus?persona=eksportir", descriptionKey: "studiKasus.children.eksportir.description" },
     ],
   },
   {
-    label: "Sumber Daya",
+    labelKey: "sumberDaya.label",
     href: "/sumber-daya",
-    description: "Kalkulator, unduhan, dan FAQ seputar kascing",
+    descriptionKey: "sumberDaya.description",
     children: [
-      { label: "Kalkulator Kebutuhan Kascing", href: "/sumber-daya#kalkulator", description: "Estimasi kebutuhan per luas lahan" },
-      { label: "Unduhan", href: "/sumber-daya#unduhan", description: "Panduan PDF & poster edukasi" },
-      { label: "FAQ", href: "/sumber-daya#faq", description: "Pertanyaan yang sering diajukan" },
+      { labelKey: "sumberDaya.children.kalkulator.label", href: "/sumber-daya#kalkulator", descriptionKey: "sumberDaya.children.kalkulator.description" },
+      { labelKey: "sumberDaya.children.unduhan.label", href: "/sumber-daya#unduhan", descriptionKey: "sumberDaya.children.unduhan.description" },
+      { labelKey: "sumberDaya.children.faq.label", href: "/sumber-daya#faq", descriptionKey: "sumberDaya.children.faq.description" },
     ],
   },
   {
-    label: "Tentang",
+    labelKey: "tentang.label",
     href: "/tentang",
-    description: "Tentang Vermicompost.id",
+    descriptionKey: "tentang.description",
   },
 ];

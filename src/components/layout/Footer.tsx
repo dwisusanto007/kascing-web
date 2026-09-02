@@ -1,8 +1,10 @@
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { NAV_ITEMS } from "@/lib/nav";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("nav");
   return (
     <footer className="mt-16 border-t border-stone-200 bg-stone-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -24,9 +26,9 @@ export function Footer() {
             <p className="mb-3 text-sm font-semibold text-stone-800">Produk & Section</p>
             <ul className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
-                <li key={item.label}>
+                <li key={item.labelKey}>
                   <Link href={item.href} className="text-sm text-stone-500 hover:text-emerald-700">
-                    {item.label}
+                    {t(item.labelKey)}
                   </Link>
                 </li>
               ))}

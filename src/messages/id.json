@@ -87,5 +87,68 @@
   },
   "direktori": {
     "card": { "cta": "Lihat profil" }
+  },
+  "nav": {
+    "belajarKascing": {
+      "label": "Belajar Kascing",
+      "description": "Panduan edukasi seputar budidaya & pemanfaatan kascing",
+      "children": {
+        "all": { "label": "Semua Artikel", "description": "Panduan dasar hingga lanjutan" },
+        "beginner": { "label": "Untuk Pemula", "description": "Mulai dari dasar budidaya kascing" },
+        "largePlantation": { "label": "Untuk Perkebunan Besar", "description": "Strategi kascing untuk lahan luas" },
+        "exporter": { "label": "Untuk Eksportir", "description": "Standar mutu untuk pasar ekspor" }
+      }
+    },
+    "berita": {
+      "label": "Berita & Artikel",
+      "description": "Kabar terbaru seputar industri dan riset kascing",
+      "children": {
+        "all": { "label": "Semua Berita", "description": "Kabar terbaru, terurut dari yang terkini" },
+        "industri": { "label": "Industri", "description": "Perkembangan industri kascing" },
+        "risetUpdate": { "label": "Riset Update", "description": "Temuan riset terbaru" },
+        "pressRelease": { "label": "Press Release", "description": "Rilis resmi Vermicompost.id" }
+      }
+    },
+    "riset": {
+      "label": "Riset & Publikasi",
+      "description": "Jurnal, laporan, dan white paper seputar kascing",
+      "children": {
+        "all": { "label": "Semua Riset & Publikasi", "description": "Jurnal, laporan, dan white paper" },
+        "whitePaper": { "label": "Unduh White Paper", "description": "Dokumen ringkas siap unduh" }
+      }
+    },
+    "direktori": {
+      "label": "Direktori",
+      "description": "Temukan dan daftarkan produsen kascing",
+      "children": {
+        "cari": { "label": "Cari Produsen", "description": "Jelajahi produsen kascing terdekat" },
+        "daftar": { "label": "Daftarkan Bisnis Anda", "description": "Masukkan bisnis Anda ke direktori" }
+      }
+    },
+    "studiKasus": {
+      "label": "Studi Kasus",
+      "description": "Cerita nyata penggunaan kascing per persona",
+      "children": {
+        "hobiis": { "label": "Hobiis", "description": "Cerita dari pecinta tanaman hias" },
+        "perkebunanBesar": { "label": "Perkebunan Besar", "description": "Dampak kascing pada produktivitas lahan luas" },
+        "eksportir": { "label": "Eksportir", "description": "Memenuhi standar organik untuk ekspor" }
+      }
+    },
+    "sumberDaya": {
+      "label": "Sumber Daya",
+      "description": "Kalkulator, unduhan, dan FAQ seputar kascing",
+      "children": {
+        "kalkulator": { "label": "Kalkulator Kebutuhan Kascing", "description": "Estimasi kebutuhan per luas lahan" },
+        "unduhan": { "label": "Unduhan", "description": "Panduan PDF & poster edukasi" },
+        "faq": { "label": "FAQ", "description": "Pertanyaan yang sering diajukan" }
+      }
+    },
+    "tentang": { "label": "Tentang", "description": "Tentang Vermicompost.id" }
+  },
+  "header": {
+    "nav": { "ariaLabel": "Navigasi utama" },
+    "mobileMenuButton": { "ariaLabel": "Buka menu navigasi" },
+    "mobileNav": { "ariaLabel": "Navigasi mobile" },
+    "mobileSubmenu": { "ariaLabel": "Buka submenu {label}" }
   }
 }
