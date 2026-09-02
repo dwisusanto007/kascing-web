@@ -15,7 +15,18 @@
     "readMore": { "less": "Show less", "more": "Read more" },
     "filter": { "noOptions": "No options", "resetLabel": "Reset {label}" },
     "cobaLagi": "Try again",
-    "kembaliKeBeranda": "Back to Home"
+    "kembaliKeBeranda": "Back to Home",
+    "sending": "Sending…"
+  },
+  "forms": {
+    "newsletter": {
+      "success": "Thank you! Your email is now subscribed to our newsletter.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Your email address",
+      "invalidEmail": "Enter a valid email address.",
+      "duplicateEmail": "This email is already subscribed to our newsletter.",
+      "submit": "Subscribe"
+    }
   },
   "home": {
     "hero": {

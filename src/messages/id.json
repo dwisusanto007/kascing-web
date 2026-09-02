@@ -15,7 +15,18 @@
     "readMore": { "less": "Tampilkan lebih sedikit", "more": "Baca selengkapnya" },
     "filter": { "noOptions": "Tidak ada opsi", "resetLabel": "Reset {label}" },
     "cobaLagi": "Coba lagi",
-    "kembaliKeBeranda": "Kembali ke Beranda"
+    "kembaliKeBeranda": "Kembali ke Beranda",
+    "sending": "Mengirim…"
+  },
+  "forms": {
+    "newsletter": {
+      "success": "Terima kasih! Email kamu sudah terdaftar untuk newsletter.",
+      "emailLabel": "Alamat email",
+      "emailPlaceholder": "Alamat email kamu",
+      "invalidEmail": "Masukkan alamat email yang valid.",
+      "duplicateEmail": "Email ini sudah terdaftar di newsletter kami.",
+      "submit": "Berlangganan"
+    }
   },
   "home": {
     "hero": {
