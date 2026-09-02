@@ -1,14 +1,16 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { caseStudies } from "@/lib/mock-data";
-import { PERSONA_LABELS } from "@/lib/types";
+import { PERSONA_LABEL_KEYS } from "@/lib/types";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
 import { Card } from "@/components/ui/Card";
 import { SkeletonCardGrid, SlowLoadingNotice } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 
 export function CaseStudyPreview() {
+  const tPersona = useTranslations("taxonomy.persona");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
 
@@ -50,7 +52,7 @@ export function CaseStudyPreview() {
           href={`/studi-kasus/${c.slug}`}
           title={c.title}
           excerpt={c.summary}
-          tag={PERSONA_LABELS[c.persona]}
+          tag={tPersona(PERSONA_LABEL_KEYS[c.persona])}
           hasImage={c.hasImage}
           imageSrc={c.imageUrl}
           cta="Baca studi kasus"

@@ -14,11 +14,12 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { PersonaCarousel } from "@/components/home/PersonaCarousel";
 import { ScrollStorySection } from "@/components/home/ScrollStorySection";
 import { StickyCtaBar } from "@/components/home/StickyCtaBar";
-import { PERSONA_LABELS } from "@/lib/types";
+import { PERSONA_LABEL_KEYS } from "@/lib/types";
 
 export default async function HomePage() {
   const t = await getTranslations("home");
   const tCommon = await getTranslations("common");
+  const tPersona = await getTranslations("taxonomy.persona");
 
   const STORY_POINTS = [
     {
@@ -41,19 +42,19 @@ export default async function HomePage() {
   const PERSONAS = [
     {
       persona: "hobiis" as const,
-      title: "Hobiis",
+      title: tPersona(PERSONA_LABEL_KEYS.hobiis),
       description: t("personas.hobiis.description"),
       href: "/belajar-kascing?kategori=Pemula",
     },
     {
       persona: "perkebunan-besar" as const,
-      title: "Perkebunan Besar",
+      title: tPersona(PERSONA_LABEL_KEYS["perkebunan-besar"]),
       description: t("personas.perkebunanBesar.description"),
       href: "/belajar-kascing?kategori=Perkebunan+Besar",
     },
     {
       persona: "eksportir" as const,
-      title: "Eksportir",
+      title: tPersona(PERSONA_LABEL_KEYS.eksportir),
       description: t("personas.eksportir.description"),
       href: "/belajar-kascing?kategori=Eksportir",
     },
@@ -107,7 +108,7 @@ export default async function HomePage() {
               className="group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md"
             >
               <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
-                {PERSONA_LABELS[p.persona]}
+                {tPersona(PERSONA_LABEL_KEYS[p.persona])}
               </span>
               <h3 className="mt-3 font-bold text-stone-900 group-hover:text-emerald-700">{p.title}</h3>
               <p className="mt-1 text-sm text-stone-500">{p.description}</p>

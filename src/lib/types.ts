@@ -1,9 +1,10 @@
 export type Persona = "hobiis" | "perkebunan-besar" | "eksportir";
 
-export const PERSONA_LABELS: Record<Persona, string> = {
-  hobiis: "Hobiis",
-  "perkebunan-besar": "Perkebunan Besar",
-  eksportir: "Eksportir",
+/** Maps a Persona id to its message key under the `taxonomy.persona` namespace. */
+export const PERSONA_LABEL_KEYS: Record<Persona, string> = {
+  hobiis: "hobiis",
+  "perkebunan-besar": "perkebunanBesar",
+  eksportir: "eksportir",
 };
 
 export interface Producer {

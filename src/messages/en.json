@@ -56,5 +56,12 @@
       "description": "Find a trusted producer near you, or list your vermicompost business in our directory."
     },
     "stickyCta": { "message": "Ready to find a nearby vermicompost producer?" }
+  },
+  "taxonomy": {
+    "persona": {
+      "hobiis": "Hobbyists",
+      "perkebunanBesar": "Large Plantations",
+      "eksportir": "Exporters"
+    }
   }
 }

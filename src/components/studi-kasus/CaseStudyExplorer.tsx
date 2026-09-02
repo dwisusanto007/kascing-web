@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { caseStudies } from "@/lib/mock-data";
 import type { CaseStudy, Persona } from "@/lib/types";
-import { PERSONA_LABELS } from "@/lib/types";
+import { PERSONA_LABEL_KEYS } from "@/lib/types";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
 import { Card } from "@/components/ui/Card";
 import { SkeletonCardGrid, SlowLoadingNotice } from "@/components/ui/Skeleton";
@@ -14,6 +15,7 @@ import { cn } from "@/lib/utils";
 const PERSONAS: Persona[] = ["hobiis", "perkebunan-besar", "eksportir"];
 
 export function CaseStudyExplorer() {
+  const tPersona = useTranslations("taxonomy.persona");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
   const initialPersona = searchParams.get("persona") as Persona | null;
@@ -57,7 +59,7 @@ export function CaseStudyExplorer() {
               activePersona === p ? "bg-emerald-700 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200",
             )}
           >
-            {PERSONA_LABELS[p]}
+            {tPersona(PERSONA_LABEL_KEYS[p])}
           </button>
         ))}
       </div>
@@ -66,7 +68,7 @@ export function CaseStudyExplorer() {
         {filtered.length === 0 ? (
           <EmptyState
             variant="no-data"
-            title={`Belum ada studi kasus untuk ${PERSONA_LABELS[activePersona]}`}
+            title={`Belum ada studi kasus untuk ${tPersona(PERSONA_LABEL_KEYS[activePersona])}`}
             description="Studi kasus untuk segmen ini akan segera hadir."
             actionLabel="Muat ulang"
             onAction={retry}
@@ -79,7 +81,7 @@ export function CaseStudyExplorer() {
                 href={`/studi-kasus/${c.slug}`}
                 title={c.title}
                 excerpt={c.summary}
-                tag={PERSONA_LABELS[c.persona]}
+                tag={tPersona(PERSONA_LABEL_KEYS[c.persona])}
                 hasImage={c.hasImage}
                 imageSrc={c.imageUrl}
                 cta="Baca studi kasus"

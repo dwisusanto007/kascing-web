@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { caseStudies, findCaseStudyBySlug, findProducerBySlug, findResearchBySlug } from "@/lib/mock-data";
-import { PERSONA_LABELS } from "@/lib/types";
+import { PERSONA_LABEL_KEYS } from "@/lib/types";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
@@ -27,6 +28,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
   const relatedProducer = caseStudy.relatedProducerSlug ? findProducerBySlug(caseStudy.relatedProducerSlug) : undefined;
   const relatedResearch = caseStudy.relatedResearchSlug ? findResearchBySlug(caseStudy.relatedResearchSlug) : undefined;
+  const tPersona = await getTranslations("taxonomy.persona");
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
@@ -35,7 +37,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
       <PlaceholderImage label={caseStudy.title} hasImage={caseStudy.hasImage} imageSrc={caseStudy.imageUrl} className="h-56 w-full rounded-xl sm:h-72" />
 
       <span className="mt-6 inline-block rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
-        {PERSONA_LABELS[caseStudy.persona]}
+        {tPersona(PERSONA_LABEL_KEYS[caseStudy.persona])}
       </span>
       <h1 className="mt-3 text-2xl font-bold text-stone-900 sm:text-3xl">{caseStudy.title}</h1>
       <p className="mt-2 text-base text-stone-600">{caseStudy.summary}</p>

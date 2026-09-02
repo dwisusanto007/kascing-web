@@ -56,5 +56,12 @@
       "description": "Temukan produsen terpercaya di sekitar Anda, atau daftarkan bisnis kascing Anda ke direktori kami."
     },
     "stickyCta": { "message": "Siap cari produsen kascing terdekat?" }
+  },
+  "taxonomy": {
+    "persona": {
+      "hobiis": "Hobiis",
+      "perkebunanBesar": "Perkebunan Besar",
+      "eksportir": "Eksportir"
+    }
   }
 }
