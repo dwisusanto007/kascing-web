@@ -65,7 +65,10 @@ export function Header() {
                   )}
                 </Link>
                 {hasChildren && openMenu === item.label && (
-                  <div className="absolute left-0 top-full w-64 rounded-xl border border-stone-200 bg-white p-2 shadow-lg">
+                  <div className="absolute left-0 top-full w-72 rounded-xl border border-stone-200 bg-white p-2 shadow-lg">
+                    {item.description && (
+                      <p className="border-b border-stone-100 px-3 pb-2 pt-1 text-xs text-stone-400">{item.description}</p>
+                    )}
                     {item.children!.map((child) => (
                       <Link
                         key={child.label}
