@@ -124,6 +124,23 @@
       "relatedTitle": "Artikel Terkait"
     }
   },
+  "berita": {
+    "title": "Berita & Artikel",
+    "subtitle": "Kabar terbaru seputar industri kascing, update riset, dan press release, terurut dari yang terbaru.",
+    "errorLabel": "daftar berita",
+    "errorMessage": "Gagal memuat daftar berita.",
+    "empty": {
+      "noData": { "title": "Belum ada berita", "description": "Berita dan artikel terbaru akan segera tampil di sini." },
+      "noResults": { "title": "Belum ada berita di kategori ini" }
+    },
+    "detail": {
+      "notFoundTitle": "Berita tidak ditemukan",
+      "sourcePrefix": "Sumber: {source}",
+      "relatedArticlePrompt": "Ingin memahami dasar-dasarnya?",
+      "readGuidePrefix": "Baca panduan dasarnya: {title} →",
+      "newsletterPrompt": "Jangan lewatkan berita terbaru lainnya"
+    }
+  },
   "studiKasus": {
     "card": { "cta": "Baca studi kasus" }
   },

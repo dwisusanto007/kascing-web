@@ -124,6 +124,23 @@
       "relatedTitle": "Related Articles"
     }
   },
+  "berita": {
+    "title": "News & Articles",
+    "subtitle": "The latest on the vermicompost industry, research updates, and press releases, sorted newest first.",
+    "errorLabel": "news list",
+    "errorMessage": "Failed to load the news list.",
+    "empty": {
+      "noData": { "title": "No news yet", "description": "The latest news and articles will appear here soon." },
+      "noResults": { "title": "No news in this category yet" }
+    },
+    "detail": {
+      "notFoundTitle": "News not found",
+      "sourcePrefix": "Source: {source}",
+      "relatedArticlePrompt": "Want to understand the basics?",
+      "readGuidePrefix": "Read the basic guide: {title} →",
+      "newsletterPrompt": "Don't miss other recent news"
+    }
+  },
   "studiKasus": {
     "card": { "cta": "Read case study" }
   },

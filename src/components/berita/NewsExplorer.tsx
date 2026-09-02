@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { newsItems } from "@/lib/mock-data";
 import type { NewsItem } from "@/lib/types";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
@@ -14,6 +15,9 @@ import { formatDate } from "@/lib/utils";
 const CATEGORIES = ["Industri", "Riset Update", "Press Release"];
 
 export function NewsExplorer() {
+  const t = useTranslations("berita");
+  const tCommon = useTranslations("common");
+  const tFilter = useTranslations("belajarKascing.filter");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
   const initialCategory = searchParams.get("kategori");
@@ -44,16 +48,16 @@ export function NewsExplorer() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat daftar berita.");
+    throw new Error(t("errorMessage"));
   }
 
   if (!data || data.length === 0) {
     return (
       <EmptyState
         variant="no-data"
-        title="Belum ada berita"
-        description="Berita dan artikel terbaru akan segera tampil di sini."
-        actionLabel="Muat ulang"
+        title={t("empty.noData.title")}
+        description={t("empty.noData.description")}
+        actionLabel={tCommon("muatUlang")}
         onAction={retry}
       />
     );
@@ -63,7 +67,7 @@ export function NewsExplorer() {
     <div>
       <div className="flex flex-wrap items-center gap-2">
         <FilterDropdown
-          label="Kategori"
+          label={tFilter("kategori")}
           options={CATEGORIES.map((c) => ({ value: c, label: c }))}
           selected={categories}
           onChange={setCategories}
@@ -74,7 +78,7 @@ export function NewsExplorer() {
             onClick={() => setCategories([])}
             className="rounded-lg px-3 py-2 text-sm font-medium text-stone-500 hover:bg-stone-100"
           >
-            Reset kategori
+            {tCommon("resetKategori")}
           </button>
         )}
       </div>
@@ -83,8 +87,8 @@ export function NewsExplorer() {
         {filtered.length === 0 ? (
           <EmptyState
             variant="no-results"
-            title="Belum ada berita di kategori ini"
-            actionLabel="Reset kategori"
+            title={t("empty.noResults.title")}
+            actionLabel={tCommon("resetKategori")}
             onAction={() => setCategories([])}
           />
         ) : (
@@ -99,6 +103,7 @@ export function NewsExplorer() {
                 tag={n.category}
                 hasImage={n.hasImage}
                 imageSrc={n.imageUrl}
+                cta={tCommon("lihatDetail")}
               />
             ))}
           </div>
