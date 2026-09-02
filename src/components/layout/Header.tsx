@@ -32,8 +32,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex shrink-0 items-center gap-2 font-bold text-emerald-800">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-700 text-white">K</span>
-          <span className="text-lg">Kascing.id</span>
+          <span className="text-lg">Vermicompost.id</span>
         </Link>
 
         <nav aria-label="Navigasi utama" className="hidden flex-1 items-center justify-center gap-1 lg:flex">

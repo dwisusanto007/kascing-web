@@ -1,6 +1,6 @@
-# Kascing.id — Website Frontend
+# Vermicompost.id — Website Frontend
 
-Frontend Kascing.id: edukasi, riset, dan direktori produsen kascing (bekas cacing), dibangun sesuai backlog Trello
+Frontend Vermicompost.id: edukasi, riset, dan direktori produsen kascing (bekas cacing), dibangun sesuai backlog Trello
 "Kascing Website - Frontend". Dibangun dengan Next.js (App Router), TypeScript, dan Tailwind CSS, memakai data mock
 lokal (`src/lib/mock-data.ts`) — belum tersambung ke backend/API.
 

@@ -104,7 +104,8 @@ export const producers: Producer[] = [
     certifications: [],
     contact: { whatsapp: "6289876543210" },
     gallery: [],
-    hasImage: false,
+    hasImage: true,
+    imageUrl: "/images/case-hobiis.jpg",
     relatedArticleSlug: "cara-memulai-budidaya-kascing-untuk-pemula",
   },
   {
@@ -145,7 +146,8 @@ export const producers: Producer[] = [
     certifications: ["SNI Pupuk Organik"],
     contact: { whatsapp: "6281122334455", phone: "0721334455" },
     gallery: [],
-    hasImage: false,
+    hasImage: true,
+    imageUrl: "/images/news-field.jpg",
   },
   {
     id: "p6",
@@ -238,7 +240,8 @@ export const articles: Article[] = [
     ],
     publishedAt: "2026-04-10",
     readingTimeMin: 3,
-    hasImage: false,
+    hasImage: true,
+    imageUrl: "/images/producer-warehouse.jpg",
     relatedSlugs: ["cara-memulai-budidaya-kascing-untuk-pemula"],
   },
   {
@@ -296,16 +299,17 @@ export const newsItems: NewsItem[] = [
   {
     id: "n3",
     slug: "kascing-id-luncurkan-direktori-produsen",
-    title: "Kascing.id Resmi Luncurkan Direktori Produsen Nasional",
+    title: "Vermicompost.id Resmi Luncurkan Direktori Produsen Nasional",
     category: "Press Release",
     excerpt: "Platform direktori mempermudah petani menemukan produsen kascing terdekat.",
     content: [
-      "Kascing.id resmi meluncurkan fitur direktori produsen yang memuat informasi lengkap produsen kascing di seluruh Indonesia.",
+      "Vermicompost.id resmi meluncurkan fitur direktori produsen yang memuat informasi lengkap produsen kascing di seluruh Indonesia.",
       "Fitur ini diharapkan mempercepat rantai pasok kascing dari produsen ke petani maupun perkebunan besar.",
     ],
     publishedAt: "2026-07-28",
-    source: "Kascing.id",
-    hasImage: false,
+    source: "Vermicompost.id",
+    hasImage: true,
+    imageUrl: "/images/story-directory.jpg",
   },
   {
     id: "n4",
@@ -347,7 +351,7 @@ export const researchPapers: ResearchPaper[] = [
     year: 2026,
     abstract:
       "Dokumen ini merangkum usulan standar mutu kascing nasional berdasarkan kajian komparatif dengan standar internasional.",
-    authors: "Tim Riset Kascing.id",
+    authors: "Tim Riset Vermicompost.id",
     fileAvailable: true,
   },
   {
@@ -372,7 +376,7 @@ export const researchPapers: ResearchPaper[] = [
     year: 2025,
     abstract:
       "Laporan tahunan mengenai tingkat adopsi kascing di kalangan petani kopi rakyat serta tantangan distribusinya.",
-    authors: "Tim Riset Kascing.id",
+    authors: "Tim Riset Vermicompost.id",
     fileAvailable: false,
   },
   {
@@ -451,7 +455,8 @@ export const caseStudies: CaseStudy[] = [
       { label: "Luas lahan bersertifikat", value: "80 hektar" },
     ],
     testimonials: [],
-    hasImage: false,
+    hasImage: true,
+    imageUrl: "/images/case-export.jpg",
     relatedProducerSlug: "sumatra-vermi-agro",
   },
 ];

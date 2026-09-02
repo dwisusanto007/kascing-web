@@ -13,7 +13,7 @@ export default function DaftarProdusenPage() {
       <Breadcrumb items={[{ label: "Direktori", href: "/direktori" }, { label: "Daftarkan Bisnis" }]} />
       <h1 className="text-2xl font-bold text-stone-900 sm:text-3xl">Daftarkan Bisnis Kascing Anda</h1>
       <p className="mt-2 text-sm text-stone-500">
-        Lengkapi formulir berikut untuk mendaftarkan produsen kascing Anda ke direktori Kascing.id. Tim kami akan
+        Lengkapi formulir berikut untuk mendaftarkan produsen kascing Anda ke direktori Vermicompost.id. Tim kami akan
         meninjau pendaftaran sebelum tampil secara publik.
       </p>
       <div className="mt-8">

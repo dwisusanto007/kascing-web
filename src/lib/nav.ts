@@ -35,7 +35,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Semua Berita", href: "/berita", description: "Kabar terbaru, terurut dari yang terkini" },
       { label: "Industri", href: "/berita?kategori=Industri", description: "Perkembangan industri kascing" },
       { label: "Riset Update", href: "/berita?kategori=Riset+Update", description: "Temuan riset terbaru" },
-      { label: "Press Release", href: "/berita?kategori=Press+Release", description: "Rilis resmi Kascing.id" },
+      { label: "Press Release", href: "/berita?kategori=Press+Release", description: "Rilis resmi Vermicompost.id" },
     ],
   },
   {
@@ -83,6 +83,6 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "Tentang",
     href: "/tentang",
-    description: "Tentang Kascing.id",
+    description: "Tentang Vermicompost.id",
   },
 ];

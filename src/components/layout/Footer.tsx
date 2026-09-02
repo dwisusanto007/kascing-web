@@ -9,8 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-bold text-emerald-800">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-700 text-white">K</span>
-              <span className="text-lg">Kascing.id</span>
+              <span className="text-lg">Vermicompost.id</span>
             </Link>
             <p className="mt-3 max-w-sm text-sm text-stone-500">
               Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir.
@@ -88,7 +87,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t border-stone-200 pt-6 text-xs text-stone-400">
-          © {new Date().getFullYear()} Kascing.id. Seluruh hak cipta dilindungi.
+          © {new Date().getFullYear()} Vermicompost.id. Seluruh hak cipta dilindungi.
         </div>
       </div>
     </footer>

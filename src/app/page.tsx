@@ -70,7 +70,7 @@ export default function HomePage() {
               Pupuk Organik Kascing untuk Pertanian yang Lebih Subur
             </h1>
             <p className="mt-4 max-w-xl text-base text-stone-600">
-              Kascing.id membantu hobiis, perkebunan besar, hingga eksportir memahami manfaat kascing dan
+              Vermicompost.id membantu hobiis, perkebunan besar, hingga eksportir memahami manfaat kascing dan
               menemukan produsen terpercaya di seluruh Indonesia.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -121,15 +121,15 @@ export default function HomePage() {
 
       {/* 02 — Scroll-driven value proposition story */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="02" title="Kenapa Mulai dari Kascing.id" />
-        <SectionErrorBoundary label="value proposition Kascing.id">
+        <SectionHeading number="02" title="Kenapa Mulai dari Vermicompost.id" />
+        <SectionErrorBoundary label="value proposition Vermicompost.id">
           <ScrollStorySection points={STORY_POINTS} />
         </SectionErrorBoundary>
       </section>
 
       {/* 03 — Feature/category grid */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="03" title="Jelajahi Kascing.id" subtitle="Semua yang kamu butuhkan seputar kascing, dalam satu tempat." />
+        <SectionHeading number="03" title="Jelajahi Vermicompost.id" subtitle="Semua yang kamu butuhkan seputar kascing, dalam satu tempat." />
         <FeatureGrid />
       </section>
 

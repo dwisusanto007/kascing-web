@@ -52,8 +52,7 @@ export function ScrollStorySection({ points }: ScrollStorySectionProps) {
             }}
             className="flex flex-col justify-center lg:min-h-[45vh]"
           >
-            <span className="text-xs font-bold text-emerald-700">{String(index + 1).padStart(2, "0")}</span>
-            <h3 className="mt-2 text-xl font-bold text-stone-900 sm:text-2xl">{point.title}</h3>
+            <h3 className="text-xl font-bold text-stone-900 sm:text-2xl">{point.title}</h3>
             <p className="mt-3 max-w-md text-stone-600">{point.description}</p>
             <PlaceholderImage
               label={point.title}

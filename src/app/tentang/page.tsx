@@ -10,7 +10,7 @@ export default function TentangPage() {
       </span>
       <h1 className="mt-4 text-2xl font-bold text-stone-900">Segera Hadir</h1>
       <p className="mt-2 text-sm text-stone-500">
-        Halaman &ldquo;Tentang Kascing.id&rdquo; sedang kami siapkan. Sementara itu, jelajahi konten edukasi dan
+        Halaman &ldquo;Tentang Vermicompost.id&rdquo; sedang kami siapkan. Sementara itu, jelajahi konten edukasi dan
         direktori produsen kami.
       </p>
     </div>

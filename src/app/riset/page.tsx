@@ -25,7 +25,7 @@ export default function RisetPage() {
       <div className="mt-16 rounded-xl border border-stone-200 bg-stone-50 p-6 sm:p-8">
         <h2 className="text-lg font-semibold text-stone-900">Ajukan Publikasi</h2>
         <p className="mt-1 max-w-2xl text-sm text-stone-500">
-          Peneliti dapat mengajukan jurnal atau laporan untuk dipublikasikan melalui Kascing.id.
+          Peneliti dapat mengajukan jurnal atau laporan untuk dipublikasikan melalui Vermicompost.id.
         </p>
         <div className="mt-6">
           <ProposePublicationForm />

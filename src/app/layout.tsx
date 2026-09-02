@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kascing.id — Edukasi & Direktori Produsen Kascing",
-    template: "%s · Kascing.id",
+    default: "Vermicompost.id — Edukasi & Direktori Produsen Kascing",
+    template: "%s · Vermicompost.id",
   },
   description:
     "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir.",
