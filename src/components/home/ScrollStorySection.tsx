@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 export interface ScrollStoryPoint {
   title: string;
   description: string;
+  imageSrc?: string;
 }
 
 interface ScrollStorySectionProps {
@@ -54,7 +55,11 @@ export function ScrollStorySection({ points }: ScrollStorySectionProps) {
             <span className="text-xs font-bold text-emerald-700">{String(index + 1).padStart(2, "0")}</span>
             <h3 className="mt-2 text-xl font-bold text-stone-900 sm:text-2xl">{point.title}</h3>
             <p className="mt-3 max-w-md text-stone-600">{point.description}</p>
-            <PlaceholderImage label={point.title} className="mt-6 h-56 w-full rounded-2xl lg:hidden" />
+            <PlaceholderImage
+              label={point.title}
+              imageSrc={point.imageSrc}
+              className="mt-6 h-56 w-full rounded-2xl object-cover lg:hidden"
+            />
           </div>
         ))}
       </div>
@@ -65,8 +70,9 @@ export function ScrollStorySection({ points }: ScrollStorySectionProps) {
             <PlaceholderImage
               key={point.title}
               label={point.title}
+              imageSrc={point.imageSrc}
               className={cn(
-                "absolute inset-0 h-full w-full transition-opacity duration-500 motion-reduce:transition-none",
+                "absolute inset-0 h-full w-full object-cover transition-opacity duration-500 motion-reduce:transition-none",
                 index === activeIndex ? "opacity-100" : "opacity-0",
               )}
             />

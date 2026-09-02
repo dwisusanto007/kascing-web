@@ -42,7 +42,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
         ]}
       />
 
-      <PlaceholderImage label={article.title} hasImage={article.hasImage} className="h-56 w-full rounded-xl sm:h-72" />
+      <PlaceholderImage label={article.title} hasImage={article.hasImage} imageSrc={article.imageUrl} className="h-56 w-full rounded-xl sm:h-72" />
 
       <span className="mt-6 inline-block rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
         {article.category}
@@ -105,6 +105,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
                 meta={formatDate(a.publishedAt)}
                 tag={a.category}
                 hasImage={a.hasImage}
+                imageSrc={a.imageUrl}
               />
             ))}
           </div>

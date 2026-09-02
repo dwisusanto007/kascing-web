@@ -52,6 +52,7 @@ export function DirectoryPreview() {
           meta={`${p.city}, ${p.province}`}
           tag={p.capacityLabel}
           hasImage={p.hasImage}
+          imageSrc={p.imageUrl}
           cta="Lihat profil"
         />
       ))}

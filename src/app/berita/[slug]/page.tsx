@@ -32,7 +32,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <Breadcrumb items={[{ label: "Berita & Artikel", href: "/berita" }, { label: news.title }]} />
 
-      <PlaceholderImage label={news.title} hasImage={news.hasImage} className="h-56 w-full rounded-xl sm:h-72" />
+      <PlaceholderImage label={news.title} hasImage={news.hasImage} imageSrc={news.imageUrl} className="h-56 w-full rounded-xl sm:h-72" />
 
       <span className="mt-6 inline-block rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
         {news.category}

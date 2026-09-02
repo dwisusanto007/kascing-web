@@ -61,6 +61,7 @@ export const producers: Producer[] = [
     contact: { phone: "0221234567", whatsapp: "6281234567890", email: "info@tanisubur.id" },
     gallery: ["fasilitas produksi", "gudang kascing", "proses pengemasan"],
     hasImage: true,
+    imageUrl: "/images/producer-warehouse.jpg",
     rating: 4.6,
     relatedArticleSlug: "cara-memulai-budidaya-kascing-untuk-pemula",
   },
@@ -82,6 +83,7 @@ export const producers: Producer[] = [
     contact: { phone: "0341567890", whatsapp: "6285678901234", email: "sales@nusantaraorganik.co.id" },
     gallery: ["gudang besar", "armada distribusi"],
     hasImage: true,
+    imageUrl: "/images/case-plantation.jpg",
     rating: 4.8,
     relatedArticleSlug: "kascing-untuk-perkebunan-skala-besar",
   },
@@ -123,6 +125,7 @@ export const producers: Producer[] = [
     contact: { phone: "0614567890", email: "cs@sumatravermi.com" },
     gallery: ["kebun percontohan"],
     hasImage: true,
+    imageUrl: "/images/worm-closeup.jpg",
     relatedArticleSlug: "kascing-untuk-perkebunan-skala-besar",
   },
   {
@@ -162,6 +165,7 @@ export const producers: Producer[] = [
     contact: { whatsapp: "6281399887766", email: "hello@baliorganic.id" },
     gallery: ["kebun organik", "produk kemasan"],
     hasImage: true,
+    imageUrl: "/images/hero-kascing.jpg",
   },
 ];
 
@@ -182,6 +186,7 @@ export const articles: Article[] = [
     publishedAt: "2026-07-02",
     readingTimeMin: 5,
     hasImage: true,
+    imageUrl: "/images/article-planting.jpg",
     relatedSlugs: ["memahami-manfaat-kascing-bagi-tanah", "menjaga-kualitas-kascing-saat-penyimpanan"],
   },
   {
@@ -199,6 +204,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-20",
     readingTimeMin: 4,
     hasImage: true,
+    imageUrl: "/images/article-gardening.jpg",
     relatedSlugs: ["cara-memulai-budidaya-kascing-untuk-pemula"],
   },
   {
@@ -216,6 +222,7 @@ export const articles: Article[] = [
     publishedAt: "2026-05-15",
     readingTimeMin: 6,
     hasImage: true,
+    imageUrl: "/images/case-plantation.jpg",
     relatedSlugs: ["memahami-manfaat-kascing-bagi-tanah"],
   },
   {
@@ -248,6 +255,7 @@ export const articles: Article[] = [
     publishedAt: "2026-03-01",
     readingTimeMin: 5,
     hasImage: true,
+    imageUrl: "/images/case-export.jpg",
     relatedSlugs: ["kascing-untuk-perkebunan-skala-besar"],
   },
 ];
@@ -266,6 +274,7 @@ export const newsItems: NewsItem[] = [
     publishedAt: "2026-08-20",
     source: "Redaksi Kascing",
     hasImage: true,
+    imageUrl: "/images/news-stack.jpg",
     relatedArticleSlug: "memahami-manfaat-kascing-bagi-tanah",
   },
   {
@@ -281,6 +290,7 @@ export const newsItems: NewsItem[] = [
     publishedAt: "2026-08-10",
     source: "Jurnal Pertanian Nusantara",
     hasImage: true,
+    imageUrl: "/images/news-field.jpg",
     relatedArticleSlug: "kascing-untuk-perkebunan-skala-besar",
   },
   {
@@ -310,6 +320,7 @@ export const newsItems: NewsItem[] = [
     publishedAt: "2026-07-05",
     source: "Redaksi Kascing",
     hasImage: true,
+    imageUrl: "/images/worm-closeup.jpg",
   },
 ];
 
@@ -398,6 +409,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Budi Santoso", role: "Hobiis Tanaman Hias", quote: "Sejak pakai kascing sendiri, tanaman di rumah jauh lebih sehat." },
     ],
     hasImage: true,
+    imageUrl: "/images/case-hobiis.jpg",
     relatedProducerSlug: "hijau-lestari-vermikompos",
   },
   {
@@ -419,6 +431,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Hendra Wijaya", role: "Manajer Kebun", quote: "Kascing membantu kami menekan biaya pupuk kimia tanpa mengorbankan hasil panen." },
     ],
     hasImage: true,
+    imageUrl: "/images/case-plantation.jpg",
     relatedProducerSlug: "nusantara-organik-fertilizer",
     relatedResearchSlug: "efektivitas-kascing-pada-produktivitas-sawit",
   },

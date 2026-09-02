@@ -81,6 +81,7 @@ export function CaseStudyExplorer() {
                 excerpt={c.summary}
                 tag={PERSONA_LABELS[c.persona]}
                 hasImage={c.hasImage}
+                imageSrc={c.imageUrl}
                 cta="Baca studi kasus"
               />
             ))}

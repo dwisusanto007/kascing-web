@@ -32,7 +32,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <Breadcrumb items={[{ label: "Studi Kasus", href: "/studi-kasus" }, { label: caseStudy.title }]} />
 
-      <PlaceholderImage label={caseStudy.title} hasImage={caseStudy.hasImage} className="h-56 w-full rounded-xl sm:h-72" />
+      <PlaceholderImage label={caseStudy.title} hasImage={caseStudy.hasImage} imageSrc={caseStudy.imageUrl} className="h-56 w-full rounded-xl sm:h-72" />
 
       <span className="mt-6 inline-block rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
         {PERSONA_LABELS[caseStudy.persona]}

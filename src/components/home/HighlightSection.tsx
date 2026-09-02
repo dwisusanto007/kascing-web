@@ -63,6 +63,7 @@ export function HighlightSection() {
                 meta={formatDate(a.publishedAt)}
                 tag={a.category}
                 hasImage={a.hasImage}
+                imageSrc={a.imageUrl}
               />
             ))}
           </div>
@@ -83,6 +84,7 @@ export function HighlightSection() {
                 meta={formatDate(n.publishedAt)}
                 tag={n.category}
                 hasImage={n.hasImage}
+                imageSrc={n.imageUrl}
               />
             ))}
           </div>

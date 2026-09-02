@@ -27,6 +27,7 @@ export interface Producer {
   };
   gallery: string[];
   hasImage: boolean;
+  imageUrl?: string;
   rating?: number;
   relatedArticleSlug?: string;
 }
@@ -42,6 +43,7 @@ export interface Article {
   publishedAt: string;
   readingTimeMin: number;
   hasImage: boolean;
+  imageUrl?: string;
   relatedSlugs: string[];
 }
 
@@ -55,6 +57,7 @@ export interface NewsItem {
   publishedAt: string;
   source: string;
   hasImage: boolean;
+  imageUrl?: string;
   relatedArticleSlug?: string;
 }
 
@@ -92,6 +95,7 @@ export interface CaseStudy {
   metrics: CaseStudyMetric[];
   testimonials: Testimonial[];
   hasImage: boolean;
+  imageUrl?: string;
   relatedProducerSlug?: string;
   relatedResearchSlug?: string;
 }

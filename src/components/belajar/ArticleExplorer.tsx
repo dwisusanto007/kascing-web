@@ -93,6 +93,7 @@ export function ArticleExplorer() {
                 meta={`${formatDate(a.publishedAt)} · ${a.readingTimeMin} menit baca`}
                 tag={a.category}
                 hasImage={a.hasImage}
+                imageSrc={a.imageUrl}
               />
             ))}
           </div>

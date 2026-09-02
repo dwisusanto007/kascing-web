@@ -20,16 +20,19 @@ const STORY_POINTS = [
     title: "Cari produsen yang sudah terverifikasi",
     description:
       "Direktori kami menyaring produsen berdasarkan lokasi, kapasitas produksi, dan sertifikasi — bukan sekadar daftar kontak.",
+    imageSrc: "/images/story-directory.jpg",
   },
   {
     title: "Belajar dari studi kasus & data nyata",
     description:
       "Lihat hasil nyata dari hobiis, perkebunan besar, hingga eksportir, lengkap dengan angka dan riset pendukung.",
+    imageSrc: "/images/story-data-check.jpg",
   },
   {
     title: "Ikuti kabar terbaru industri kascing",
     description:
       "Update riset, press release, dan artikel edukasi baru tayang rutin, supaya keputusanmu selalu berbasis info terkini.",
+    imageSrc: "/images/news-stack.jpg",
   },
 ];
 
@@ -87,7 +90,8 @@ export default function HomePage() {
           </div>
           <PlaceholderImage
             label="Hero Kascing"
-            className="h-64 w-full rounded-2xl sm:h-80 lg:h-96"
+            imageSrc="/images/hero-kascing.jpg"
+            className="h-64 w-full rounded-2xl object-cover sm:h-80 lg:h-96"
           />
         </div>
       </section>

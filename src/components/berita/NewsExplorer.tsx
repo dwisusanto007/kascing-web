@@ -98,6 +98,7 @@ export function NewsExplorer() {
                 meta={formatDate(n.publishedAt)}
                 tag={n.category}
                 hasImage={n.hasImage}
+                imageSrc={n.imageUrl}
               />
             ))}
           </div>
