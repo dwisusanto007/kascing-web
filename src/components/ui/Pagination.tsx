@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 interface PaginationProps {
   page: number;
   totalPages: number;
@@ -7,18 +9,19 @@ interface PaginationProps {
 }
 
 export function Pagination({ page, totalPages, onChange }: PaginationProps) {
+  const t = useTranslations("common.pagination");
   if (totalPages <= 1) return null;
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <nav aria-label="Navigasi halaman" className="mt-8 flex items-center justify-center gap-2">
+    <nav aria-label={t("ariaLabel")} className="mt-8 flex items-center justify-center gap-2">
       <button
         type="button"
         onClick={() => onChange(page - 1)}
         disabled={page <= 1}
         className="rounded-lg border border-stone-300 px-3 py-1.5 text-sm text-stone-600 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        ← Sebelumnya
+        {t("previous")}
       </button>
       {pages.map((p) => (
         <button
@@ -41,7 +44,7 @@ export function Pagination({ page, totalPages, onChange }: PaginationProps) {
         disabled={page >= totalPages}
         className="rounded-lg border border-stone-300 px-3 py-1.5 text-sm text-stone-600 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Berikutnya →
+        {t("next")}
       </button>
     </nav>
   );

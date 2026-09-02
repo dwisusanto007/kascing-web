@@ -9,7 +9,11 @@
     "tutup": "Close",
     "carousel": { "previous": "Previous", "next": "Next" },
     "muatUlang": "Reload",
-    "lihatDetail": "View details"
+    "lihatDetail": "View details",
+    "slowLoading": "Still loading, please wait…",
+    "pagination": { "ariaLabel": "Page navigation", "previous": "← Previous", "next": "Next →" },
+    "readMore": { "less": "Show less", "more": "Read more" },
+    "filter": { "noOptions": "No options", "resetLabel": "Reset {label}" }
   },
   "home": {
     "hero": {

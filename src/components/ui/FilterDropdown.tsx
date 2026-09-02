@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export interface FilterOption {
@@ -18,6 +19,7 @@ interface FilterDropdownProps {
 
 /** Base filter/dropdown component supporting single & multi-select. */
 export function FilterDropdown({ label, options, selected, onChange, multi = true }: FilterDropdownProps) {
+  const t = useTranslations("common.filter");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -74,7 +76,7 @@ export function FilterDropdown({ label, options, selected, onChange, multi = tru
           role="listbox"
           className="absolute z-20 mt-2 max-h-64 w-56 overflow-y-auto rounded-lg border border-stone-200 bg-white p-2 shadow-lg"
         >
-          {options.length === 0 && <p className="px-2 py-1.5 text-sm text-stone-400">Tidak ada opsi</p>}
+          {options.length === 0 && <p className="px-2 py-1.5 text-sm text-stone-400">{t("noOptions")}</p>}
           {options.map((opt) => (
             <label
               key={opt.value}
@@ -95,7 +97,7 @@ export function FilterDropdown({ label, options, selected, onChange, multi = tru
               onClick={() => onChange([])}
               className="mt-1 w-full rounded-md px-2 py-1 text-left text-xs text-stone-500 hover:bg-stone-50"
             >
-              Reset {label.toLowerCase()}
+              {t("resetLabel", { label: label.toLowerCase() })}
             </button>
           )}
         </div>

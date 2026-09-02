@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 /** Collapses long text with a "baca selengkapnya" toggle so layout never overflows. */
 export function ReadMore({ text, lines = 4 }: { text: string; lines?: number }) {
+  const t = useTranslations("common.readMore");
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -20,7 +22,7 @@ export function ReadMore({ text, lines = 4 }: { text: string; lines?: number }) 
         onClick={() => setExpanded((e) => !e)}
         className="mt-2 text-sm font-medium text-emerald-700 hover:underline"
       >
-        {expanded ? "Tampilkan lebih sedikit" : "Baca selengkapnya"}
+        {expanded ? t("less") : t("more")}
       </button>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
+import { useTranslations } from "next-intl";
 
 interface ModalProps {
   open: boolean;
@@ -12,6 +13,7 @@ interface ModalProps {
 
 /** Base modal: confirm / form / image preview. Supports ESC, backdrop click, and a keyboard focus trap. */
 export function Modal({ open, onClose, title, children }: ModalProps) {
+  const t = useTranslations("common");
   const dialogRef = useRef<HTMLDivElement>(null);
   const previousFocus = useRef<HTMLElement | null>(null);
 
@@ -71,7 +73,7 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
           <button
             type="button"
             onClick={onClose}
-            aria-label="Tutup"
+            aria-label={t("tutup")}
             className="ml-auto rounded-full p-1 text-stone-400 hover:bg-stone-100 hover:text-stone-600"
           >
             ✕

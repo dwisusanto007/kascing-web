@@ -9,7 +9,11 @@
     "tutup": "Tutup",
     "carousel": { "previous": "Sebelumnya", "next": "Berikutnya" },
     "muatUlang": "Muat ulang",
-    "lihatDetail": "Lihat detail"
+    "lihatDetail": "Lihat detail",
+    "slowLoading": "Masih memuat, mohon tunggu sebentar…",
+    "pagination": { "ariaLabel": "Navigasi halaman", "previous": "← Sebelumnya", "next": "Berikutnya →" },
+    "readMore": { "less": "Tampilkan lebih sedikit", "more": "Baca selengkapnya" },
+    "filter": { "noOptions": "Tidak ada opsi", "resetLabel": "Reset {label}" }
   },
   "home": {
     "hero": {

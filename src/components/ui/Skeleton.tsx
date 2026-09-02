@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export function SkeletonBlock({ className }: { className?: string }) {
@@ -68,9 +71,10 @@ export function SkeletonForm({ fields = 4 }: { fields?: number }) {
 
 /** Shown once a loading state has taken longer than the configured timeout. */
 export function SlowLoadingNotice() {
+  const t = useTranslations("common");
   return (
     <p role="status" className="mt-3 text-center text-sm text-stone-500">
-      Masih memuat, mohon tunggu sebentar…
+      {t("slowLoading")}
     </p>
   );
 }
