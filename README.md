@@ -15,6 +15,11 @@ Buka [http://localhost:3000](http://localhost:3000).
 
 Perintah lain: `npm run build` (production build), `npm run lint` (ESLint).
 
+## Deploy
+
+Lihat [`DEPLOYMENT.md`](./DEPLOYMENT.md) untuk langkah setup di Vercel (build settings, environment variables,
+custom domain, preview deployment per PR).
+
 ## Struktur
 
 - `src/app/` — halaman (App Router): beranda, direktori, belajar-kascing, berita, riset, studi-kasus, sumber-daya.
