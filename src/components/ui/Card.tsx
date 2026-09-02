@@ -9,11 +9,11 @@ interface CardProps {
   tag?: string;
   hasImage?: boolean;
   imageSrc?: string;
-  cta?: string;
+  cta: string;
 }
 
 /** Base card used across Direktori, Belajar Kascing, Berita, Riset, Studi Kasus. */
-export function Card({ href, title, excerpt, meta, tag, hasImage = true, imageSrc, cta = "Lihat detail" }: CardProps) {
+export function Card({ href, title, excerpt, meta, tag, hasImage = true, imageSrc, cta }: CardProps) {
   return (
     <Link
       href={href}
