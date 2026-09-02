@@ -370,6 +370,10 @@
       "titleWithLabel": "Failed to load {label}.",
       "titleGeneric": "Something went wrong while loading this section.",
       "exhausted": "Already retried several times and still failing. Please reload the page later."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you're looking for may have moved, been deleted, or isn't available yet."
     }
   },
   "nav": {

@@ -370,6 +370,10 @@
       "titleWithLabel": "Gagal memuat {label}.",
       "titleGeneric": "Terjadi kesalahan saat memuat bagian ini.",
       "exhausted": "Sudah dicoba beberapa kali dan masih gagal. Silakan muat ulang halaman nanti."
+    },
+    "notFound": {
+      "title": "Halaman tidak ditemukan",
+      "description": "Halaman yang kamu cari mungkin sudah dipindahkan, dihapus, atau belum tersedia."
     }
   },
   "nav": {
