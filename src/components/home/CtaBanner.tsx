@@ -3,7 +3,7 @@ import Link from "next/link";
 /** Full-width solid-green CTA banner, join.com-style, closing out the homepage. */
 export function CtaBanner() {
   return (
-    <section className="bg-emerald-700">
+    <section id="cta-banner" className="bg-emerald-700">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:text-left">
         <div>
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Siap mulai dengan kascing?</h2>

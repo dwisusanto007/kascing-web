@@ -10,7 +10,28 @@ import { DirectoryPreview } from "@/components/home/DirectoryPreview";
 import { FeatureGrid } from "@/components/home/FeatureGrid";
 import { StatsStrip } from "@/components/home/StatsStrip";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { PersonaCarousel } from "@/components/home/PersonaCarousel";
+import { ScrollStorySection } from "@/components/home/ScrollStorySection";
+import { StickyCtaBar } from "@/components/home/StickyCtaBar";
 import { PERSONA_LABELS } from "@/lib/types";
+
+const STORY_POINTS = [
+  {
+    title: "Cari produsen yang sudah terverifikasi",
+    description:
+      "Direktori kami menyaring produsen berdasarkan lokasi, kapasitas produksi, dan sertifikasi — bukan sekadar daftar kontak.",
+  },
+  {
+    title: "Belajar dari studi kasus & data nyata",
+    description:
+      "Lihat hasil nyata dari hobiis, perkebunan besar, hingga eksportir, lengkap dengan angka dan riset pendukung.",
+  },
+  {
+    title: "Ikuti kabar terbaru industri kascing",
+    description:
+      "Update riset, press release, dan artikel edukasi baru tayang rutin, supaya keputusanmu selalu berbasis info terkini.",
+  },
+];
 
 const PERSONAS = [
   {
@@ -36,8 +57,10 @@ const PERSONAS = [
 export default function HomePage() {
   return (
     <div>
+      <StickyCtaBar />
+
       {/* Hero */}
-      <section className="border-b border-stone-200 bg-gradient-to-b from-emerald-50 to-white">
+      <section id="hero" className="border-b border-stone-200 bg-gradient-to-b from-emerald-50 to-white">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl">
@@ -74,12 +97,12 @@ export default function HomePage() {
       {/* 01 — Persona entry points */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <SectionHeading number="01" title="Mulai Sesuai Kebutuhanmu" />
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <PersonaCarousel ariaLabel="Mulai sesuai kebutuhanmu">
           {PERSONAS.map((p) => (
             <Link
               key={p.persona}
               href={p.href}
-              className="group flex flex-col rounded-xl border border-stone-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md"
+              className="group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md"
             >
               <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
                 {PERSONA_LABELS[p.persona]}
@@ -89,18 +112,26 @@ export default function HomePage() {
               <span className="mt-auto pt-4 text-sm font-medium text-emerald-700">Pelajari lebih lanjut →</span>
             </Link>
           ))}
-        </div>
+        </PersonaCarousel>
       </section>
 
-      {/* 02 — Feature/category grid */}
+      {/* 02 — Scroll-driven value proposition story */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="02" title="Jelajahi Kascing.id" subtitle="Semua yang kamu butuhkan seputar kascing, dalam satu tempat." />
+        <SectionHeading number="02" title="Kenapa Mulai dari Kascing.id" />
+        <SectionErrorBoundary label="value proposition Kascing.id">
+          <ScrollStorySection points={STORY_POINTS} />
+        </SectionErrorBoundary>
+      </section>
+
+      {/* 03 — Feature/category grid */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <SectionHeading number="03" title="Jelajahi Kascing.id" subtitle="Semua yang kamu butuhkan seputar kascing, dalam satu tempat." />
         <FeatureGrid />
       </section>
 
-      {/* 03 — Highlight artikel & berita */}
+      {/* 04 — Highlight artikel & berita */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="03" title="Edukasi & Kabar Terbaru" />
+        <SectionHeading number="04" title="Edukasi & Kabar Terbaru" />
         <SectionErrorBoundary label="artikel & berita terbaru">
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <HighlightSection />
@@ -108,9 +139,9 @@ export default function HomePage() {
         </SectionErrorBoundary>
       </section>
 
-      {/* 04 — Studi kasus preview */}
+      {/* 05 — Studi kasus preview */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="04" title="Studi Kasus" action={{ label: "Lihat semua", href: "/studi-kasus" }} />
+        <SectionHeading number="05" title="Studi Kasus" action={{ label: "Lihat semua", href: "/studi-kasus" }} />
         <SectionErrorBoundary label="preview studi kasus">
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <CaseStudyPreview />
@@ -118,9 +149,9 @@ export default function HomePage() {
         </SectionErrorBoundary>
       </section>
 
-      {/* 05 — Direktori preview */}
+      {/* 06 — Direktori preview */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="05" title="Direktori Produsen" action={{ label: "Lihat semua", href: "/direktori" }} />
+        <SectionHeading number="06" title="Direktori Produsen" action={{ label: "Lihat semua", href: "/direktori" }} />
         <SectionErrorBoundary label="preview direktori produsen">
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <DirectoryPreview />

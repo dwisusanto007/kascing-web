@@ -19,8 +19,3 @@ export function hashString(input: string): number {
   }
   return Math.abs(hash);
 }
-
-export function initials(text: string): string {
-  const words = text.trim().split(/\s+/).slice(0, 2);
-  return words.map((w) => w.charAt(0).toUpperCase()).join("");
-}
