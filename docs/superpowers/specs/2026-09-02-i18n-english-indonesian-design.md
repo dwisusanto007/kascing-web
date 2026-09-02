@@ -16,10 +16,16 @@ questions (see summary below); this doc records the resulting design.
   heading/subhead, `PERSONAS` (persona carousel entries), `FeatureGrid`
   entries, `ScrollStorySection` points, `CtaBanner`, `StickyCtaBar`,
   page-intro paragraphs on list pages.
-- Taxonomy/filter-option vocabulary defined in `mock-data.ts` but used as
-  UI labels, not prose: `PRODUCTS_LIST`, `CERTIFICATIONS_LIST`,
-  `COMMODITIES_LIST`, persona labels (`PERSONA_LABELS`). These move into
-  the message dictionaries.
+- Persona labels (`PERSONA_LABELS` in `types.ts`) — safe to translate:
+  the `Persona` enum values (`"hobiis"`, `"perkebunan-besar"`,
+  `"eksportir"`) are already stable IDs distinct from their display
+  labels, so translating the labels can't cause a data mismatch.
+- The capacity-tier filter labels hardcoded in `DirectoryExplorer`/
+  `RegistrationForm` ("Kecil (< 1 ton/bulan)" etc.) — also safe: they're
+  pure UI copy keyed by the stable `capacity` enum
+  (`"kecil"/"menengah"/"besar"`), separate from each producer's own
+  `capacityLabel` display data (e.g. "5-10 ton/bulan", which stays
+  Indonesian as content).
 
 **Out of scope — stays Indonesian in both locales:**
 - All long-form mock content: producer names/descriptions, article
@@ -28,6 +34,18 @@ questions (see summary below); this doc records the resulting design.
   the same Indonesian content as `/id/...`.
 - `PROVINCES` (province names) — left as-is, not translated, per explicit
   user decision ("Leave province names as-is").
+- **`PRODUCTS_LIST`, `CERTIFICATIONS_LIST`, `COMMODITIES_LIST`
+  (`mock-data.ts`), and the `CATEGORIES` arrays local to
+  `ArticleExplorer`/`NewsExplorer`** — revised out of scope during
+  implementation planning (2026-09-02), reversing this doc's original
+  "DO get translated" call. Reason: these arrays' values are also the
+  literal values stored on `Producer.products[]`/`.certifications[]`/
+  `.commodities[]` and `article.category`/`news.category`, rendered
+  directly as badges/tags elsewhere. Translating only the filter-option
+  label, not the stored data, would make an English filter silently fail
+  to match Indonesian-stored records. Applying this doc's own fallback
+  rule for an unresolved borderline case (leave untranslated, flag it) —
+  these stay Indonesian in both locales, matching `PROVINCES`.
 
 ## Architecture
 
