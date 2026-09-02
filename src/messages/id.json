@@ -378,7 +378,7 @@
   },
   "nav": {
     "belajarKascing": {
-      "label": "Belajar Kascing",
+      "label": "Belajar",
       "description": "Panduan edukasi seputar budidaya & pemanfaatan kascing",
       "children": {
         "all": { "label": "Semua Artikel", "description": "Panduan dasar hingga lanjutan" },
@@ -388,7 +388,7 @@
       }
     },
     "berita": {
-      "label": "Berita & Artikel",
+      "label": "Berita",
       "description": "Kabar terbaru seputar industri dan riset kascing",
       "children": {
         "all": { "label": "Semua Berita", "description": "Kabar terbaru, terurut dari yang terkini" },
@@ -431,7 +431,8 @@
         "faq": { "label": "FAQ", "description": "Pertanyaan yang sering diajukan" }
       }
     },
-    "tentang": { "label": "Tentang", "description": "Tentang Vermicompost.id" }
+    "tentang": { "label": "Tentang", "description": "Tentang Vermicompost.id" },
+    "more": { "label": "Lainnya", "description": "Riset, sumber daya, dan tentang kami" }
   },
   "header": {
     "nav": { "ariaLabel": "Navigasi utama" },

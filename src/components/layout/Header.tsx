@@ -13,6 +13,10 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+// Lower-traffic sections are tucked under a "More" menu so the top-level
+// nav stays on one line at desktop widths.
+const MORE_HREFS = ["/riset", "/sumber-daya", "/tentang"];
+
 export function Header() {
   const t = useTranslations("nav");
   const tHeader = useTranslations("header");
@@ -23,7 +27,7 @@ export function Header() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [lastPathname, setLastPathname] = useState(pathname);
 
-  const navItems = NAV_ITEMS.map((item) => ({
+  const allNavItems = NAV_ITEMS.map((item) => ({
     ...item,
     label: t(item.labelKey),
     description: item.descriptionKey ? t(item.descriptionKey) : undefined,
@@ -33,6 +37,23 @@ export function Header() {
       description: child.descriptionKey ? t(child.descriptionKey) : undefined,
     })),
   }));
+
+  const primaryNavItems = allNavItems.filter((item) => !MORE_HREFS.includes(item.href));
+  const moreNavChildren = allNavItems.filter((item) => MORE_HREFS.includes(item.href));
+
+  const navItems =
+    moreNavChildren.length > 0
+      ? [
+          ...primaryNavItems,
+          {
+            labelKey: "more.label",
+            href: moreNavChildren[0].href,
+            label: t("more.label"),
+            description: t("more.description"),
+            children: moreNavChildren,
+          },
+        ]
+      : primaryNavItems;
 
   // Close menus on route change — adjusted synchronously during render
   // (React's recommended pattern for resetting state when an input changes)
@@ -53,7 +74,7 @@ export function Header() {
 
         <nav aria-label={tHeader("nav.ariaLabel")} className="hidden flex-1 items-center justify-center gap-1 lg:flex">
           {navItems.map((item) => {
-            const active = isActive(pathname, item.href);
+            const active = isActive(pathname, item.href) || (item.children?.some((child) => isActive(pathname, child.href)) ?? false);
             const hasChildren = !!item.children?.length;
             return (
               <div
@@ -68,7 +89,7 @@ export function Header() {
                   aria-current={active ? "page" : undefined}
                   aria-expanded={hasChildren ? openMenu === item.label : undefined}
                   className={cn(
-                    "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition",
+                    "flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition",
                     active ? "text-emerald-700" : "text-stone-600 hover:text-emerald-700",
                   )}
                 >
@@ -128,7 +149,7 @@ export function Header() {
         <nav aria-label={tHeader("mobileNav.ariaLabel")} className="border-t border-stone-200 bg-white px-4 py-3 lg:hidden">
           <ul className="flex flex-col gap-1">
             {navItems.map((item) => {
-              const active = isActive(pathname, item.href);
+              const active = isActive(pathname, item.href) || (item.children?.some((child) => isActive(pathname, child.href)) ?? false);
               const hasChildren = !!item.children?.length;
               const expanded = mobileExpanded === item.label;
               return (
