@@ -78,7 +78,7 @@ export function Calculator() {
       <div className="sm:col-span-1">
         <button
           type="submit"
-          className="w-full rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
+          className="w-full rounded-full bg-emerald-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
         >
           Hitung Kebutuhan
         </button>

@@ -41,7 +41,7 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
+        className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
       >
         Unduh White Paper
       </button>
@@ -54,7 +54,7 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
             <button
               type="button"
               onClick={handleClose}
-              className="mt-4 rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800"
+              className="mt-4 rounded-full bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800"
             >
               Tutup
             </button>
@@ -78,7 +78,7 @@ export function DownloadPaperButton({ title, fileAvailable }: { title: string; f
             {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
             <button
               type="submit"
-              className="mt-4 w-full rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
+              className="mt-4 w-full rounded-full bg-emerald-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
             >
               Kirim Tautan Unduhan
             </button>

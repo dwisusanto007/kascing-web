@@ -32,7 +32,7 @@ export function DownloadList() {
           <button
             type="button"
             onClick={() => handleDownload(d.id, d.available, d.title)}
-            className="shrink-0 rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
+            className="shrink-0 rounded-full border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
           >
             Unduh
           </button>

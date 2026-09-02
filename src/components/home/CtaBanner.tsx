@@ -14,13 +14,13 @@ export function CtaBanner() {
         <div className="flex flex-wrap justify-center gap-3">
           <Link
             href="/direktori"
-            className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
+            className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
           >
             Cari Produsen
           </Link>
           <Link
             href="/direktori/daftar"
-            className="rounded-lg border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
+            className="rounded-full border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
           >
             Daftarkan Bisnis Anda
           </Link>

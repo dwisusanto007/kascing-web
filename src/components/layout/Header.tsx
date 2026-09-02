@@ -91,7 +91,7 @@ export function Header() {
         <div className="hidden shrink-0 lg:block">
           <Link
             href="/direktori"
-            className="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
+            className="rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
           >
             Cari Produsen
           </Link>
@@ -159,7 +159,7 @@ export function Header() {
           </ul>
           <Link
             href="/direktori"
-            className="mt-3 block rounded-lg bg-emerald-700 px-4 py-2 text-center text-sm font-semibold text-white"
+            className="mt-3 block rounded-full bg-emerald-700 px-4 py-2 text-center text-sm font-semibold text-white"
           >
             Cari Produsen
           </Link>

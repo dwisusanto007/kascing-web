@@ -19,7 +19,7 @@ export default function DirektoriPage() {
         </div>
         <Link
           href="/direktori/daftar"
-          className="shrink-0 rounded-lg border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
+          className="shrink-0 rounded-full border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
         >
           Daftarkan Bisnis Anda
         </Link>

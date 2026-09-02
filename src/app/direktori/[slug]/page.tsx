@@ -133,7 +133,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
                     href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(`Halo ${producer.name}, saya tertarik dengan produk kascing Anda.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg bg-emerald-700 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-emerald-800"
+                    className="rounded-full bg-emerald-700 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-emerald-800"
                   >
                     Chat via WhatsApp
                   </a>
@@ -141,7 +141,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
                 {contact.phone && (
                   <a
                     href={`tel:${contact.phone}`}
-                    className="rounded-lg border border-stone-300 px-4 py-2.5 text-center text-sm font-medium text-stone-700 hover:bg-stone-50"
+                    className="rounded-full border border-stone-300 px-4 py-2.5 text-center text-sm font-medium text-stone-700 hover:bg-stone-50"
                   >
                     Telepon {contact.phone}
                   </a>
@@ -149,7 +149,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
                 {contact.email && (
                   <a
                     href={`mailto:${contact.email}`}
-                    className="rounded-lg border border-stone-300 px-4 py-2.5 text-center text-sm font-medium text-stone-700 hover:bg-stone-50"
+                    className="rounded-full border border-stone-300 px-4 py-2.5 text-center text-sm font-medium text-stone-700 hover:bg-stone-50"
                   >
                     Email {contact.email}
                   </a>

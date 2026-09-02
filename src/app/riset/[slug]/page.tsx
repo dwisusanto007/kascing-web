@@ -49,7 +49,7 @@ export default async function ResearchDetailPage({ params }: PageProps) {
         {relatedArticle && (
           <Link
             href={`/belajar-kascing/${relatedArticle.slug}`}
-            className="rounded-lg border border-emerald-700 px-5 py-2.5 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
+            className="rounded-full border border-emerald-700 px-5 py-2.5 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
           >
             Baca Versi Sederhana →
           </Link>

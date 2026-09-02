@@ -161,7 +161,7 @@ export function RegistrationForm() {
           Terima kasih, {form.businessName}. Pendaftaran Anda berstatus <strong>menunggu review admin</strong>. Kami
           akan menghubungi Anda melalui email {form.email} setelah proses review selesai.
         </p>
-        <Link href="/direktori" className="mt-5 inline-block rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800">
+        <Link href="/direktori" className="mt-5 inline-block rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800">
           Kembali ke Direktori
         </Link>
       </div>
@@ -314,7 +314,7 @@ export function RegistrationForm() {
             type="button"
             onClick={handleBack}
             disabled={step === 0}
-            className="rounded-lg border border-stone-300 px-5 py-2.5 text-sm font-medium text-stone-600 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-full border border-stone-300 px-5 py-2.5 text-sm font-medium text-stone-600 disabled:cursor-not-allowed disabled:opacity-40"
           >
             ← Kembali
           </button>
@@ -323,7 +323,7 @@ export function RegistrationForm() {
               key="next-button"
               type="button"
               onClick={handleNext}
-              className="rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
+              className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
             >
               Lanjut →
             </button>
@@ -332,7 +332,7 @@ export function RegistrationForm() {
               key="submit-button"
               type="submit"
               disabled={submitting}
-              className="rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800 disabled:opacity-60"
+              className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800 disabled:opacity-60"
             >
               {submitting ? "Mengirim…" : "Kirim Pendaftaran"}
             </button>

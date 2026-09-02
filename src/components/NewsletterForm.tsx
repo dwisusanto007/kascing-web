@@ -64,7 +64,7 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="shrink-0 rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-800 disabled:opacity-60"
+        className="shrink-0 rounded-full bg-emerald-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-800 disabled:opacity-60"
       >
         {status === "loading" ? "Mengirim…" : "Berlangganan"}
       </button>
