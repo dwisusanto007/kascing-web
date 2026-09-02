@@ -16,7 +16,9 @@
     "filter": { "noOptions": "No options", "resetLabel": "Reset {label}" },
     "cobaLagi": "Try again",
     "kembaliKeBeranda": "Back to Home",
-    "sending": "Sending…"
+    "sending": "Sending…",
+    "resetFilter": "Reset filter",
+    "resetSemuaFilter": "Reset all filters"
   },
   "forms": {
     "newsletter": {
@@ -103,7 +105,31 @@
     "card": { "cta": "Read case study" }
   },
   "direktori": {
-    "card": { "cta": "View profile" }
+    "card": { "cta": "View profile" },
+    "title": "Vermicompost Producer Directory",
+    "subtitle": "Find nearby vermicompost producers by location, product type, production capacity, and certification.",
+    "errorLabel": "producer list",
+    "errorMessage": "Failed to load the producer list.",
+    "search": { "label": "Search producer name or city", "placeholder": "Search producer name or city…" },
+    "view": { "list": "List", "map": "Map" },
+    "filter": {
+      "lokasi": "Location",
+      "jenisProduk": "Product Type",
+      "kapasitas": "Production Capacity",
+      "sertifikasi": "Certification",
+      "komoditas": "Commodity"
+    },
+    "capacity": {
+      "kecil": "Small (< 1 ton/month)",
+      "menengah": "Medium (1-20 tons/month)",
+      "besar": "Large (> 20 tons/month)"
+    },
+    "resultsCount": "{count} producers found",
+    "empty": {
+      "noData": { "title": "No registered producers yet", "description": "Vermicompost producers will appear here soon." },
+      "noResults": { "title": "No matching producers", "description": "Try changing your search keyword or filter combination." }
+    },
+    "map": { "disclaimer": "Schematic map view (illustrative producer locations)" }
   },
   "errors": {
     "pageFallback": {

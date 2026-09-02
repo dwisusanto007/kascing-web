@@ -16,7 +16,9 @@
     "filter": { "noOptions": "Tidak ada opsi", "resetLabel": "Reset {label}" },
     "cobaLagi": "Coba lagi",
     "kembaliKeBeranda": "Kembali ke Beranda",
-    "sending": "Mengirim…"
+    "sending": "Mengirim…",
+    "resetFilter": "Reset filter",
+    "resetSemuaFilter": "Reset semua filter"
   },
   "forms": {
     "newsletter": {
@@ -103,7 +105,31 @@
     "card": { "cta": "Baca studi kasus" }
   },
   "direktori": {
-    "card": { "cta": "Lihat profil" }
+    "card": { "cta": "Lihat profil" },
+    "title": "Direktori Produsen Kascing",
+    "subtitle": "Temukan produsen kascing terdekat berdasarkan lokasi, jenis produk, kapasitas produksi, dan sertifikasi.",
+    "errorLabel": "daftar produsen",
+    "errorMessage": "Gagal memuat daftar produsen.",
+    "search": { "label": "Cari nama atau kota produsen", "placeholder": "Cari nama produsen atau kota…" },
+    "view": { "list": "List", "map": "Peta" },
+    "filter": {
+      "lokasi": "Lokasi",
+      "jenisProduk": "Jenis Produk",
+      "kapasitas": "Kapasitas Produksi",
+      "sertifikasi": "Sertifikasi",
+      "komoditas": "Komoditas"
+    },
+    "capacity": {
+      "kecil": "Kecil (< 1 ton/bulan)",
+      "menengah": "Menengah (1-20 ton/bulan)",
+      "besar": "Besar (> 20 ton/bulan)"
+    },
+    "resultsCount": "{count} produsen ditemukan",
+    "empty": {
+      "noData": { "title": "Belum ada produsen terdaftar", "description": "Produsen kascing akan segera tampil di sini." },
+      "noResults": { "title": "Tidak ada produsen yang cocok", "description": "Coba ubah kata kunci pencarian atau kombinasi filter yang digunakan." }
+    },
+    "map": { "disclaimer": "Tampilan peta skematik (ilustrasi lokasi produsen)" }
   },
   "errors": {
     "pageFallback": {

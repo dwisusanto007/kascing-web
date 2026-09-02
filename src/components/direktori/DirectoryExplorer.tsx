@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { producers, PROVINCES, PRODUCTS_LIST, CERTIFICATIONS_LIST, COMMODITIES_LIST } from "@/lib/mock-data";
 import type { Producer } from "@/lib/types";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
@@ -12,17 +13,19 @@ import { SkeletonCardGrid, SlowLoadingNotice } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { hashString } from "@/lib/utils";
 
-const CAPACITY_OPTIONS = [
-  { value: "kecil", label: "Kecil (< 1 ton/bulan)" },
-  { value: "menengah", label: "Menengah (1-20 ton/bulan)" },
-  { value: "besar", label: "Besar (> 20 ton/bulan)" },
-];
-
 const PAGE_SIZE = 6;
 
 export function DirectoryExplorer() {
+  const t = useTranslations("direktori");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
+
+  const CAPACITY_OPTIONS = [
+    { value: "kecil", label: t("capacity.kecil") },
+    { value: "menengah", label: t("capacity.menengah") },
+    { value: "besar", label: t("capacity.besar") },
+  ];
 
   const { status, data, isSlow, retry } = useAsyncData<Producer[]>(
     () => (debugEmpty ? [] : producers),
@@ -89,7 +92,7 @@ export function DirectoryExplorer() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat daftar produsen.");
+    throw new Error(t("errorMessage"));
   }
 
   return (
@@ -98,7 +101,7 @@ export function DirectoryExplorer() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <label htmlFor="directory-search" className="sr-only">
-              Cari nama atau kota produsen
+              {t("search.label")}
             </label>
             <input
               id="directory-search"
@@ -108,7 +111,7 @@ export function DirectoryExplorer() {
                 setSearch(e.target.value);
                 setPage(1);
               }}
-              placeholder="Cari nama produsen atau kota…"
+              placeholder={t("search.placeholder")}
               className="w-full rounded-lg border border-stone-300 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
@@ -119,7 +122,7 @@ export function DirectoryExplorer() {
               aria-pressed={view === "list"}
               className={view === "list" ? "bg-emerald-700 px-3 py-2 text-white" : "bg-white px-3 py-2 text-stone-600"}
             >
-              List
+              {t("view.list")}
             </button>
             <button
               type="button"
@@ -127,38 +130,38 @@ export function DirectoryExplorer() {
               aria-pressed={view === "map"}
               className={view === "map" ? "bg-emerald-700 px-3 py-2 text-white" : "bg-white px-3 py-2 text-stone-600"}
             >
-              Peta
+              {t("view.map")}
             </button>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2">
           <FilterDropdown
-            label="Lokasi"
+            label={t("filter.lokasi")}
             options={PROVINCES.map((p) => ({ value: p, label: p }))}
             selected={provinces}
             onChange={withReset(setProvinces)}
           />
           <FilterDropdown
-            label="Jenis Produk"
+            label={t("filter.jenisProduk")}
             options={PRODUCTS_LIST.map((p) => ({ value: p, label: p }))}
             selected={products}
             onChange={withReset(setProducts)}
           />
           <FilterDropdown
-            label="Kapasitas Produksi"
+            label={t("filter.kapasitas")}
             options={CAPACITY_OPTIONS}
             selected={capacities}
             onChange={withReset(setCapacities)}
           />
           <FilterDropdown
-            label="Sertifikasi"
+            label={t("filter.sertifikasi")}
             options={CERTIFICATIONS_LIST.map((c) => ({ value: c, label: c }))}
             selected={certifications}
             onChange={withReset(setCertifications)}
           />
           <FilterDropdown
-            label="Komoditas"
+            label={t("filter.komoditas")}
             options={COMMODITIES_LIST.map((c) => ({ value: c, label: c }))}
             selected={commodities}
             onChange={withReset(setCommodities)}
@@ -169,29 +172,29 @@ export function DirectoryExplorer() {
               onClick={resetFilters}
               className="rounded-lg px-3 py-2 text-sm font-medium text-stone-500 hover:bg-stone-100"
             >
-              Reset semua filter
+              {tCommon("resetSemuaFilter")}
             </button>
           )}
         </div>
       </div>
 
-      <p className="mt-4 text-sm text-stone-500">{filtered.length} produsen ditemukan</p>
+      <p className="mt-4 text-sm text-stone-500">{t("resultsCount", { count: filtered.length })}</p>
 
       <div className="mt-4">
         {data && data.length === 0 ? (
           <EmptyState
             variant="no-data"
-            title="Belum ada produsen terdaftar"
-            description="Produsen kascing akan segera tampil di sini."
-            actionLabel="Muat ulang"
+            title={t("empty.noData.title")}
+            description={t("empty.noData.description")}
+            actionLabel={tCommon("muatUlang")}
             onAction={retry}
           />
         ) : filtered.length === 0 ? (
           <EmptyState
             variant="no-results"
-            title="Tidak ada produsen yang cocok"
-            description="Coba ubah kata kunci pencarian atau kombinasi filter yang digunakan."
-            actionLabel="Reset filter"
+            title={t("empty.noResults.title")}
+            description={t("empty.noResults.description")}
+            actionLabel={tCommon("resetFilter")}
             onAction={resetFilters}
           />
         ) : view === "list" ? (
@@ -206,14 +209,14 @@ export function DirectoryExplorer() {
                 tag={p.capacityLabel}
                 hasImage={p.hasImage}
                 imageSrc={p.imageUrl}
-                cta="Lihat profil"
+                cta={t("card.cta")}
               />
             ))}
           </div>
         ) : (
           <div className="relative h-[420px] overflow-hidden rounded-xl border border-stone-200 bg-emerald-50">
             <p className="absolute left-3 top-3 z-10 rounded-md bg-white/90 px-2 py-1 text-xs text-stone-500">
-              Tampilan peta skematik (ilustrasi lokasi produsen)
+              {t("map.disclaimer")}
             </p>
             {filtered.map((p) => {
               const h = hashString(p.id);
