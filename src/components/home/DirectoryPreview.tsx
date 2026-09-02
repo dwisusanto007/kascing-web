@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { producers } from "@/lib/mock-data";
 import { useAsyncData } from "@/lib/hooks/useAsyncData";
@@ -8,6 +9,9 @@ import { SkeletonCardGrid, SlowLoadingNotice } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 
 export function DirectoryPreview() {
+  const t = useTranslations("home.directoryPreview");
+  const tCard = useTranslations("direktori.card");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
 
@@ -26,16 +30,16 @@ export function DirectoryPreview() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat preview direktori produsen.");
+    throw new Error(t("errorMessage"));
   }
 
   if (!data || data.length === 0) {
     return (
       <EmptyState
         variant="no-data"
-        title="Belum ada produsen terdaftar"
-        description="Produsen kascing di sekitar kamu akan segera tampil di sini."
-        actionLabel="Muat ulang"
+        title={t("empty.title")}
+        description={t("empty.description")}
+        actionLabel={tCommon("muatUlang")}
         onAction={retry}
       />
     );
@@ -53,7 +57,7 @@ export function DirectoryPreview() {
           tag={p.capacityLabel}
           hasImage={p.hasImage}
           imageSrc={p.imageUrl}
-          cta="Lihat profil"
+          cta={tCard("cta")}
         />
       ))}
     </div>

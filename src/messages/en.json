@@ -7,7 +7,9 @@
     "cariProdusenCta": "Find Producers",
     "lihatSemua": "See all",
     "tutup": "Close",
-    "carousel": { "previous": "Previous", "next": "Next" }
+    "carousel": { "previous": "Previous", "next": "Next" },
+    "muatUlang": "Reload",
+    "lihatDetail": "View details"
   },
   "home": {
     "hero": {
@@ -55,7 +57,23 @@
       "title": "Ready to get started with vermicompost?",
       "description": "Find a trusted producer near you, or list your vermicompost business in our directory."
     },
-    "stickyCta": { "message": "Ready to find a nearby vermicompost producer?" }
+    "stickyCta": { "message": "Ready to find a nearby vermicompost producer?" },
+    "highlights": {
+      "errorMessage": "Failed to load article & news highlights.",
+      "emptyAll": { "title": "No articles or news yet", "description": "Educational content and the latest news will appear here soon." },
+      "emptyArticles": { "title": "No articles yet" },
+      "emptyNews": { "title": "No news yet" },
+      "articlesTitle": "Latest Educational Articles",
+      "newsTitle": "Latest News"
+    },
+    "caseStudiesPreview": {
+      "errorMessage": "Failed to load the case study preview.",
+      "empty": { "title": "No case studies yet", "description": "Case studies from various personas will be available soon." }
+    },
+    "directoryPreview": {
+      "errorMessage": "Failed to load the producer directory preview.",
+      "empty": { "title": "No registered producers yet", "description": "Producers near you will appear here soon." }
+    }
   },
   "taxonomy": {
     "persona": {
@@ -63,5 +81,11 @@
       "perkebunanBesar": "Large Plantations",
       "eksportir": "Exporters"
     }
+  },
+  "studiKasus": {
+    "card": { "cta": "Read case study" }
+  },
+  "direktori": {
+    "card": { "cta": "View profile" }
   }
 }

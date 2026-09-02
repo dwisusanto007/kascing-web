@@ -7,7 +7,9 @@
     "cariProdusenCta": "Cari Produsen",
     "lihatSemua": "Lihat semua",
     "tutup": "Tutup",
-    "carousel": { "previous": "Sebelumnya", "next": "Berikutnya" }
+    "carousel": { "previous": "Sebelumnya", "next": "Berikutnya" },
+    "muatUlang": "Muat ulang",
+    "lihatDetail": "Lihat detail"
   },
   "home": {
     "hero": {
@@ -55,7 +57,23 @@
       "title": "Siap mulai dengan kascing?",
       "description": "Temukan produsen terpercaya di sekitar Anda, atau daftarkan bisnis kascing Anda ke direktori kami."
     },
-    "stickyCta": { "message": "Siap cari produsen kascing terdekat?" }
+    "stickyCta": { "message": "Siap cari produsen kascing terdekat?" },
+    "highlights": {
+      "errorMessage": "Gagal memuat highlight artikel & berita.",
+      "emptyAll": { "title": "Belum ada artikel atau berita", "description": "Konten edukasi dan berita terbaru akan segera hadir di sini." },
+      "emptyArticles": { "title": "Belum ada artikel" },
+      "emptyNews": { "title": "Belum ada berita" },
+      "articlesTitle": "Artikel Edukasi Terbaru",
+      "newsTitle": "Berita Terbaru"
+    },
+    "caseStudiesPreview": {
+      "errorMessage": "Gagal memuat preview studi kasus.",
+      "empty": { "title": "Belum ada studi kasus", "description": "Studi kasus dari berbagai persona akan segera hadir." }
+    },
+    "directoryPreview": {
+      "errorMessage": "Gagal memuat preview direktori produsen.",
+      "empty": { "title": "Belum ada produsen terdaftar", "description": "Produsen kascing di sekitar kamu akan segera tampil di sini." }
+    }
   },
   "taxonomy": {
     "persona": {
@@ -63,5 +81,11 @@
       "perkebunanBesar": "Perkebunan Besar",
       "eksportir": "Eksportir"
     }
+  },
+  "studiKasus": {
+    "card": { "cta": "Baca studi kasus" }
+  },
+  "direktori": {
+    "card": { "cta": "Lihat profil" }
   }
 }

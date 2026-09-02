@@ -10,7 +10,10 @@ import { SkeletonCardGrid, SlowLoadingNotice } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 
 export function CaseStudyPreview() {
+  const t = useTranslations("home.caseStudiesPreview");
+  const tCard = useTranslations("studiKasus.card");
   const tPersona = useTranslations("taxonomy.persona");
+  const tCommon = useTranslations("common");
   const searchParams = useSearchParams();
   const debugEmpty = searchParams.get("debugEmpty") === "1";
 
@@ -29,16 +32,16 @@ export function CaseStudyPreview() {
   }
 
   if (status === "error") {
-    throw new Error("Gagal memuat preview studi kasus.");
+    throw new Error(t("errorMessage"));
   }
 
   if (!data || data.length === 0) {
     return (
       <EmptyState
         variant="no-data"
-        title="Belum ada studi kasus"
-        description="Studi kasus dari berbagai persona akan segera hadir."
-        actionLabel="Muat ulang"
+        title={t("empty.title")}
+        description={t("empty.description")}
+        actionLabel={tCommon("muatUlang")}
         onAction={retry}
       />
     );
@@ -55,7 +58,7 @@ export function CaseStudyPreview() {
           tag={tPersona(PERSONA_LABEL_KEYS[c.persona])}
           hasImage={c.hasImage}
           imageSrc={c.imageUrl}
-          cta="Baca studi kasus"
+          cta={tCard("cta")}
         />
       ))}
     </div>
