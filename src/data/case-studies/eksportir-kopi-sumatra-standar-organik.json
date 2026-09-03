@@ -1,0 +1,22 @@
+{
+  "id": "c3",
+  "slug": "eksportir-kopi-sumatra-standar-organik",
+  "title": "Eksportir Kopi Sumatra Penuhi Standar Organik dengan Kascing",
+  "persona": "eksportir",
+  "summary": "Sertifikasi organik untuk kopi ekspor tercapai berkat penggunaan kascing bersertifikat.",
+  "story": [
+    "Sebuah kelompok tani kopi di Sumatera Utara bermitra dengan eksportir untuk memenuhi standar organik pasar Eropa.",
+    "Penggunaan kascing bersertifikat menjadi salah satu syarat utama dalam proses sertifikasi organik.",
+    "Produk kopi kini berhasil diekspor dengan label organik, meningkatkan nilai jual hingga 25%."
+  ],
+  "metrics": [
+    { "label": "Nilai jual", "value": "+25% dengan label organik" },
+    { "label": "Luas lahan bersertifikat", "value": "80 hektar" }
+  ],
+  "testimonials": [],
+  "hasImage": true,
+  "imageUrl": "/images/case-export.jpg",
+  "relatedProducerSlug": "sumatra-vermi-agro",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# data generated from src/data/**/*.json by scripts/generate-data.mjs
+/src/lib/generated/
+
 # production
 /build
 

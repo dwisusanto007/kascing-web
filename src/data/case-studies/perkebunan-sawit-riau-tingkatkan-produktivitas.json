@@ -1,0 +1,25 @@
+{
+  "id": "c2",
+  "slug": "perkebunan-sawit-riau-tingkatkan-produktivitas",
+  "title": "Perkebunan Sawit di Riau Tingkatkan Produktivitas dengan Kascing",
+  "persona": "perkebunan-besar",
+  "summary": "Kombinasi kascing dan pupuk kimia dosis rendah meningkatkan produktivitas TBS sebesar 12%.",
+  "story": [
+    "Sebuah perkebunan sawit seluas 500 hektar di Riau mengadopsi kascing sebagai bagian dari program pemupukan berimbang.",
+    "Dalam satu musim tanam, produktivitas tandan buah segar (TBS) meningkat signifikan dibanding periode sebelumnya.",
+    "Penggunaan kascing juga membantu memperbaiki struktur tanah gambut yang sebelumnya kurang subur."
+  ],
+  "metrics": [
+    { "label": "Produktivitas TBS", "value": "+12% per hektar" },
+    { "label": "Biaya pupuk kimia", "value": "-18%" }
+  ],
+  "testimonials": [
+    { "name": "Hendra Wijaya", "role": "Manajer Kebun", "quote": "Kascing membantu kami menekan biaya pupuk kimia tanpa mengorbankan hasil panen." }
+  ],
+  "hasImage": true,
+  "imageUrl": "/images/case-plantation.jpg",
+  "relatedProducerSlug": "nusantara-organik-fertilizer",
+  "relatedResearchSlug": "efektivitas-kascing-pada-produktivitas-sawit",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

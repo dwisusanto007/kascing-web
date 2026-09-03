@@ -1,0 +1,22 @@
+{
+  "id": "p3",
+  "slug": "hijau-lestari-vermikompos",
+  "name": "Hijau Lestari Vermikompos",
+  "province": "Jawa Tengah",
+  "city": "Solo",
+  "description": "Kascing rumahan untuk komunitas hobiis tanaman hias.",
+  "longDescription": "Berawal dari komunitas pecinta tanaman hias, Hijau Lestari Vermikompos kini menjadi produsen kascing rumahan yang berfokus pada kualitas untuk tanaman hias dan sayuran pot.",
+  "address": "Jl. Slamet Riyadi Gg. 5, Solo",
+  "products": ["Kascing Kemasan", "Bibit Cacing Lumbricus"],
+  "commodities": ["Tanaman Hias"],
+  "capacity": "kecil",
+  "capacityLabel": "< 1 ton/bulan",
+  "certifications": [],
+  "contact": { "whatsapp": "6289876543210" },
+  "gallery": [],
+  "hasImage": true,
+  "imageUrl": "/images/case-hobiis.jpg",
+  "relatedArticleSlug": "cara-memulai-budidaya-kascing-untuk-pemula",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

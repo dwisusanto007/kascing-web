@@ -1,0 +1,23 @@
+{
+  "id": "p2",
+  "slug": "nusantara-organik-fertilizer",
+  "name": "Nusantara Organik Fertilizer",
+  "province": "Jawa Timur",
+  "city": "Malang",
+  "description": "Produsen skala besar untuk kebutuhan perkebunan dan ekspor.",
+  "longDescription": "Nusantara Organik Fertilizer merupakan produsen kascing berskala industri dengan kapasitas produksi tinggi, melayani perkebunan sawit dan kopi skala besar serta mitra ekspor ke Asia Tenggara.",
+  "address": "Kawasan Industri Singosari, Malang",
+  "products": ["Kascing Curah", "Media Tanam Campuran"],
+  "commodities": ["Sawit", "Kopi"],
+  "capacity": "besar",
+  "capacityLabel": "50-80 ton/bulan",
+  "certifications": ["ISO 9001", "Organik Indonesia", "Halal MUI"],
+  "contact": { "phone": "0341567890", "whatsapp": "6285678901234", "email": "sales@nusantaraorganik.co.id" },
+  "gallery": ["gudang besar", "armada distribusi"],
+  "hasImage": true,
+  "imageUrl": "/images/case-plantation.jpg",
+  "rating": 4.8,
+  "relatedArticleSlug": "kascing-untuk-perkebunan-skala-besar",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

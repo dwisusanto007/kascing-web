@@ -7,7 +7,14 @@ export const PERSONA_LABEL_KEYS: Record<Persona, string> = {
   eksportir: "eksportir",
 };
 
-export interface Producer {
+/** Citation metadata every crawled/researched entry must carry. */
+export interface Sourced {
+  sourceUrl: string;
+  sourceName?: string;
+  retrievedAt?: string;
+}
+
+export interface Producer extends Sourced {
   id: string;
   slug: string;
   name: string;
@@ -33,7 +40,7 @@ export interface Producer {
   relatedArticleSlug?: string;
 }
 
-export interface Article {
+export interface Article extends Sourced {
   id: string;
   slug: string;
   title: string;
@@ -48,7 +55,7 @@ export interface Article {
   relatedSlugs: string[];
 }
 
-export interface NewsItem {
+export interface NewsItem extends Sourced {
   id: string;
   slug: string;
   title: string;
@@ -62,7 +69,7 @@ export interface NewsItem {
   relatedArticleSlug?: string;
 }
 
-export interface ResearchPaper {
+export interface ResearchPaper extends Sourced {
   id: string;
   slug: string;
   title: string;
@@ -86,7 +93,7 @@ export interface Testimonial {
   quote: string;
 }
 
-export interface CaseStudy {
+export interface CaseStudy extends Sourced {
   id: string;
   slug: string;
   title: string;
@@ -101,7 +108,7 @@ export interface CaseStudy {
   relatedResearchSlug?: string;
 }
 
-export interface DownloadResource {
+export interface DownloadResource extends Sourced {
   id: string;
   title: string;
   type: "Panduan PDF" | "Poster Edukasi";
@@ -109,13 +116,28 @@ export interface DownloadResource {
   available: boolean;
 }
 
-export interface FaqItem {
+export interface FaqItem extends Sourced {
   id: string;
   question: string;
   answer: string;
 }
 
-export interface CalculatorRate {
+export interface CalculatorRate extends Sourced {
+  id: string;
   commodity: string;
   kgPerM2: number;
+}
+
+export interface AffiliateProduct extends Sourced {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  category: string;
+  price?: string;
+  marketplace: string;
+  buyUrl: string;
+  producerSlug?: string;
+  hasImage: boolean;
+  imageUrl?: string;
 }

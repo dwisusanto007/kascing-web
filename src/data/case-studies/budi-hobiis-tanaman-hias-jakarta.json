@@ -1,0 +1,24 @@
+{
+  "id": "c1",
+  "slug": "budi-hobiis-tanaman-hias-jakarta",
+  "title": "Budi: Dari Hobi Tanaman Hias ke Bisnis Kascing Rumahan",
+  "persona": "hobiis",
+  "summary": "Kascing rumahan mengubah hobi tanaman hias Budi menjadi usaha sampingan yang menguntungkan.",
+  "story": [
+    "Budi awalnya hanya membuat kascing untuk kebutuhan tanaman hiasnya sendiri di teras rumah.",
+    "Setelah melihat hasil tanaman yang lebih subur, ia mulai menjual kelebihan produksi kascing ke tetangga dan komunitas pecinta tanaman hias.",
+    "Kini Budi memproduksi kascing skala kecil secara rutin dan memasarkannya melalui media sosial."
+  ],
+  "metrics": [
+    { "label": "Sebelum", "value": "Tanaman kurang subur, sering layu" },
+    { "label": "Sesudah", "value": "Daun lebih hijau & rimbun dalam 2 bulan" }
+  ],
+  "testimonials": [
+    { "name": "Budi Santoso", "role": "Hobiis Tanaman Hias", "quote": "Sejak pakai kascing sendiri, tanaman di rumah jauh lebih sehat." }
+  ],
+  "hasImage": true,
+  "imageUrl": "/images/case-hobiis.jpg",
+  "relatedProducerSlug": "hijau-lestari-vermikompos",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

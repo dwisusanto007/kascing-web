@@ -1,0 +1,21 @@
+{
+  "id": "p5",
+  "slug": "lampung-kascing-mandiri",
+  "name": "Lampung Kascing Mandiri",
+  "province": "Lampung",
+  "city": "Bandar Lampung",
+  "description": "Kascing untuk lahan sawah dan palawija.",
+  "longDescription": "Lampung Kascing Mandiri adalah koperasi produsen kascing yang mendukung petani padi dan palawija di wilayah Lampung dengan harga terjangkau dan distribusi cepat.",
+  "address": "Jl. Soekarno-Hatta KM 15, Bandar Lampung",
+  "products": ["Kascing Curah"],
+  "commodities": ["Padi"],
+  "capacity": "menengah",
+  "capacityLabel": "8-15 ton/bulan",
+  "certifications": ["SNI Pupuk Organik"],
+  "contact": { "whatsapp": "6281122334455", "phone": "0721334455" },
+  "gallery": [],
+  "hasImage": true,
+  "imageUrl": "/images/news-field.jpg",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

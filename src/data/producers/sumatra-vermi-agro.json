@@ -1,0 +1,22 @@
+{
+  "id": "p4",
+  "slug": "sumatra-vermi-agro",
+  "name": "Sumatra Vermi Agro",
+  "province": "Sumatera Utara",
+  "city": "Medan",
+  "description": "Fokus pada kascing untuk komoditas kakao dan kopi ekspor.",
+  "longDescription": "Sumatra Vermi Agro melayani kebutuhan pupuk organik untuk perkebunan kakao dan kopi rakyat di Sumatera Utara, dengan sertifikasi organik untuk mendukung produk ekspor.",
+  "address": "Jl. Perkebunan No. 8, Deli Serdang",
+  "products": ["Kascing Curah", "Teh Kascing (Cairan)"],
+  "commodities": ["Kakao", "Kopi"],
+  "capacity": "menengah",
+  "capacityLabel": "10-20 ton/bulan",
+  "certifications": ["Organik Indonesia"],
+  "contact": { "phone": "0614567890", "email": "cs@sumatravermi.com" },
+  "gallery": ["kebun percontohan"],
+  "hasImage": true,
+  "imageUrl": "/images/worm-closeup.jpg",
+  "relatedArticleSlug": "kascing-untuk-perkebunan-skala-besar",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}

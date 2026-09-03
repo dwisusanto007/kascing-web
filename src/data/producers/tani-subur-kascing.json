@@ -1,0 +1,23 @@
+{
+  "id": "p1",
+  "slug": "tani-subur-kascing",
+  "name": "Tani Subur Kascing",
+  "province": "Jawa Barat",
+  "city": "Bandung",
+  "description": "Produsen kascing curah & kemasan untuk kebutuhan pertanian skala kecil-menengah.",
+  "longDescription": "Tani Subur Kascing telah beroperasi sejak 2015, fokus pada produksi kascing berkualitas dari limbah organik lokal. Kami melayani petani hobiis hingga perkebunan menengah di wilayah Jawa Barat dengan standar kelembapan dan unsur hara yang terjaga.",
+  "address": "Jl. Raya Lembang No. 12, Bandung Barat",
+  "products": ["Kascing Curah", "Kascing Kemasan", "Teh Kascing (Cairan)"],
+  "commodities": ["Sayuran", "Tanaman Hias"],
+  "capacity": "menengah",
+  "capacityLabel": "5-10 ton/bulan",
+  "certifications": ["Organik Indonesia", "SNI Pupuk Organik"],
+  "contact": { "phone": "0221234567", "whatsapp": "6281234567890", "email": "info@tanisubur.id" },
+  "gallery": ["fasilitas produksi", "gudang kascing", "proses pengemasan"],
+  "hasImage": true,
+  "imageUrl": "/images/producer-warehouse.jpg",
+  "rating": 4.6,
+  "relatedArticleSlug": "cara-memulai-budidaya-kascing-untuk-pemula",
+  "sourceUrl": "PENDING_SOURCE",
+  "sourceName": "Data contoh (belum diverifikasi)"
+}
