@@ -378,7 +378,7 @@
   },
   "nav": {
     "belajarKascing": {
-      "label": "Learn Vermicomposting",
+      "label": "Learn",
       "description": "Educational guides on growing & using vermicompost",
       "children": {
         "all": { "label": "All Articles", "description": "Basic to advanced guides" },
@@ -388,7 +388,7 @@
       }
     },
     "berita": {
-      "label": "News & Articles",
+      "label": "News",
       "description": "The latest on the vermicompost industry and research",
       "children": {
         "all": { "label": "All News", "description": "Latest news, most recent first" },
@@ -431,7 +431,8 @@
         "faq": { "label": "FAQ", "description": "Frequently asked questions" }
       }
     },
-    "tentang": { "label": "About", "description": "About Vermicompost.id" }
+    "tentang": { "label": "About", "description": "About Vermicompost.id" },
+    "more": { "label": "More", "description": "Research, resources, and about us" }
   },
   "header": {
     "nav": { "ariaLabel": "Main navigation" },
