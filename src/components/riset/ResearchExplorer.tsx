@@ -31,7 +31,10 @@ export function ResearchExplorer() {
     [data],
   );
   const years = useMemo(
-    () => Array.from(new Set((data ?? []).map((r) => String(r.year)))).sort((a, b) => Number(b) - Number(a)),
+    () =>
+      Array.from(new Set((data ?? []).filter((r) => r.year != null).map((r) => String(r.year)))).sort(
+        (a, b) => Number(b) - Number(a),
+      ),
     [data],
   );
 
@@ -44,7 +47,7 @@ export function ResearchExplorer() {
     return data.filter((r) => {
       const matchCommodity = selectedCommodities.length === 0 || selectedCommodities.includes(r.commodity);
       const matchDocType = selectedDocTypes.length === 0 || selectedDocTypes.includes(r.docType);
-      const matchYear = selectedYears.length === 0 || selectedYears.includes(String(r.year));
+      const matchYear = selectedYears.length === 0 || (r.year != null && selectedYears.includes(String(r.year)));
       return matchCommodity && matchDocType && matchYear;
     });
   }, [data, selectedCommodities, selectedDocTypes, selectedYears]);
@@ -127,7 +130,7 @@ export function ResearchExplorer() {
                 href={`/riset/${r.slug}`}
                 title={r.title}
                 excerpt={r.abstract}
-                meta={`${r.docType} · ${r.year}`}
+                meta={r.year != null ? `${r.docType} · ${r.year}` : r.docType}
                 tag={r.commodity}
                 hasImage={false}
                 cta={t("card.cta")}

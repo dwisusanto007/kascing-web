@@ -39,11 +39,13 @@ export default async function ResearchDetailPage({ params }: PageProps) {
       <div className="flex flex-wrap gap-2">
         <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">{paper.docType}</span>
         <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">{paper.commodity}</span>
-        <span className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600">{paper.year}</span>
+        {paper.year != null && (
+          <span className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600">{paper.year}</span>
+        )}
       </div>
 
       <h1 className="mt-4 text-2xl font-bold text-stone-900 sm:text-3xl">{paper.title}</h1>
-      <p className="mt-2 text-sm text-stone-500">{paper.authors}</p>
+      {paper.authors && <p className="mt-2 text-sm text-stone-500">{paper.authors}</p>}
 
       <div className="mt-6">
         <h2 className="mb-2 text-lg font-semibold text-stone-900">{t("abstractTitle")}</h2>

@@ -75,9 +75,9 @@ export interface ResearchPaper extends Sourced {
   title: string;
   commodity: string;
   docType: "Jurnal" | "White Paper" | "Laporan";
-  year: number;
+  year?: number;
   abstract: string;
-  authors: string;
+  authors?: string;
   fileAvailable: boolean;
   relatedArticleSlug?: string;
 }
