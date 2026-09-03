@@ -2,6 +2,7 @@
   "id": "sayuran",
   "commodity": "Sayuran",
   "kgPerM2": 0.5,
-  "sourceUrl": "PENDING_SOURCE",
-  "sourceName": "Data contoh (belum diverifikasi)"
+  "sourceUrl": "https://jurnal.unpad.ac.id/kultivasi/article/view/22184",
+  "sourceName": "Jurnal Kultivasi, Universitas Padjadjaran",
+  "retrievedAt": "2026-09-03"
 }

@@ -1,7 +1,8 @@
 {
   "id": "f3",
   "question": "Apakah kascing aman untuk semua jenis tanaman?",
-  "answer": "Ya, kascing umumnya aman untuk berbagai jenis tanaman karena bersifat organik dan tidak merusak struktur tanah.",
-  "sourceUrl": "PENDING_SOURCE",
-  "sourceName": "Data contoh (belum diverifikasi)"
+  "answer": "Ya. Berbeda dari pupuk kimia, kascing tidak berisiko \"membakar\" akar dan aman digunakan dalam jangka panjang tanpa merusak struktur tanah, sehingga efektif untuk berbagai jenis tanaman hortikultura.",
+  "sourceUrl": "https://bbppkupang.bppsdmp.pertanian.go.id/blog/keunggulan-kascing-yang-dapat-mengembalikan-kesuburan-tanah",
+  "sourceName": "BBPP Kupang (Kementan)",
+  "retrievedAt": "2026-09-03"
 }

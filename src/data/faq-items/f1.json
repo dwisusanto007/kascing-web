@@ -1,7 +1,8 @@
 {
   "id": "f1",
   "question": "Apa itu kascing?",
-  "answer": "Kascing (bekas cacing) adalah pupuk organik hasil pengolahan bahan organik oleh cacing tanah, kaya unsur hara dan mikroorganisme baik untuk tanah.",
-  "sourceUrl": "PENDING_SOURCE",
-  "sourceName": "Data contoh (belum diverifikasi)"
+  "answer": "Kascing adalah singkatan dari \"bekas cacing\" — pupuk organik hasil vermicomposting oleh cacing tanah (terutama Lumbricus rubellus), bertekstur halus, berwarna hitam, homogen, dan tidak berbau. Kascing kaya unsur hara seperti N, P, K, dan Ca.",
+  "sourceUrl": "http://cybex.pertanian.go.id/mobile/artikel/81639/Pupuk-Kascing-bekas-Cacing-Kec-Rengat-Barat-Kab-Inhu",
+  "sourceName": "Cybex Pertanian (Kementan)",
+  "retrievedAt": "2026-09-03"
 }
