@@ -114,6 +114,7 @@ export interface DownloadResource extends Sourced {
   type: "Panduan PDF" | "Poster Edukasi";
   sizeKb: number;
   available: boolean;
+  fileUrl?: string;
 }
 
 export interface FaqItem extends Sourced {

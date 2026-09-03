@@ -32,13 +32,24 @@ export function DownloadList() {
               </p>
             )}
           </div>
-          <button
-            type="button"
-            onClick={() => handleDownload(d.id, d.available, d.title)}
-            className="shrink-0 rounded-full border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
-          >
-            {tCommon("unduh")}
-          </button>
+          {d.available && d.fileUrl ? (
+            <a
+              href={d.fileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-full border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
+            >
+              {tCommon("unduh")}
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={() => handleDownload(d.id, d.available, d.title)}
+              className="shrink-0 rounded-full border border-emerald-700 px-4 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
+            >
+              {tCommon("unduh")}
+            </button>
+          )}
         </li>
       ))}
     </ul>
