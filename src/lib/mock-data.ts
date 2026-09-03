@@ -6,12 +6,14 @@ export { caseStudies } from "./generated/case-studies.generated";
 export { downloadResources } from "./generated/download-resources.generated";
 export { faqItems } from "./generated/faq-items.generated";
 export { calculatorRates } from "./generated/calculator-rates.generated";
+export { affiliateProducts } from "./generated/affiliate-products.generated";
 
 import { producers } from "./generated/producers.generated";
 import { articles } from "./generated/articles.generated";
 import { newsItems } from "./generated/news-items.generated";
 import { researchPapers } from "./generated/research-papers.generated";
 import { caseStudies } from "./generated/case-studies.generated";
+import { affiliateProducts } from "./generated/affiliate-products.generated";
 
 export const PRODUCTS_LIST = [
   "Kascing Curah",
@@ -64,4 +66,8 @@ export function findResearchBySlug(slug: string) {
 
 export function findCaseStudyBySlug(slug: string) {
   return caseStudies.find((c) => c.slug === slug);
+}
+
+export function findAffiliateProductBySlug(slug: string) {
+  return affiliateProducts.find((p) => p.slug === slug);
 }

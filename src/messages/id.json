@@ -46,8 +46,9 @@
       "story": { "title": "Kenapa Mulai dari Vermicompost.id", "errorLabel": "value proposition Vermicompost.id" },
       "features": { "title": "Jelajahi Vermicompost.id", "subtitle": "Semua yang kamu butuhkan seputar kascing, dalam satu tempat." },
       "highlights": { "title": "Edukasi & Kabar Terbaru", "errorLabel": "artikel & berita terbaru" },
-      "caseStudies": { "errorLabel": "preview studi kasus" },
-      "directory": { "title": "Direktori Produsen", "errorLabel": "preview direktori produsen" }
+      "caseStudies": { "title": "Studi Kasus", "errorLabel": "preview studi kasus" },
+      "directory": { "title": "Direktori Produsen", "errorLabel": "preview direktori produsen" },
+      "produk": { "title": "Produk yang Bisa Dibeli", "errorLabel": "preview produk" }
     },
     "personas": {
       "hobiis": { "description": "Baru mulai atau hobi tanaman hias? Pelajari dasar-dasar kascing untuk halaman rumahmu." },
@@ -95,6 +96,10 @@
     "directoryPreview": {
       "errorMessage": "Gagal memuat preview direktori produsen.",
       "empty": { "title": "Belum ada produsen terdaftar", "description": "Produsen kascing di sekitar kamu akan segera tampil di sini." }
+    },
+    "productPreview": {
+      "errorMessage": "Gagal memuat preview produk.",
+      "empty": { "title": "Belum ada produk", "description": "Produk kascing yang bisa dibeli akan segera tampil di sini." }
     }
   },
   "taxonomy": {
@@ -211,6 +216,25 @@
       "notFoundTitle": "Studi kasus tidak ditemukan",
       "relatedProducerCta": "Lihat Produsen Terkait →",
       "relatedResearchCta": "Baca Riset Pendukung →"
+    }
+  },
+  "produk": {
+    "title": "Produk",
+    "subtitle": "Produk kascing yang bisa langsung dibeli, lengkap dengan link ke marketplace atau toko penjualnya.",
+    "errorLabel": "daftar produk",
+    "errorMessage": "Gagal memuat daftar produk.",
+    "filter": { "kategori": "Kategori" },
+    "empty": {
+      "noData": { "title": "Belum ada produk", "description": "Produk kascing akan segera tampil di sini." },
+      "noResults": { "title": "Belum ada produk di kategori ini", "description": "Coba pilih kategori lain." }
+    },
+    "card": { "cta": "Lihat produk" },
+    "detail": {
+      "notFoundTitle": "Produk tidak ditemukan",
+      "marketplaceLabel": "Dijual di {marketplace}",
+      "buyButtonPrefix": "Beli di {marketplace}",
+      "fromProducerPrompt": "Produk ini berasal dari produsen yang ada di direktori kami.",
+      "producerProductsTitle": "Produk dari Produsen Ini"
     }
   },
   "direktori": {
@@ -412,6 +436,10 @@
         "cari": { "label": "Cari Produsen", "description": "Jelajahi produsen kascing terdekat" },
         "daftar": { "label": "Daftarkan Bisnis Anda", "description": "Masukkan bisnis Anda ke direktori" }
       }
+    },
+    "produk": {
+      "label": "Produk",
+      "description": "Produk kascing yang bisa langsung dibeli"
     },
     "studiKasus": {
       "label": "Studi Kasus",

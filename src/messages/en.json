@@ -46,8 +46,9 @@
       "story": { "title": "Why Start with Vermicompost.id", "errorLabel": "Vermicompost.id value proposition" },
       "features": { "title": "Explore Vermicompost.id", "subtitle": "Everything you need about vermicompost, in one place." },
       "highlights": { "title": "Education & Latest News", "errorLabel": "latest articles & news" },
-      "caseStudies": { "errorLabel": "case study preview" },
-      "directory": { "title": "Producer Directory", "errorLabel": "producer directory preview" }
+      "caseStudies": { "title": "Case Studies", "errorLabel": "case study preview" },
+      "directory": { "title": "Producer Directory", "errorLabel": "producer directory preview" },
+      "produk": { "title": "Products You Can Buy", "errorLabel": "product preview" }
     },
     "personas": {
       "hobiis": { "description": "Just starting out or into ornamental plants? Learn vermicompost basics for your home garden." },
@@ -95,6 +96,10 @@
     "directoryPreview": {
       "errorMessage": "Failed to load the producer directory preview.",
       "empty": { "title": "No registered producers yet", "description": "Producers near you will appear here soon." }
+    },
+    "productPreview": {
+      "errorMessage": "Failed to load the product preview.",
+      "empty": { "title": "No products yet", "description": "Vermicompost products you can buy will appear here soon." }
     }
   },
   "taxonomy": {
@@ -211,6 +216,25 @@
       "notFoundTitle": "Case study not found",
       "relatedProducerCta": "View Related Producer →",
       "relatedResearchCta": "Read Supporting Research →"
+    }
+  },
+  "produk": {
+    "title": "Products",
+    "subtitle": "Vermicompost products you can buy right now, with links to the marketplace or store selling them.",
+    "errorLabel": "product list",
+    "errorMessage": "Failed to load the product list.",
+    "filter": { "kategori": "Category" },
+    "empty": {
+      "noData": { "title": "No products yet", "description": "Vermicompost products will appear here soon." },
+      "noResults": { "title": "No products in this category yet", "description": "Try selecting a different category." }
+    },
+    "card": { "cta": "View product" },
+    "detail": {
+      "notFoundTitle": "Product not found",
+      "marketplaceLabel": "Sold on {marketplace}",
+      "buyButtonPrefix": "Buy on {marketplace}",
+      "fromProducerPrompt": "This product is from a producer in our directory.",
+      "producerProductsTitle": "Products from This Producer"
     }
   },
   "direktori": {
@@ -412,6 +436,10 @@
         "cari": { "label": "Find Producers", "description": "Browse nearby vermicompost producers" },
         "daftar": { "label": "List Your Business", "description": "Add your business to the directory" }
       }
+    },
+    "produk": {
+      "label": "Products",
+      "description": "Vermicompost products you can buy right now"
     },
     "studiKasus": {
       "label": "Case Studies",

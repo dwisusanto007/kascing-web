@@ -15,7 +15,7 @@ function isActive(pathname: string, href: string) {
 
 // Lower-traffic sections are tucked under a "More" menu so the top-level
 // nav stays on one line at desktop widths.
-const MORE_HREFS = ["/riset", "/sumber-daya", "/tentang"];
+const MORE_HREFS = ["/riset", "/produk", "/sumber-daya", "/tentang"];
 
 export function Header() {
   const t = useTranslations("nav");

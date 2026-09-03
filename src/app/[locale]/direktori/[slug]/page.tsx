@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import { findArticleBySlug, findProducerBySlug, producers } from "@/lib/mock-data";
+import { affiliateProducts, findArticleBySlug, findProducerBySlug, producers } from "@/lib/mock-data";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Card } from "@/components/ui/Card";
@@ -37,6 +37,8 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
   const t = await getTranslations("direktori.detail");
   const tCard = await getTranslations("direktori.card");
   const tNav = await getTranslations("nav");
+  const tProdukDetail = await getTranslations("produk.detail");
+  const tProdukCard = await getTranslations("produk");
 
   const debugNoContact = sp.debugNoContact === "1";
   const contact = debugNoContact ? {} : producer.contact;
@@ -46,6 +48,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
   const relatedProducers = producers
     .filter((p) => p.id !== producer.id && p.province === producer.province)
     .slice(0, 3);
+  const producerProducts = affiliateProducts.filter((p) => p.producerSlug === producer.slug);
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
@@ -171,6 +174,27 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
           </div>
         </div>
       </div>
+
+      {producerProducts.length > 0 && (
+        <div className="mt-12">
+          <h2 className="mb-4 text-lg font-semibold text-stone-900">{tProdukDetail("producerProductsTitle")}</h2>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {producerProducts.map((p) => (
+              <Card
+                key={p.id}
+                href={`/produk/${p.slug}`}
+                title={p.name}
+                excerpt={p.description}
+                meta={p.marketplace}
+                tag={p.category}
+                hasImage={p.hasImage}
+                imageSrc={p.imageUrl}
+                cta={tProdukCard("card.cta")}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {relatedProducers.length > 0 && (
         <div className="mt-12">

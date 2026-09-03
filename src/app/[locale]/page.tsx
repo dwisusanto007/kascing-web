@@ -8,6 +8,7 @@ import { SkeletonCardGrid } from "@/components/ui/Skeleton";
 import { HighlightSection } from "@/components/home/HighlightSection";
 import { CaseStudyPreview } from "@/components/home/CaseStudyPreview";
 import { DirectoryPreview } from "@/components/home/DirectoryPreview";
+import { ProductPreview } from "@/components/home/ProductPreview";
 import { FeatureGrid } from "@/components/home/FeatureGrid";
 import { StatsStrip } from "@/components/home/StatsStrip";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -148,7 +149,7 @@ export default async function HomePage() {
 
       {/* 05 — Studi kasus preview */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <SectionHeading number="05" title="Studi Kasus" action={{ label: tCommon("lihatSemua"), href: "/studi-kasus" }} />
+        <SectionHeading number="05" title={t("sections.caseStudies.title")} action={{ label: tCommon("lihatSemua"), href: "/studi-kasus" }} />
         <SectionErrorBoundary label={t("sections.caseStudies.errorLabel")}>
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <CaseStudyPreview />
@@ -166,6 +167,20 @@ export default async function HomePage() {
         <SectionErrorBoundary label={t("sections.directory.errorLabel")}>
           <Suspense fallback={<SkeletonCardGrid count={3} />}>
             <DirectoryPreview />
+          </Suspense>
+        </SectionErrorBoundary>
+      </section>
+
+      {/* 07 — Produk affiliate preview */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <SectionHeading
+          number="07"
+          title={t("sections.produk.title")}
+          action={{ label: tCommon("lihatSemua"), href: "/produk" }}
+        />
+        <SectionErrorBoundary label={t("sections.produk.errorLabel")}>
+          <Suspense fallback={<SkeletonCardGrid count={3} />}>
+            <ProductPreview />
           </Suspense>
         </SectionErrorBoundary>
       </section>

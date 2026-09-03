@@ -53,6 +53,11 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
+    labelKey: "produk.label",
+    href: "/produk",
+    descriptionKey: "produk.description",
+  },
+  {
     labelKey: "studiKasus.label",
     href: "/studi-kasus",
     descriptionKey: "studiKasus.description",
