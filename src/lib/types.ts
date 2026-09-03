@@ -112,7 +112,7 @@ export interface DownloadResource extends Sourced {
   id: string;
   title: string;
   type: "Panduan PDF" | "Poster Edukasi";
-  sizeKb: number;
+  sizeKb?: number;
   available: boolean;
   fileUrl?: string;
 }

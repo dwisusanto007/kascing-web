@@ -24,7 +24,7 @@ export function DownloadList() {
           <div>
             <p className="font-medium text-stone-900">{d.title}</p>
             <p className="text-xs text-stone-400">
-              {d.type} · {(d.sizeKb / 1024).toFixed(1)} MB
+              {d.sizeKb != null ? `${d.type} · ${(d.sizeKb / 1024).toFixed(1)} MB` : d.type}
             </p>
             {message[d.id] && (
               <p className={`mt-1 text-xs ${message[d.id].isError ? "text-red-600" : "text-emerald-700"}`}>
