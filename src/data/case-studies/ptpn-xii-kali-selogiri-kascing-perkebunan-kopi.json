@@ -1,0 +1,21 @@
+{
+  "id": "c7",
+  "slug": "ptpn-xii-kali-selogiri-kascing-perkebunan-kopi",
+  "title": "PTPN XII Kebun Kali Selogiri: Produksi Kascing untuk Tekan Biaya Pupuk di Kebun Kopi 700 Hektare",
+  "persona": "perkebunan-besar",
+  "summary": "Kebun kopi robusta seluas sekitar 700 hektare milik PTPN XII di Banyuwangi membangun 14 unit rumah produksi kascing untuk menekan biaya pupuk sekaligus mengolah limbah kotoran ternak.",
+  "story": [
+    "Kebun Kali Selogiri milik PT Perkebunan Nusantara XII (PTPN XII) di Banyuwangi, Jawa Timur, adalah perkebunan kopi robusta seluas sekitar 700 hektare yang mengekspor biji kopi ke Italia, Inggris, Jepang, dan Swiss.",
+    "Untuk menekan biaya pupuk, kebun ini membangun 14 unit rumah produksi kascing memakai cacing Lumbricus rubellus yang diberi pakan kotoran ternak dan limbah kulit kopi.",
+    "Satu batch produksi standar (15 kg kotoran ternak + 200 gram cacing, diproses sekitar 2 minggu) menghasilkan sekitar 7,5 kg kascing; total produksi harian kebun ini dilaporkan mencapai sekitar 4,5 ton kascing. Program ini juga mendapat kunjungan apresiasi dari dinas pertanian setempat."
+  ],
+  "metrics": [
+    { "label": "Luas kebun", "value": "± 700 hektare kopi robusta" },
+    { "label": "Produksi kascing", "value": "± 4,5 ton/hari dari 14 unit rumah produksi" }
+  ],
+  "testimonials": [],
+  "hasImage": false,
+  "sourceUrl": "https://timesindonesia.co.id/ekonomi/182215/wow-di-ptpn-xii-banyuwangi-ada-pupuk-dari-kotoran-cacing",
+  "sourceName": "TIMES Indonesia",
+  "retrievedAt": "2026-09-03"
+}
