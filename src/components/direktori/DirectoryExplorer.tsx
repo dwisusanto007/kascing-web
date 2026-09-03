@@ -54,7 +54,7 @@ export function DirectoryExplorer() {
         p.city.toLowerCase().includes(search.trim().toLowerCase());
       const matchesProvince = provinces.length === 0 || provinces.includes(p.province);
       const matchesProducts = products.length === 0 || products.some((prod) => p.products.includes(prod));
-      const matchesCapacity = capacities.length === 0 || capacities.includes(p.capacity);
+      const matchesCapacity = capacities.length === 0 || (p.capacity != null && capacities.includes(p.capacity));
       const matchesCert = certifications.length === 0 || certifications.some((c) => p.certifications.includes(c));
       const matchesCommodity = commodities.length === 0 || commodities.some((c) => p.commodities.includes(c));
       return matchesSearch && matchesProvince && matchesProducts && matchesCapacity && matchesCert && matchesCommodity;

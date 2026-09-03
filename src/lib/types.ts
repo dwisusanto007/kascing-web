@@ -22,11 +22,11 @@ export interface Producer extends Sourced {
   city: string;
   description: string;
   longDescription: string;
-  address: string;
+  address?: string;
   products: string[];
   commodities: string[];
-  capacity: "kecil" | "menengah" | "besar";
-  capacityLabel: string;
+  capacity?: "kecil" | "menengah" | "besar";
+  capacityLabel?: string;
   certifications: string[];
   contact: {
     phone?: string;

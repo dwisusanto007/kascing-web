@@ -65,13 +65,16 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
 
           <h1 className="mt-6 text-2xl font-bold text-stone-900 sm:text-3xl">{producer.name}</h1>
           <p className="mt-1 text-sm text-stone-500">
-            {producer.city}, {producer.province} · {producer.address}
+            {producer.city}, {producer.province}
+            {producer.address && ` · ${producer.address}`}
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
-              {t("capacityPrefix", { label: producer.capacityLabel })}
-            </span>
+            {producer.capacityLabel && (
+              <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+                {t("capacityPrefix", { label: producer.capacityLabel })}
+              </span>
+            )}
             {producer.certifications.map((c) => (
               <span key={c} className="rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">
                 {c}
