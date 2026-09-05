@@ -46,6 +46,27 @@ If a variable a page depends on is ever missing, that page's data-loading logic 
 existing Error Boundary / Empty State components (see `src/components/ui/SectionErrorBoundary.tsx` and
 `EmptyState.tsx`) rather than crashing the whole app — keep that in mind when a real API integration lands.
 
+## 2b. Analytics (GA4)
+
+The base gtag.js tracking snippet is wired into `src/app/[locale]/layout.tsx`, gated entirely behind
+`NEXT_PUBLIC_GA_MEASUREMENT_ID` (see `.env.example`) — when that env var is unset, no GA script renders at all
+(no crash, tracking is simply off). The account-level steps below can't be done from this environment and need to
+happen in your own Vercel/Google accounts:
+
+1. **Set the env var in Vercel**: Project Settings → Environment Variables → add `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+   with the real Measurement ID (e.g. `G-ZXQ8T65YFC`) for **Production** and **Preview** — redeploy for it to
+   take effect on existing deployments.
+2. **Enable Enhanced Measurement**: GA4 Admin → Data Streams → select the web stream → toggle **Outbound clicks**
+   ON. This automatically records clicks to external links (e.g. `wa.me` WhatsApp links) with no custom event
+   code needed.
+3. **Exclude internal/team traffic**: GA4 Admin → Data Streams → Configure tag settings → Define internal traffic
+   → add the team's office/home IP addresses, so testing and day-to-day dev traffic don't pollute real analytics.
+4. **Verify before go-live**: GA4 Admin → DebugView — confirm `page_view` and outbound-click events are recorded
+   correctly against a real deployment before relying on the data for decisions.
+
+Any persona-specific custom events (e.g. `whatsapp_click_<persona>`) layered on top of this base tracking are a
+separate, later piece of work — this section only covers the site-wide gtag.js setup.
+
 ## 3. Custom domain
 
 1. Project Settings → Domains → add your domain (e.g. `kascing.id`).
