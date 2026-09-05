@@ -217,7 +217,13 @@
     "detail": {
       "notFoundTitle": "Studi kasus tidak ditemukan",
       "relatedProducerCta": "Lihat Produsen Terkait →",
-      "relatedResearchCta": "Baca Riset Pendukung →"
+      "relatedResearchCta": "Baca Riset Pendukung →",
+      "metricsHeading": {
+        "importir": "Data Volume & Kontrak",
+        "hobiis": "Sebelum & Sesudah",
+        "perkebunan": "Dampak Kuantitatif",
+        "petaniPadi": "Pencapaian Sertifikasi"
+      }
     }
   },
   "produk": {

@@ -217,7 +217,13 @@
     "detail": {
       "notFoundTitle": "Case study not found",
       "relatedProducerCta": "View Related Producer →",
-      "relatedResearchCta": "Read Supporting Research →"
+      "relatedResearchCta": "Read Supporting Research →",
+      "metricsHeading": {
+        "importir": "Volume & Contract Data",
+        "hobiis": "Before & After",
+        "perkebunan": "Quantitative Impact",
+        "petaniPadi": "Certification Milestones"
+      }
     }
   },
   "produk": {

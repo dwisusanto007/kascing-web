@@ -47,13 +47,18 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
       <p className="mt-2 text-base text-stone-600">{caseStudy.summary}</p>
 
       {caseStudy.metrics.length > 0 && (
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {caseStudy.metrics.map((m) => (
-            <div key={m.label} className="rounded-xl border border-stone-200 bg-stone-50 p-4">
-              <p className="text-xs text-stone-400">{m.label}</p>
-              <p className="mt-1 text-lg font-semibold text-stone-900">{m.value}</p>
-            </div>
-          ))}
+        <div className="mt-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-stone-500">
+            {t(`metricsHeading.${PERSONA_LABEL_KEYS[caseStudy.persona]}`)}
+          </h2>
+          <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {caseStudy.metrics.map((m) => (
+              <div key={m.label} className="rounded-xl border border-stone-200 bg-stone-50 p-4">
+                <p className="text-xs text-stone-400">{m.label}</p>
+                <p className="mt-1 text-lg font-semibold text-stone-900">{m.value}</p>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
