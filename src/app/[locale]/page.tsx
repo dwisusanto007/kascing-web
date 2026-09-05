@@ -113,6 +113,7 @@ export default async function HomePage() {
               key={p.persona}
               title={t("personas.comingSoon")}
               aria-disabled="true"
+              tabIndex={0}
               className="flex h-full cursor-not-allowed flex-col rounded-xl border border-stone-200 bg-white p-6 opacity-70"
             >
               <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
