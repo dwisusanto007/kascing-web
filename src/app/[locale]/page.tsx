@@ -108,22 +108,37 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <SectionHeading number="01" title={t("sections.personas.title")} />
         <PersonaCarousel ariaLabel={t("sections.personas.ariaLabel")}>
-          {PERSONAS.map((p) => (
-            <div
-              key={p.persona}
-              title={t("personas.comingSoon")}
-              aria-disabled="true"
-              tabIndex={0}
-              className="flex h-full cursor-not-allowed flex-col rounded-xl border border-stone-200 bg-white p-6 opacity-70"
-            >
-              <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
-                {tPersona(PERSONA_LABEL_KEYS[p.persona])}
-              </span>
-              <h3 className="mt-3 font-bold text-stone-900">{p.title}</h3>
-              <p className="mt-1 text-sm text-stone-500">{p.description}</p>
-              <span className="mt-auto pt-4 text-sm font-medium text-stone-400">{p.ctaLabel} · {t("personas.comingSoon")}</span>
-            </div>
-          ))}
+          {PERSONAS.map((p) =>
+            p.persona === "importir" ? (
+              <Link
+                key={p.persona}
+                href="/untuk-importir"
+                className="group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                  {tPersona(PERSONA_LABEL_KEYS[p.persona])}
+                </span>
+                <h3 className="mt-3 font-bold text-stone-900 group-hover:text-emerald-700">{p.title}</h3>
+                <p className="mt-1 text-sm text-stone-500">{p.description}</p>
+                <span className="mt-auto pt-4 text-sm font-medium text-emerald-700">{p.ctaLabel}</span>
+              </Link>
+            ) : (
+              <div
+                key={p.persona}
+                title={t("personas.comingSoon")}
+                aria-disabled="true"
+                tabIndex={0}
+                className="flex h-full cursor-not-allowed flex-col rounded-xl border border-stone-200 bg-white p-6 opacity-70"
+              >
+                <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                  {tPersona(PERSONA_LABEL_KEYS[p.persona])}
+                </span>
+                <h3 className="mt-3 font-bold text-stone-900">{p.title}</h3>
+                <p className="mt-1 text-sm text-stone-500">{p.description}</p>
+                <span className="mt-auto pt-4 text-sm font-medium text-stone-400">{p.ctaLabel} · {t("personas.comingSoon")}</span>
+              </div>
+            ),
+          )}
         </PersonaCarousel>
       </section>
 
