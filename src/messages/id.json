@@ -2,7 +2,7 @@
   "common": {
     "meta": {
       "title": "Vermicompost.id — Edukasi & Direktori Produsen Kascing",
-      "description": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir."
+      "description": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan, importir, hingga petani padi."
     },
     "cariProdusenCta": "Cari Produsen",
     "lihatSemua": "Lihat semua",
@@ -36,7 +36,7 @@
   "home": {
     "hero": {
       "title": "Pupuk Organik Kascing untuk Pertanian yang Lebih Subur",
-      "subtitle": "Vermicompost.id membantu hobiis, perkebunan besar, hingga eksportir memahami manfaat kascing dan menemukan produsen terpercaya di seluruh Indonesia.",
+      "subtitle": "Vermicompost.id membantu hobiis, perkebunan, importir, hingga petani padi memahami manfaat kascing dan menemukan produsen terpercaya di seluruh Indonesia.",
       "ctaPrimary": "Mulai Belajar",
       "ctaSecondary": "Cari Produsen Terdekat",
       "imageLabel": "Hero Kascing"
@@ -51,14 +51,15 @@
       "produk": { "title": "Produk yang Bisa Dibeli", "errorLabel": "preview produk" }
     },
     "personas": {
-      "hobiis": { "description": "Baru mulai atau hobi tanaman hias? Pelajari dasar-dasar kascing untuk halaman rumahmu." },
-      "perkebunanBesar": { "description": "Tingkatkan produktivitas lahan luas dengan strategi kascing berbasis data." },
-      "eksportir": { "description": "Penuhi standar mutu organik untuk pasar ekspor dengan kascing bersertifikat." },
-      "ctaLabel": "Pelajari lebih lanjut →"
+      "importir": { "description": "Cari pasokan kascing/vermikompos volume besar untuk diimpor? Lihat spesifikasi produk dan sertifikasi ekspor kami.", "ctaLabel": "Minta Spec Sheet & Harga FOB" },
+      "hobiis": { "description": "Baru mulai atau hobi tanaman hias? Pelajari dasar-dasar kascing untuk halaman rumahmu.", "ctaLabel": "Coba Starter Pack" },
+      "perkebunan": { "description": "Kelola kebun karet, sawit, durian, atau alpukat? Tingkatkan hasil panen dengan strategi kascing berbasis data.", "ctaLabel": "Ajukan Demo Plot Gratis" },
+      "petaniPadi": { "description": "Tergabung dalam kelompok tani padi? Coba skema beli bareng kascing bersertifikat organik.", "ctaLabel": "Gabung Skema Beli Bareng Poktan" },
+      "comingSoon": "Segera hadir"
     },
     "story": {
       "directory": { "title": "Cari produsen yang sudah terverifikasi", "description": "Direktori kami menyaring produsen berdasarkan lokasi, kapasitas produksi, dan sertifikasi — bukan sekadar daftar kontak." },
-      "data": { "title": "Belajar dari studi kasus & data nyata", "description": "Lihat hasil nyata dari hobiis, perkebunan besar, hingga eksportir, lengkap dengan angka dan riset pendukung." },
+      "data": { "title": "Belajar dari studi kasus & data nyata", "description": "Lihat hasil nyata dari hobiis, perkebunan, importir, hingga petani padi, lengkap dengan angka dan riset pendukung." },
       "news": { "title": "Ikuti kabar terbaru industri kascing", "description": "Update riset, press release, dan artikel edukasi baru tayang rutin, supaya keputusanmu selalu berbasis info terkini." }
     },
     "features": {
@@ -66,7 +67,7 @@
       "direktoriProdusen": { "title": "Direktori Produsen", "description": "Temukan dan bandingkan produsen kascing terdekat sesuai kebutuhan Anda." },
       "berita": { "title": "Berita & Artikel", "description": "Kabar terbaru seputar industri kascing, update riset, dan press release." },
       "riset": { "title": "Riset & Publikasi", "description": "Jurnal, laporan, dan white paper berbasis data untuk pengambilan keputusan." },
-      "studiKasus": { "title": "Studi Kasus", "description": "Cerita nyata penggunaan kascing dari hobiis, perkebunan besar, hingga eksportir." },
+      "studiKasus": { "title": "Studi Kasus", "description": "Cerita nyata penggunaan kascing dari hobiis, perkebunan, importir, hingga petani padi." },
       "sumberDaya": { "title": "Sumber Daya", "description": "Kalkulator kebutuhan kascing, unduhan panduan, dan jawaban pertanyaan umum." },
       "cardCta": "Jelajahi →"
     },
@@ -104,9 +105,10 @@
   },
   "taxonomy": {
     "persona": {
-      "hobiis": "Hobiis",
-      "perkebunanBesar": "Perkebunan Besar",
-      "eksportir": "Eksportir"
+      "importir": "Importir Malaysia",
+      "hobiis": "Hobiis Tanaman",
+      "perkebunan": "Perkebunan",
+      "petaniPadi": "Petani Padi Organik"
     }
   },
   "belajarKascing": {
@@ -205,7 +207,7 @@
   "studiKasus": {
     "card": { "cta": "Baca studi kasus" },
     "title": "Studi Kasus",
-    "subtitle": "Cerita nyata penggunaan kascing dari hobiis, perkebunan besar, hingga eksportir.",
+    "subtitle": "Cerita nyata penggunaan kascing dari hobiis, perkebunan, importir, hingga petani padi.",
     "errorLabel": "studi kasus",
     "errorMessage": "Gagal memuat studi kasus.",
     "tabs": { "ariaLabel": "Segmentasi persona" },
@@ -445,9 +447,10 @@
       "label": "Studi Kasus",
       "description": "Cerita nyata penggunaan kascing per persona",
       "children": {
-        "hobiis": { "label": "Hobiis", "description": "Cerita dari pecinta tanaman hias" },
-        "perkebunanBesar": { "label": "Perkebunan Besar", "description": "Dampak kascing pada produktivitas lahan luas" },
-        "eksportir": { "label": "Eksportir", "description": "Memenuhi standar organik untuk ekspor" }
+        "importir": { "label": "Importir Malaysia", "description": "Cerita dari mitra pembeli volume besar" },
+        "hobiis": { "label": "Hobiis Tanaman", "description": "Cerita dari pecinta tanaman hias" },
+        "perkebunan": { "label": "Perkebunan", "description": "Dampak kascing pada produktivitas kebun karet/sawit/durian/alpukat" },
+        "petaniPadi": { "label": "Petani Padi Organik", "description": "Cerita kelompok tani padi bersertifikat organik" }
       }
     },
     "sumberDaya": {
@@ -469,7 +472,7 @@
     "mobileSubmenu": { "ariaLabel": "Buka submenu {label}" }
   },
   "footer": {
-    "tagline": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan besar, hingga eksportir.",
+    "tagline": "Pusat edukasi, riset, dan direktori produsen kascing (bekas cacing) untuk hobiis, perkebunan, importir, hingga petani padi.",
     "newsletterLabel": "Berlangganan newsletter",
     "columns": { "produk": "Produk & Section", "perusahaan": "Perusahaan", "legal": "Legal" },
     "links": {

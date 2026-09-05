@@ -12,7 +12,7 @@ import { SkeletonCardGrid, SlowLoadingNotice } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { cn } from "@/lib/utils";
 
-const PERSONAS: Persona[] = ["hobiis", "perkebunan-besar", "eksportir"];
+const PERSONAS: Persona[] = ["importir", "hobiis", "perkebunan", "petani-padi"];
 
 export function CaseStudyExplorer() {
   const t = useTranslations("studiKasus");
@@ -32,7 +32,10 @@ export function CaseStudyExplorer() {
     initialPersona && PERSONAS.includes(initialPersona) ? initialPersona : "hobiis",
   );
 
-  const filtered = useMemo(() => (data ?? []).filter((c) => c.persona === activePersona), [data, activePersona]);
+  const filtered = useMemo(
+    () => (data ?? []).filter((c) => c.persona === activePersona && !c.hidden),
+    [data, activePersona],
+  );
 
   if (status === "loading") {
     return (

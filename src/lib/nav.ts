@@ -62,9 +62,10 @@ export const NAV_ITEMS: NavItem[] = [
     href: "/studi-kasus",
     descriptionKey: "studiKasus.description",
     children: [
+      { labelKey: "studiKasus.children.importir.label", href: "/studi-kasus?persona=importir", descriptionKey: "studiKasus.children.importir.description" },
       { labelKey: "studiKasus.children.hobiis.label", href: "/studi-kasus?persona=hobiis", descriptionKey: "studiKasus.children.hobiis.description" },
-      { labelKey: "studiKasus.children.perkebunanBesar.label", href: "/studi-kasus?persona=perkebunan-besar", descriptionKey: "studiKasus.children.perkebunanBesar.description" },
-      { labelKey: "studiKasus.children.eksportir.label", href: "/studi-kasus?persona=eksportir", descriptionKey: "studiKasus.children.eksportir.description" },
+      { labelKey: "studiKasus.children.perkebunan.label", href: "/studi-kasus?persona=perkebunan", descriptionKey: "studiKasus.children.perkebunan.description" },
+      { labelKey: "studiKasus.children.petaniPadi.label", href: "/studi-kasus?persona=petani-padi", descriptionKey: "studiKasus.children.petaniPadi.description" },
     ],
   },
   {

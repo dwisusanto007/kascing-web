@@ -2,7 +2,8 @@
   "id": "c3",
   "slug": "eksportir-kopi-sumatra-standar-organik",
   "title": "Eksportir Kopi Sumatra Penuhi Standar Organik dengan Kascing",
-  "persona": "eksportir",
+  "persona": "perkebunan",
+  "hidden": true,
   "summary": "Sertifikasi organik untuk kopi ekspor tercapai berkat penggunaan kascing bersertifikat.",
   "story": [
     "Sebuah kelompok tani kopi di Sumatera Utara bermitra dengan eksportir untuk memenuhi standar organik pasar Eropa.",

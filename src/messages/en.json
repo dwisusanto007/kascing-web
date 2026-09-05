@@ -2,7 +2,7 @@
   "common": {
     "meta": {
       "title": "Vermicompost.id — Education & Producer Directory",
-      "description": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, large plantations, and exporters alike."
+      "description": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, plantations, importers, and rice farmers alike."
     },
     "cariProdusenCta": "Find Producers",
     "lihatSemua": "See all",
@@ -36,7 +36,7 @@
   "home": {
     "hero": {
       "title": "Organic Vermicompost for Richer Farming",
-      "subtitle": "Vermicompost.id helps hobbyists, large plantations, and exporters understand the benefits of vermicompost and find trusted producers across Indonesia.",
+      "subtitle": "Vermicompost.id helps hobbyists, plantations, importers, and rice farmers understand the benefits of vermicompost and find trusted producers across Indonesia.",
       "ctaPrimary": "Start Learning",
       "ctaSecondary": "Find a Nearby Producer",
       "imageLabel": "Vermicompost Hero"
@@ -51,14 +51,15 @@
       "produk": { "title": "Products You Can Buy", "errorLabel": "product preview" }
     },
     "personas": {
-      "hobiis": { "description": "Just starting out or into ornamental plants? Learn vermicompost basics for your home garden." },
-      "perkebunanBesar": { "description": "Boost large-scale land productivity with a data-driven vermicompost strategy." },
-      "eksportir": { "description": "Meet organic quality standards for export markets with certified vermicompost." },
-      "ctaLabel": "Learn more →"
+      "importir": { "description": "Looking for bulk vermicompost supply to import? See our product specs and export certifications.", "ctaLabel": "Request Spec Sheet & FOB Price" },
+      "hobiis": { "description": "Just starting out or into ornamental plants? Learn vermicompost basics for your home garden.", "ctaLabel": "Try the Starter Pack" },
+      "perkebunan": { "description": "Manage a rubber, palm oil, durian, or avocado plantation? Boost your harvest with a data-driven vermicompost strategy.", "ctaLabel": "Request a Free Demo Plot" },
+      "petaniPadi": { "description": "Part of a rice farmers' group? Try our certified organic vermicompost group-buy scheme.", "ctaLabel": "Join the Farmer Group-Buy Scheme" },
+      "comingSoon": "Coming soon"
     },
     "story": {
       "directory": { "title": "Find already-verified producers", "description": "Our directory filters producers by location, production capacity, and certification — not just a contact list." },
-      "data": { "title": "Learn from case studies & real data", "description": "See real results from hobbyists, large plantations, and exporters, backed by figures and supporting research." },
+      "data": { "title": "Learn from case studies & real data", "description": "See real results from hobbyists, plantations, importers, and rice farmers, backed by figures and supporting research." },
       "news": { "title": "Follow the latest vermicompost industry news", "description": "New research updates, press releases, and educational articles publish regularly, so your decisions are always based on current information." }
     },
     "features": {
@@ -66,7 +67,7 @@
       "direktoriProdusen": { "title": "Producer Directory", "description": "Find and compare nearby vermicompost producers that fit your needs." },
       "berita": { "title": "News & Articles", "description": "The latest on the vermicompost industry, research updates, and press releases." },
       "riset": { "title": "Research & Publications", "description": "Journals, reports, and data-driven white papers for decision-making." },
-      "studiKasus": { "title": "Case Studies", "description": "Real stories of vermicompost use from hobbyists, large plantations, and exporters." },
+      "studiKasus": { "title": "Case Studies", "description": "Real stories of vermicompost use from hobbyists, plantations, importers, and rice farmers." },
       "sumberDaya": { "title": "Resources", "description": "A vermicompost needs calculator, guide downloads, and answers to common questions." },
       "cardCta": "Explore →"
     },
@@ -104,9 +105,10 @@
   },
   "taxonomy": {
     "persona": {
-      "hobiis": "Hobbyists",
-      "perkebunanBesar": "Large Plantations",
-      "eksportir": "Exporters"
+      "importir": "Malaysian Importers",
+      "hobiis": "Hobbyist Gardeners",
+      "perkebunan": "Plantations",
+      "petaniPadi": "Organic Rice Farmers"
     }
   },
   "belajarKascing": {
@@ -205,7 +207,7 @@
   "studiKasus": {
     "card": { "cta": "Read case study" },
     "title": "Case Studies",
-    "subtitle": "Real vermicompost usage stories from hobbyists, large plantations, and exporters.",
+    "subtitle": "Real vermicompost usage stories from hobbyists, plantations, importers, and rice farmers.",
     "errorLabel": "case studies",
     "errorMessage": "Failed to load case studies.",
     "tabs": { "ariaLabel": "Persona segmentation" },
@@ -445,9 +447,10 @@
       "label": "Case Studies",
       "description": "Real vermicompost stories by persona",
       "children": {
-        "hobiis": { "label": "Hobbyists", "description": "Stories from ornamental plant lovers" },
-        "perkebunanBesar": { "label": "Large Plantations", "description": "Vermicompost's impact on large-land productivity" },
-        "eksportir": { "label": "Exporters", "description": "Meeting organic standards for export" }
+        "importir": { "label": "Malaysian Importers", "description": "Stories from bulk buyer partners" },
+        "hobiis": { "label": "Hobbyist Gardeners", "description": "Stories from ornamental plant lovers" },
+        "perkebunan": { "label": "Plantations", "description": "Vermicompost's impact on rubber/palm oil/durian/avocado plantation productivity" },
+        "petaniPadi": { "label": "Organic Rice Farmers", "description": "Stories from certified organic rice farmer groups" }
       }
     },
     "sumberDaya": {
@@ -469,7 +472,7 @@
     "mobileSubmenu": { "ariaLabel": "Open {label} submenu" }
   },
   "footer": {
-    "tagline": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, large plantations, and exporters alike.",
+    "tagline": "A hub for education, research, and a producer directory for vermicompost (worm castings) — for hobbyists, plantations, importers, and rice farmers alike.",
     "newsletterLabel": "Subscribe to our newsletter",
     "columns": { "produk": "Product & Sections", "perusahaan": "Company", "legal": "Legal" },
     "links": {

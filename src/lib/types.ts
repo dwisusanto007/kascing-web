@@ -1,10 +1,11 @@
-export type Persona = "hobiis" | "perkebunan-besar" | "eksportir";
+export type Persona = "importir" | "hobiis" | "perkebunan" | "petani-padi";
 
 /** Maps a Persona id to its message key under the `taxonomy.persona` namespace. */
 export const PERSONA_LABEL_KEYS: Record<Persona, string> = {
+  importir: "importir",
   hobiis: "hobiis",
-  "perkebunan-besar": "perkebunanBesar",
-  eksportir: "eksportir",
+  perkebunan: "perkebunan",
+  "petani-padi": "petaniPadi",
 };
 
 /** Citation metadata every crawled/researched entry must carry. */
@@ -106,6 +107,8 @@ export interface CaseStudy extends Sourced {
   imageUrl?: string;
   relatedProducerSlug?: string;
   relatedResearchSlug?: string;
+  /** Excluded from listings/preview when true - kept for entries whose persona no longer maps cleanly to the current taxonomy, without deleting the underlying content. */
+  hidden?: boolean;
 }
 
 export interface DownloadResource extends Sourced {

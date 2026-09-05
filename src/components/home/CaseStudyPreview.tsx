@@ -18,7 +18,7 @@ export function CaseStudyPreview() {
   const debugEmpty = searchParams.get("debugEmpty") === "1";
 
   const { status, data, isSlow, retry } = useAsyncData(
-    () => (debugEmpty ? [] : caseStudies.slice(0, 3)),
+    () => (debugEmpty ? [] : caseStudies.filter((c) => !c.hidden).slice(0, 3)),
     [debugEmpty],
   );
 
