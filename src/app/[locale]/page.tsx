@@ -70,6 +70,7 @@ export default async function HomePage() {
   const PERSONA_HREFS: Partial<Record<(typeof PERSONAS)[number]["persona"], string>> = {
     importir: "/untuk-importir",
     hobiis: "/untuk-hobiis",
+    perkebunan: "/untuk-perkebunan",
   };
 
   return (

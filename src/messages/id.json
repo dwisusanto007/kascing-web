@@ -256,6 +256,44 @@
       "message": "Halo, saya mau tanya soal kascing untuk tanaman hias. [Source: Web-Hobiis]"
     }
   },
+  "untukPerkebunan": {
+    "hero": {
+      "title": "Strategi Kascing untuk Perkebunan Karet, Sawit, Durian & Alpukat",
+      "subtitle": "Tingkatkan produktivitas kebun dengan strategi kascing berbasis data — pilih komoditas kebun Anda untuk melihat info dosis yang sesuai."
+    },
+    "commodity": {
+      "title": "Pilih Komoditas Kebun Anda",
+      "sampleLabel": "Info dosis di bawah masih data contoh, belum divalidasi tim agronomis — lihat catatan di tiap bagian.",
+      "karet": { "label": "Karet", "dosage": "Estimasi 1 kg kascing per m² area tajuk, aplikasikan 2x setahun di awal & akhir musim hujan.", "benefit": "Membantu menjaga kelembapan tanah dan mendukung produksi lateks yang lebih stabil." },
+      "sawit": { "label": "Sawit", "dosage": "Estimasi 1,2 kg kascing per m² piringan pokok, aplikasikan setiap 4-6 bulan.", "benefit": "Kombinasi dengan pupuk kimia dosis rendah terbukti membantu produktivitas TBS pada beberapa kasus nyata (lihat studi kasus)." },
+      "durian": { "label": "Durian", "dosage": "Estimasi 1,5 kg kascing per m² area akar, aplikasikan menjelang musim berbunga.", "benefit": "Mendukung perbaikan struktur tanah dan penyerapan nutrisi untuk pembentukan buah." },
+      "alpukat": { "label": "Alpukat", "dosage": "Estimasi 1,3 kg kascing per m² area akar, aplikasikan 2x setahun.", "benefit": "Membantu menjaga kestabilan pH tanah yang penting untuk penyerapan hara pada alpukat." }
+    },
+    "caseStudy": {
+      "title": "Studi Kasus Terkait",
+      "specificCta": "Baca studi kasus {commodity} →",
+      "genericCta": "Lihat semua studi kasus Perkebunan →"
+    },
+    "calculator": {
+      "title": "Kalkulator Estimasi Kebutuhan & Biaya",
+      "disclaimer": "Estimasi biaya bersifat ilustratif (asumsi harga Rp 2.500/kg) dan formula dosis masih data contoh — belum divalidasi tim agronomis.",
+      "fields": { "area": "Luas Lahan (hektar)", "areaPlaceholder": "misal: 5", "commodity": "Komoditas", "location": "Lokasi Kebun (opsional)", "locationPlaceholder": "misal: Riau" },
+      "submit": "Hitung Estimasi",
+      "errors": { "areaRequired": "Luas lahan wajib diisi.", "areaInvalid": "Masukkan angka yang valid untuk luas lahan.", "areaPositive": "Luas lahan harus lebih besar dari 0." },
+      "result": "Estimasi kebutuhan untuk {area} ha {commodity}:",
+      "resultKg": "{kg} kg kascing",
+      "resultCost": "≈ Rp {cost}"
+    },
+    "waCta": {
+      "demoTitle": "Tertarik coba di kebun Anda?",
+      "demoCta": "Ajukan Demo Plot Gratis via WhatsApp",
+      "bulkTitle": "Sudah yakin dan mau pesan dalam jumlah besar?",
+      "bulkCta": "Pesan Karung Besar via WhatsApp",
+      "messageTemplate": "Halo, saya dari kebun {commodity} di {location}, luas {area} ha, tertarik ajukan demo plot gratis. [Source: Web-Perkebunan]",
+      "locationPlaceholder": "[lokasi]",
+      "areaPlaceholder": "[isi]"
+    }
+  },
   "produk": {
     "title": "Produk",
     "subtitle": "Produk kascing yang bisa langsung dibeli, lengkap dengan link ke marketplace atau toko penjualnya.",

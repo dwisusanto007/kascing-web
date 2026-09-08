@@ -256,6 +256,44 @@
       "message": "Hi, I'd like to ask about vermicompost for ornamental plants. [Source: Web-Hobiis]"
     }
   },
+  "untukPerkebunan": {
+    "hero": {
+      "title": "Vermicompost Strategy for Rubber, Palm Oil, Durian & Avocado Plantations",
+      "subtitle": "Boost your plantation's productivity with a data-driven vermicompost strategy — pick your commodity to see the matching dosage info."
+    },
+    "commodity": {
+      "title": "Pick Your Plantation Commodity",
+      "sampleLabel": "The dosage info below is still sample data, not yet validated by an agronomy team — see the note in each section.",
+      "karet": { "label": "Rubber", "dosage": "Estimated 1 kg vermicompost per m² of canopy area, applied twice a year at the start & end of the rainy season.", "benefit": "Helps maintain soil moisture and supports more stable latex production." },
+      "sawit": { "label": "Palm Oil", "dosage": "Estimated 1.2 kg vermicompost per m² of the tree's fertilizing circle, applied every 4-6 months.", "benefit": "Combined with a low dose of chemical fertilizer, this has helped improve FFB productivity in some real cases (see case study)." },
+      "durian": { "label": "Durian", "dosage": "Estimated 1.5 kg vermicompost per m² of root area, applied ahead of the flowering season.", "benefit": "Supports improved soil structure and nutrient uptake for fruit formation." },
+      "alpukat": { "label": "Avocado", "dosage": "Estimated 1.3 kg vermicompost per m² of root area, applied twice a year.", "benefit": "Helps maintain the soil pH stability that's important for nutrient uptake in avocado trees." }
+    },
+    "caseStudy": {
+      "title": "Related Case Study",
+      "specificCta": "Read the {commodity} case study →",
+      "genericCta": "See all Plantation case studies →"
+    },
+    "calculator": {
+      "title": "Needs & Cost Estimate Calculator",
+      "disclaimer": "The cost estimate is illustrative (assuming Rp 2,500/kg) and the dosage formula is still sample data - not yet validated by an agronomy team.",
+      "fields": { "area": "Land Area (hectares)", "areaPlaceholder": "e.g. 5", "commodity": "Commodity", "location": "Plantation Location (optional)", "locationPlaceholder": "e.g. Riau" },
+      "submit": "Calculate Estimate",
+      "errors": { "areaRequired": "Land area is required.", "areaInvalid": "Enter a valid number for the land area.", "areaPositive": "Land area must be greater than 0." },
+      "result": "Estimated needs for {area} ha of {commodity}:",
+      "resultKg": "{kg} kg of vermicompost",
+      "resultCost": "≈ Rp {cost}"
+    },
+    "waCta": {
+      "demoTitle": "Interested in trying it on your plantation?",
+      "demoCta": "Request a Free Demo Plot via WhatsApp",
+      "bulkTitle": "Already convinced and want to order in bulk?",
+      "bulkCta": "Order in Bulk via WhatsApp",
+      "messageTemplate": "Hello, I'm from a {commodity} plantation in {location}, {area} ha, interested in requesting a free demo plot. [Source: Web-Perkebunan]",
+      "locationPlaceholder": "[location]",
+      "areaPlaceholder": "[fill in]"
+    }
+  },
   "produk": {
     "title": "Products",
     "subtitle": "Vermicompost products you can buy right now, with links to the marketplace or store selling them.",
