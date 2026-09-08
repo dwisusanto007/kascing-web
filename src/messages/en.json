@@ -294,6 +294,38 @@
       "areaPlaceholder": "[fill in]"
     }
   },
+  "untukPetaniPadi": {
+    "hero": {
+      "title": "Certified Organic Vermicompost for Rice Farmer Groups",
+      "subtitle": "A group-buy scheme for farmer groups (poktan) transitioning to organic farming — more affordable because it's purchased together."
+    },
+    "intro": {
+      "title": "Why Vermicompost Matters for Organic Rice",
+      "description": "If your farmer group wants to sell rice with an organic label, one requirement is using fertilizer free of synthetic chemicals. Vermicompost (fertilizer from worm castings) is one organic fertilizer that qualifies — and with a group-buy scheme, the price per member becomes more affordable."
+    },
+    "legalDoc": {
+      "title": "Organic Standard Compliance Document",
+      "sampleLabel": "Sample/placeholder — not an official certificate, do not use as legal proof before it's replaced with the real document.",
+      "description": "A sample document explaining how vermicompost meets organic farming standards (free of synthetic chemicals, aligned with Indonesian SNI Organic guidelines).",
+      "cta": "Download Sample Document"
+    },
+    "testimonial": {
+      "title": "Stories from Other Farmer Groups",
+      "cta": "Read the full story →"
+    },
+    "penyuluh": {
+      "title": "Does Your Group Have an Agricultural Extension Officer (PPL)?",
+      "description": "If your farmer group already works with a local agricultural extension officer, just mention it when you chat with us on WhatsApp — we can coordinate together on vermicompost guidance each planting season."
+    },
+    "waCta": {
+      "title": "Interested in Joining the Group-Buy Scheme?",
+      "cta": "Join the Group-Buy Scheme via WhatsApp",
+      "fields": { "poktan": "Farmer Group Name (Poktan)", "poktanPlaceholder": "e.g. Tani Makmur", "desa": "Village/District", "desaPlaceholder": "e.g. Sukamaju" },
+      "messageTemplate": "Hello, I'm from the {poktan} farmer group in {desa}, I'd like to ask about the vermicompost group-buy scheme. [Source: Web-PetaniPadi]",
+      "poktanFallback": "[farmer group name]",
+      "desaFallback": "[village]"
+    }
+  },
   "produk": {
     "title": "Products",
     "subtitle": "Vermicompost products you can buy right now, with links to the marketplace or store selling them.",

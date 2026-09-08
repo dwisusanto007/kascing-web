@@ -71,6 +71,7 @@ export default async function HomePage() {
     importir: "/untuk-importir",
     hobiis: "/untuk-hobiis",
     perkebunan: "/untuk-perkebunan",
+    "petani-padi": "/untuk-petani-padi",
   };
 
   return (

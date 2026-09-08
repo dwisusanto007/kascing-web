@@ -294,6 +294,38 @@
       "areaPlaceholder": "[isi]"
     }
   },
+  "untukPetaniPadi": {
+    "hero": {
+      "title": "Kascing Bersertifikat Organik untuk Kelompok Tani Padi",
+      "subtitle": "Skema beli bareng kascing untuk kelompok tani (poktan) yang ingin beralih ke pertanian organik — dengan harga lebih terjangkau karena dibeli bersama."
+    },
+    "intro": {
+      "title": "Kenapa Kascing Penting untuk Padi Organik?",
+      "description": "Kalau kelompok tani Anda ingin jual beras dengan label organik, salah satu syaratnya adalah pakai pupuk yang bebas bahan kimia sintetis. Kascing (pupuk dari kotoran cacing) adalah salah satu pupuk organik yang bisa dipakai untuk itu — dan dengan skema beli bareng, harganya jadi lebih murah per anggota."
+    },
+    "legalDoc": {
+      "title": "Dokumen Kesesuaian Standar Organik",
+      "sampleLabel": "Contoh/placeholder — bukan sertifikat resmi, jangan dipakai sebagai bukti legal sebelum diganti dokumen asli.",
+      "description": "Contoh dokumen yang menjelaskan kesesuaian kascing dengan standar pertanian organik (bebas bahan kimia sintetis, sesuai panduan SNI Organik).",
+      "cta": "Unduh Dokumen Contoh"
+    },
+    "testimonial": {
+      "title": "Cerita Kelompok Tani Lain",
+      "cta": "Baca cerita selengkapnya →"
+    },
+    "penyuluh": {
+      "title": "Ada Penyuluh Pertanian (PPL) yang Mendampingi Kelompok Anda?",
+      "description": "Kalau kelompok tani Anda sudah didampingi penyuluh pertanian setempat, sampaikan saja saat chat WhatsApp — kami bisa koordinasi bersama untuk pendampingan penggunaan kascing tiap musim tanam."
+    },
+    "waCta": {
+      "title": "Tertarik Ikut Skema Beli Bareng?",
+      "cta": "Daftar Beli Bareng via WhatsApp",
+      "fields": { "poktan": "Nama Kelompok Tani (Poktan)", "poktanPlaceholder": "misal: Tani Makmur", "desa": "Desa/Kecamatan", "desaPlaceholder": "misal: Sukamaju" },
+      "messageTemplate": "Halo, saya dari kelompok tani {poktan} di {desa}, mau tanya soal skema beli bareng kascing. [Source: Web-PetaniPadi]",
+      "poktanFallback": "[nama poktan]",
+      "desaFallback": "[desa]"
+    }
+  },
   "produk": {
     "title": "Produk",
     "subtitle": "Produk kascing yang bisa langsung dibeli, lengkap dengan link ke marketplace atau toko penjualnya.",
