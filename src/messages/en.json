@@ -226,6 +226,36 @@
       }
     }
   },
+  "untukHobiis": {
+    "hero": {
+      "title": "What's the difference between vermicompost, compost, and chemical fertilizer?",
+      "subtitle": "Whether you're just starting out or you've been growing ornamental plants for a while — here's a simple explanation so you don't get stuck choosing a fertilizer."
+    },
+    "comparison": {
+      "title": "Vermicompost vs Compost vs Chemical Fertilizer",
+      "kascing": { "title": "Vermicompost (Kascing)", "description": "Worm castings processed into organic fertilizer. Nutrients are complete and released slowly, so it's less likely to \"burn\" your plants, and it improves soil structure." },
+      "kompos": { "title": "Compost", "description": "Decomposed organic waste (leaves, vegetable scraps, etc). Good for the soil, but nutrient content is less consistent than vermicompost, and the process can take longer or smell if not done right." },
+      "kimia": { "title": "Chemical Fertilizer", "description": "Nutrients are absorbed quickly with instant-looking results, but relying on it alone over time can make soil harder and less fertile in the long run." }
+    },
+    "testimonial": {
+      "title": "Before & After Using Vermicompost",
+      "sampleLabel": "Illustrative example — not a real customer testimonial",
+      "before": "Before: dull leaves, wilts easily, slow growth.",
+      "after": "After (~2 months of vermicompost use): greener, fuller leaves, healthier-looking plant."
+    },
+    "starterPack": {
+      "title": "Vermicompost Starter Pack",
+      "description": "Small size (250g–1kg), perfect for trying it out on your home ornamental plants before buying in bulk.",
+      "priceLabel": "Check the latest price & stock directly on the marketplace",
+      "cta": "Buy Starter Pack on Marketplace"
+    },
+    "waCta": {
+      "title": "Still not sure, or want to ask first?",
+      "description": "No problem — feel free to chat with us first, no need to buy right away.",
+      "cta": "Ask via WhatsApp",
+      "message": "Hi, I'd like to ask about vermicompost for ornamental plants. [Source: Web-Hobiis]"
+    }
+  },
   "produk": {
     "title": "Products",
     "subtitle": "Vermicompost products you can buy right now, with links to the marketplace or store selling them.",

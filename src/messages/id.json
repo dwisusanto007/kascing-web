@@ -226,6 +226,36 @@
       }
     }
   },
+  "untukHobiis": {
+    "hero": {
+      "title": "Kascing itu apa sih bedanya sama kompos & pupuk kimia?",
+      "subtitle": "Buat kamu yang baru mulai atau udah lama hobi tanaman hias — ini penjelasan simpel biar nggak bingung pilih pupuk."
+    },
+    "comparison": {
+      "title": "Kascing vs Kompos vs Pupuk Kimia",
+      "kascing": { "title": "Kascing", "description": "Kotoran cacing yang udah diproses jadi pupuk organik. Nutrisinya lengkap, lepasnya pelan-pelan jadi nggak gampang bikin tanaman \"kebakar\", dan bikin tanah jadi lebih gembur." },
+      "kompos": { "title": "Kompos", "description": "Sisa organik (daun, sisa sayur, dll) yang dibusukkan. Bagus buat tanah, tapi kandungan nutrisinya nggak sekonsisten kascing dan prosesnya bisa lebih lama/bau kalau nggak pas." },
+      "kimia": { "title": "Pupuk Kimia", "description": "Nutrisinya cepat diserap dan hasilnya kelihatan instan, tapi kalau kepakai terus tanpa pupuk organik, tanah bisa jadi keras dan kurang subur dalam jangka panjang." }
+    },
+    "testimonial": {
+      "title": "Sebelum & Sesudah Pakai Kascing",
+      "sampleLabel": "Contoh ilustrasi — bukan testimoni pelanggan asli",
+      "before": "Sebelum: daun kusam, gampang layu, pertumbuhan lambat.",
+      "after": "Sesudah (±2 bulan pakai kascing): daun lebih hijau & rimbun, tanaman lebih segar."
+    },
+    "starterPack": {
+      "title": "Starter Pack Kascing",
+      "description": "Ukuran kecil (250g–1kg), pas buat coba-coba di tanaman hias rumahan sebelum beli dalam jumlah besar.",
+      "priceLabel": "Cek harga & stok terbaru langsung di marketplace",
+      "cta": "Beli Starter Pack di Marketplace"
+    },
+    "waCta": {
+      "title": "Masih ragu atau mau tanya-tanya dulu?",
+      "description": "Nggak masalah — chat aja dulu, nggak harus langsung beli.",
+      "cta": "Tanya-tanya via WhatsApp",
+      "message": "Halo, saya mau tanya soal kascing untuk tanaman hias. [Source: Web-Hobiis]"
+    }
+  },
   "produk": {
     "title": "Produk",
     "subtitle": "Produk kascing yang bisa langsung dibeli, lengkap dengan link ke marketplace atau toko penjualnya.",

@@ -67,6 +67,11 @@ export default async function HomePage() {
     },
   ];
 
+  const PERSONA_HREFS: Partial<Record<(typeof PERSONAS)[number]["persona"], string>> = {
+    importir: "/untuk-importir",
+    hobiis: "/untuk-hobiis",
+  };
+
   return (
     <div>
       <StickyCtaBar />
@@ -108,11 +113,12 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <SectionHeading number="01" title={t("sections.personas.title")} />
         <PersonaCarousel ariaLabel={t("sections.personas.ariaLabel")}>
-          {PERSONAS.map((p) =>
-            p.persona === "importir" ? (
+          {PERSONAS.map((p) => {
+            const href = PERSONA_HREFS[p.persona];
+            return href ? (
               <Link
                 key={p.persona}
-                href="/untuk-importir"
+                href={href}
                 className="group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md"
               >
                 <span className="w-fit rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
@@ -137,8 +143,8 @@ export default async function HomePage() {
                 <p className="mt-1 text-sm text-stone-500">{p.description}</p>
                 <span className="mt-auto pt-4 text-sm font-medium text-stone-400">{p.ctaLabel} · {t("personas.comingSoon")}</span>
               </div>
-            ),
-          )}
+            );
+          })}
         </PersonaCarousel>
       </section>
 
