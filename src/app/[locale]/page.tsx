@@ -103,7 +103,7 @@ export default async function HomePage() {
           </div>
           <PlaceholderImage
             label={t("hero.imageLabel")}
-            imageSrc="/images/hero-kascing.jpg"
+            imageSrc="/images/hero-vermicompost.png"
             className="h-64 w-full rounded-2xl object-cover sm:h-80 lg:h-96"
           />
         </div>
