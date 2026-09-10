@@ -97,6 +97,7 @@ export function ArticleExplorer() {
                 tag={a.category}
                 hasImage={a.hasImage}
                 imageSrc={a.imageUrl}
+                illustrationCategory="article"
                 cta={tCommon("lihatDetail")}
               />
             ))}

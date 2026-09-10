@@ -39,6 +39,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         label={product.name}
         hasImage={product.hasImage}
         imageSrc={product.imageUrl}
+        illustrationCategory="product"
         className="h-56 w-full rounded-xl sm:h-72"
       />
 

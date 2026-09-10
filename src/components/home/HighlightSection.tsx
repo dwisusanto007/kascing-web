@@ -67,6 +67,7 @@ export function HighlightSection() {
                 tag={a.category}
                 hasImage={a.hasImage}
                 imageSrc={a.imageUrl}
+                illustrationCategory="article"
                 cta={tCommon("lihatDetail")}
               />
             ))}
@@ -89,6 +90,7 @@ export function HighlightSection() {
                 tag={n.category}
                 hasImage={n.hasImage}
                 imageSrc={n.imageUrl}
+                illustrationCategory="news"
                 cta={tCommon("lihatDetail")}
               />
             ))}

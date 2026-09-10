@@ -103,6 +103,7 @@ export function NewsExplorer() {
                 tag={n.category}
                 hasImage={n.hasImage}
                 imageSrc={n.imageUrl}
+                illustrationCategory="news"
                 cta={tCommon("lihatDetail")}
               />
             ))}

@@ -61,7 +61,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <PlaceholderImage label={producer.name} hasImage={producer.hasImage} imageSrc={producer.imageUrl} className="h-56 w-full rounded-xl sm:h-72" />
+          <PlaceholderImage label={producer.name} hasImage={producer.hasImage} imageSrc={producer.imageUrl} illustrationCategory="producer" className="h-56 w-full rounded-xl sm:h-72" />
 
           <h1 className="mt-6 text-2xl font-bold text-stone-900 sm:text-3xl">{producer.name}</h1>
           <p className="mt-1 text-sm text-stone-500">
@@ -113,6 +113,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
                 label={producer.name}
                 hasImage={false}
                 fallbackText={t("noGalleryPhoto")}
+                illustrationCategory="producer"
                 className="h-32 w-full rounded-lg"
               />
             ) : (
@@ -192,6 +193,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
                 tag={p.category}
                 hasImage={p.hasImage}
                 imageSrc={p.imageUrl}
+                illustrationCategory="product"
                 cta={tProdukCard("card.cta")}
               />
             ))}
@@ -215,6 +217,7 @@ export default async function ProducerProfilePage({ params, searchParams }: Page
                 tag={p.capacityLabel}
                 hasImage={p.hasImage}
                 imageSrc={p.imageUrl}
+                illustrationCategory="producer"
                 cta={tCard("cta")}
               />
             ))}

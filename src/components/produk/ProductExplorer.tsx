@@ -97,6 +97,7 @@ export function ProductExplorer() {
                 tag={p.category}
                 hasImage={p.hasImage}
                 imageSrc={p.imageUrl}
+                illustrationCategory="product"
                 cta={t("card.cta")}
               />
             ))}

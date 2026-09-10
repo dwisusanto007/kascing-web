@@ -57,6 +57,7 @@ export function DirectoryPreview() {
           tag={p.capacityLabel}
           hasImage={p.hasImage}
           imageSrc={p.imageUrl}
+          illustrationCategory="producer"
           cta={tCard("cta")}
         />
       ))}

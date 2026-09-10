@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn, hashString } from "@/lib/utils";
+import { CategoryIllustration, type IllustrationCategory } from "./CategoryIllustrations";
 
 const GRADIENTS = [
   "from-emerald-500 to-emerald-700",
@@ -76,6 +77,8 @@ interface PlaceholderImageProps {
   fallbackText?: string;
   /** Real photo URL, when one is available. Falls back to the icon placeholder on load failure. */
   imageSrc?: string;
+  /** When hasImage is false, renders a generic on-brand illustration for this content type instead of the plain "Foto belum tersedia" box. */
+  illustrationCategory?: IllustrationCategory;
 }
 
 /**
@@ -92,10 +95,21 @@ export function PlaceholderImage({
   className,
   fallbackText = "Foto belum tersedia",
   imageSrc,
+  illustrationCategory,
 }: PlaceholderImageProps) {
   const [imageFailed, setImageFailed] = useState(false);
 
   if (!hasImage) {
+    if (illustrationCategory) {
+      return (
+        <div className={cn("relative shrink-0 overflow-hidden", className)}>
+          <CategoryIllustration category={illustrationCategory} />
+          <span className="absolute bottom-1.5 right-1.5 rounded-full bg-white/85 px-2 py-0.5 text-[10px] font-medium text-stone-500">
+            Ilustrasi
+          </span>
+        </div>
+      );
+    }
     return (
       <div
         className={cn(

@@ -209,6 +209,7 @@ export function DirectoryExplorer() {
                 tag={p.capacityLabel}
                 hasImage={p.hasImage}
                 imageSrc={p.imageUrl}
+                illustrationCategory="producer"
                 cta={t("card.cta")}
               />
             ))}

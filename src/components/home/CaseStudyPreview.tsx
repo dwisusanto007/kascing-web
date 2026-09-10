@@ -58,6 +58,7 @@ export function CaseStudyPreview() {
           tag={tPersona(PERSONA_LABEL_KEYS[c.persona])}
           hasImage={c.hasImage}
           imageSrc={c.imageUrl}
+          illustrationCategory="case-study"
           cta={tCard("cta")}
         />
       ))}

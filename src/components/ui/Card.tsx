@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { PlaceholderImage } from "./PlaceholderImage";
+import type { IllustrationCategory } from "./CategoryIllustrations";
 
 interface CardProps {
   href: string;
@@ -9,17 +10,24 @@ interface CardProps {
   tag?: string;
   hasImage?: boolean;
   imageSrc?: string;
+  illustrationCategory?: IllustrationCategory;
   cta: string;
 }
 
 /** Base card used across Direktori, Belajar Kascing, Berita, Riset, Studi Kasus. */
-export function Card({ href, title, excerpt, meta, tag, hasImage = true, imageSrc, cta }: CardProps) {
+export function Card({ href, title, excerpt, meta, tag, hasImage = true, imageSrc, illustrationCategory, cta }: CardProps) {
   return (
     <Link
       href={href}
       className="group flex flex-col overflow-hidden rounded-xl border border-stone-200 bg-white transition hover:-translate-y-0.5 hover:shadow-md"
     >
-      <PlaceholderImage label={title} hasImage={hasImage} imageSrc={imageSrc} className="h-36 w-full" />
+      <PlaceholderImage
+        label={title}
+        hasImage={hasImage}
+        imageSrc={imageSrc}
+        illustrationCategory={illustrationCategory}
+        className="h-36 w-full"
+      />
       <div className="flex flex-1 flex-col p-4">
         {tag && (
           <span className="mb-1 w-fit rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
