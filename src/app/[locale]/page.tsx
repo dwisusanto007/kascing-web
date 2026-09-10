@@ -101,9 +101,12 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
+          {/* Real photo pending (public/images/hero-vermicompost.png) - swap
+              hasImage back to true and pass imageSrc once it's pushed. */}
           <PlaceholderImage
             label={t("hero.imageLabel")}
-            imageSrc="/images/hero-vermicompost.png"
+            hasImage={false}
+            illustrationCategory="hero"
             className="h-64 w-full rounded-2xl object-cover sm:h-80 lg:h-96"
           />
         </div>
