@@ -70,6 +70,7 @@ export function StickyCtaBar() {
   return (
     <div
       aria-hidden={!visible}
+      data-testid="sticky-cta-bar"
       className={cn(
         "fixed inset-x-0 bottom-4 z-30 mx-auto flex w-[92%] max-w-md items-center gap-3 rounded-full border border-stone-200 bg-white px-4 py-3 shadow-lg transition-all duration-300 motion-reduce:transition-none sm:w-auto",
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0",

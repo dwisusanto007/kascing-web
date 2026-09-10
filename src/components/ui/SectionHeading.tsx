@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
@@ -27,9 +28,9 @@ export function SectionHeading({ number, title, subtitle, align = "left", action
         {subtitle && <p className="mt-2 max-w-2xl text-sm text-stone-500">{subtitle}</p>}
       </div>
       {action && (
-        <a href={action.href} className="shrink-0 text-sm font-semibold text-emerald-700 hover:underline">
+        <Link href={action.href} className="shrink-0 text-sm font-semibold text-emerald-700 hover:underline">
           {action.label} →
-        </a>
+        </Link>
       )}
     </div>
   );
