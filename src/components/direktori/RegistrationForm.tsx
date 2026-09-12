@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
+import { Children, cloneElement, isValidElement, useId, useRef, useState, type ChangeEvent, type FormEvent, type ReactElement } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -373,12 +373,18 @@ function Field({
   error?: string;
   children: React.ReactNode;
 }) {
+  const id = useId();
+  // The first child is always the actual input/select/textarea; anything
+  // after it (e.g. a "file selected" hint under the photo upload) is left
+  // alone - only the control itself needs the id for the label to target.
+  const [control, ...rest] = Children.toArray(children);
   return (
     <div>
-      <label className="mb-1 block text-sm font-medium text-stone-700">
+      <label htmlFor={id} className="mb-1 block text-sm font-medium text-stone-700">
         {label} {required && <span className="text-red-500">*</span>}
       </label>
-      {children}
+      {isValidElement(control) ? cloneElement(control as ReactElement<{ id?: string }>, { id }) : control}
+      {rest}
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
     </div>
   );
