@@ -6,6 +6,7 @@ import { articles, findArticleBySlug } from "@/lib/mock-data";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Card } from "@/components/ui/Card";
+import { ArticleTable } from "@/components/belajar/ArticleTable";
 import { formatDate } from "@/lib/utils";
 
 interface PageProps {
@@ -81,6 +82,8 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           </p>
         ))}
       </div>
+
+      {article.table && <ArticleTable table={article.table} />}
 
       <div className="mt-8 flex flex-wrap gap-3">
         {related[0] ? (

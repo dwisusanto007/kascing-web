@@ -12,6 +12,17 @@
     "Penelitian di Universitas Muhammadiyah Jember menemukan kasgot sudah memenuhi standar minimum SNI Kompos untuk pH, nitrogen, fosfor, kalium, dan C-organik, tapi rasio C/N-nya masih di bawah standar, diduga karena residu biokonversi larva belum terurai sempurna saat dipanen. Kascing umumnya lebih stabil secara mikrobiologis karena prosesnya lebih lambat, sehingga rasio C/N-nya lebih mendekati matang.",
     "Satu penelitian persemaian sawi dan kailan dari Universitas Galuh mencatat kasgot memberi tinggi bibit lebih baik dibanding kascing dan kotoran sapi pada kondisi uji yang sama. Tapi riset soal kasgot di Indonesia masih jauh lebih sedikit dibanding kascing, yang sudah lama dipakai dan diteliti luas, termasuk pada tanaman jagung manis. Keduanya tidak harus dipilih salah satu. Kalau sudah ternak maggot BSF untuk pakan, kasgot adalah hasil sampingan yang sayang dibuang, asal dikomposkan lebih lanjut dulu sebelum dipakai di persemaian yang sensitif."
   ],
+  "table": {
+    "columns": ["Parameter", "Kascing", "Kasgot"],
+    "rows": [
+      { "label": "Nitrogen (N)", "values": ["0,86 – 1,06%", "~1,12% (pakan diperkaya)"] },
+      { "label": "Fosfor (P / P₂O₅)", "values": ["0,16 – 0,48%", "~2,02% (pakan diperkaya)"] },
+      { "label": "Kalium (K / K₂O)", "values": ["0,23 – 0,87%", "~1,09% (pakan diperkaya)"] },
+      { "label": "Rasio C/N", "values": ["9,4 – 12,7", "< 7,7 (di bawah standar)"] },
+      { "label": "pH", "values": ["6,5 – 7,0", "Memenuhi minimum SNI"] }
+    ],
+    "note": "Angka kasgot di atas berasal dari larva yang diberi pakan campuran limbah restoran dan sludge sosis industri (rasio 75:25), substrat yang jauh lebih kaya protein dan lemak dibanding sampah dapur biasa. Angka bukan rata-rata nasional dan sangat bergantung pada substrat tiap penelitian, jadi jangan dianggap nilai tetap untuk semua produk kascing atau kasgot."
+  },
   "publishedAt": "2026-10-26",
   "readingTimeMin": 5,
   "hasImage": false,

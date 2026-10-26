@@ -41,6 +41,19 @@ export interface Producer extends Sourced {
   relatedArticleSlug?: string;
 }
 
+/** One row of an ArticleTable: a left-hand label plus one value per column. */
+export interface ArticleTableRow {
+  label: string;
+  values: string[];
+}
+
+/** Optional comparison/data table an article can render below its body text. */
+export interface ArticleTable {
+  columns: string[];
+  rows: ArticleTableRow[];
+  note?: string;
+}
+
 export interface Article extends Sourced {
   id: string;
   slug: string;
@@ -49,6 +62,7 @@ export interface Article extends Sourced {
   tags: string[];
   excerpt: string;
   content: string[];
+  table?: ArticleTable;
   publishedAt: string;
   readingTimeMin: number;
   hasImage: boolean;
