@@ -62,6 +62,8 @@ export interface Article extends Sourced {
   tags: string[];
   excerpt: string;
   content: string[];
+  /** Optional short title per content paragraph, used by the TOC instead of "Section N". Must match content's length when present. */
+  sectionHeadings?: string[];
   table?: ArticleTable;
   publishedAt: string;
   readingTimeMin: number;

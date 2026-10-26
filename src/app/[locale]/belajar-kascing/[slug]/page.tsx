@@ -39,6 +39,9 @@ export default async function ArticleDetailPage({ params }: PageProps) {
   const related = article.relatedSlugs
     .map((s) => findArticleBySlug(s))
     .filter((a): a is NonNullable<typeof a> => !!a);
+  const readMoreTarget = related[0];
+  // Related Articles below repeats whatever the Read More CTA already points to otherwise.
+  const relatedForGrid = related.filter((a) => a.slug !== readMoreTarget?.slug);
   const showToc = article.content.length > TOC_THRESHOLD;
 
   return (
@@ -67,7 +70,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             {article.content.map((_, i) => (
               <li key={i}>
                 <a href={`#bagian-${i + 1}`} className="text-emerald-700 hover:underline">
-                  {t("section", { n: i + 1 })}
+                  {article.sectionHeadings?.[i] ?? t("section", { n: i + 1 })}
                 </a>
               </li>
             ))}
@@ -86,9 +89,9 @@ export default async function ArticleDetailPage({ params }: PageProps) {
       {article.table && <ArticleTable table={article.table} />}
 
       <div className="mt-8 flex flex-wrap gap-3">
-        {related[0] ? (
+        {readMoreTarget ? (
           <Link
-            href={`/belajar-kascing/${related[0].slug}`}
+            href={`/belajar-kascing/${readMoreTarget.slug}`}
             className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800"
           >
             {t("readMoreCta")}
@@ -102,11 +105,11 @@ export default async function ArticleDetailPage({ params }: PageProps) {
         </Link>
       </div>
 
-      {related.length > 0 && (
+      {relatedForGrid.length > 0 && (
         <div className="mt-12">
           <h2 className="mb-4 text-lg font-semibold text-stone-900">{t("relatedTitle")}</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {related.map((a) => (
+            {relatedForGrid.map((a) => (
               <Card
                 key={a.id}
                 href={`/belajar-kascing/${a.slug}`}
