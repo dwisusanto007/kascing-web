@@ -1,0 +1,22 @@
+{
+  "id": "a10",
+  "slug": "perbedaan-kascing-dan-kasgot",
+  "title": "Perbedaan Kascing dan Kasgot (Bekas Maggot BSF)",
+  "category": "Pemula",
+  "tags": ["pemula", "edukasi"],
+  "excerpt": "Kascing berasal dari cacing tanah, sedangkan kasgot adalah residu larva maggot BSF, keduanya punya kandungan hara yang berbeda-beda tergantung bahan baku.",
+  "content": [
+    "Kascing dan kasgot sama-sama pupuk organik hasil biokonversi hewan, tapi agennya berbeda. Kascing adalah bekas cacing tanah, hasil pencernaan bahan organik oleh cacing seperti Lumbricus rubellus atau Eisenia fetida lewat proses vermikomposting. Kasgot adalah bekas maggot, residu media bekas budidaya larva black soldier fly (BSF) atau Hermetia illucens setelah larvanya dipanen.",
+    "Proses pembuatan kascing berjalan lewat sistem pencernaan cacing yang memakan limbah organik seperti kotoran ternak atau sisa dapur, lalu mengeluarkannya sebagai granul halus kaya hara. Kasgot terbentuk lebih cepat, siklus budidayanya biasanya cuma 2 sampai 3 minggu, karena larva BSF mencerna bahan organik jauh lebih cepat dibanding cacing. Karena dipanen bersamaan larvanya, kasgot kadang masih menyisakan bahan yang belum terurai sempurna.",
+    "Kandungan hara keduanya sangat bergantung pada substrat yang dipakai, jadi angka dari satu penelitian tidak bisa mewakili semua kascing atau semua kasgot. Penelitian di Syntax Literate pada kascing dari kotoran kuda, substrat umum yang dipakai peternak cacing, mencatat nitrogen sekitar 1,06 persen, fosfor 0,48 persen, dan kalium 0,87 persen. Riset di Universitas Gadjah Mada pernah mencatat kasgot dengan fosfor setinggi 2,02 persen, tapi itu dari larva yang diberi pakan campuran limbah restoran dan sludge sosis industri dengan rasio 75:25, substrat yang jauh lebih kaya protein dan lemak dibanding sampah dapur atau sisa sayur yang biasa dipakai peternak kasgot rumahan. Kasgot dari substrat yang lebih umum seperti sisa sayur justru cenderung jauh lebih rendah kandungan haranya, jadi angka tinggi pada kasgot biasanya mencerminkan pakan yang sengaja diperkaya, bukan bukti bahwa kasgot secara umum lebih kaya hara dibanding kascing.",
+    "Penelitian di Universitas Muhammadiyah Jember menemukan kasgot sudah memenuhi standar minimum SNI Kompos untuk pH, nitrogen, fosfor, kalium, dan C-organik, tapi rasio C/N-nya masih di bawah standar, diduga karena residu biokonversi larva belum terurai sempurna saat dipanen. Kascing umumnya lebih stabil secara mikrobiologis karena prosesnya lebih lambat, sehingga rasio C/N-nya lebih mendekati matang.",
+    "Satu penelitian persemaian sawi dan kailan dari Universitas Galuh mencatat kasgot memberi tinggi bibit lebih baik dibanding kascing dan kotoran sapi pada kondisi uji yang sama. Tapi riset soal kasgot di Indonesia masih jauh lebih sedikit dibanding kascing, yang sudah lama dipakai dan diteliti luas, termasuk pada tanaman jagung manis. Keduanya tidak harus dipilih salah satu. Kalau sudah ternak maggot BSF untuk pakan, kasgot adalah hasil sampingan yang sayang dibuang, asal dikomposkan lebih lanjut dulu sebelum dipakai di persemaian yang sensitif."
+  ],
+  "publishedAt": "2026-10-26",
+  "readingTimeMin": 5,
+  "hasImage": false,
+  "relatedSlugs": ["perbedaan-kascing-dan-kompos-biasa", "manfaat-cacing-lumbricus-eisenia-fetida-untuk-vermikompos"],
+  "sourceUrl": "https://research-report.umm.ac.id/index.php/psppi/article/download/394/284/1062",
+  "sourceName": "Universitas Muhammadiyah Jember",
+  "retrievedAt": "2026-10-26"
+}
