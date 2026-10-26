@@ -20,6 +20,11 @@ Perintah lain: `npm run build` (production build), `npm run lint` (ESLint).
 Lihat [`DEPLOYMENT.md`](./DEPLOYMENT.md) untuk langkah setup di Vercel (build settings, environment variables,
 custom domain, preview deployment per PR).
 
+## Known issues
+
+Lihat [`KNOWN_ISSUES.md`](./KNOWN_ISSUES.md) — saat ini ada satu isu terbuka: navigasi `<Link>` yang kadang
+tidak merespons klik (flaky, site-wide), diduga bug upstream Next.js 16.3.x.
+
 ## Struktur
 
 - `src/app/` — halaman (App Router): beranda, direktori, belajar-kascing, berita, riset, studi-kasus, sumber-daya.
