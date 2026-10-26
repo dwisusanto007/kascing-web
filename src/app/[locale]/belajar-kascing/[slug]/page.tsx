@@ -79,11 +79,27 @@ export default async function ArticleDetailPage({ params }: PageProps) {
       )}
 
       <div className="prose prose-stone mt-6 flex max-w-none flex-col gap-4">
-        {article.content.map((paragraph, i) => (
-          <p key={i} id={`bagian-${i + 1}`} className="scroll-mt-24 text-base leading-relaxed text-stone-700">
-            {paragraph}
-          </p>
-        ))}
+        {article.content.map((paragraph, i) => {
+          const heading = article.sectionHeadings?.[i];
+          return (
+            <div key={i}>
+              {heading && (
+                <h2
+                  id={`bagian-${i + 1}`}
+                  className="scroll-mt-24 text-lg font-semibold text-stone-900"
+                >
+                  {heading}
+                </h2>
+              )}
+              <p
+                id={heading ? undefined : `bagian-${i + 1}`}
+                className={`scroll-mt-24 text-base leading-relaxed text-stone-700 ${heading ? "mt-2" : ""}`}
+              >
+                {paragraph}
+              </p>
+            </div>
+          );
+        })}
       </div>
 
       {article.table && <ArticleTable table={article.table} />}
